@@ -1,0 +1,51 @@
+name: Sync Bilibili author badge
+on:
+  schedule:
+    - cron: "17 20 * * *"   # daily 04:17 Asia/Shanghai
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch Bilibili card and update assets/author.json
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, sys
+          req = urllib.request.Request(
+              "https://api.bilibili.com/x/web-interface/card?mid=212027",
+              headers={
+                  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+                  "Referer": "https://www.bilibili.com/",
+                  "Accept": "application/json",
+              },
+          )
+          try:
+              d = json.load(urllib.request.urlopen(req, timeout=20))
+          except Exception as e:
+              print("fetch failed:", e); sys.exit(0)
+          card = (d.get("data") or {}).get("card") or {}
+          name, face = card.get("name"), card.get("face")
+          if d.get("code") != 0 or not name or not face:
+              print("unexpected response, skipping:", d.get("code"), d.get("message")); sys.exit(0)
+          face = face.replace("http://", "https://", 1)
+          path = "assets/author.json"
+          cur = json.load(open(path, encoding="utf-8"))
+          new = dict(cur, name=name, face=face, url="https://space.bilibili.com/212027")
+          if new != cur:
+              open(path, "w", encoding="utf-8").write(json.dumps(new, ensure_ascii=False, indent=2) + "\n")
+              print("updated:", new)
+          else:
+              print("no change")
+          PY
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet -- assets/author.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/author.json
+            git commit -m "Sync Bilibili author info"
+            git push
+          fi
