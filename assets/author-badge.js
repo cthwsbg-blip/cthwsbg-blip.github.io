@@ -8,7 +8,7 @@
     for(var i=0;i<nodes.length;i++){
       var a=nodes[i],img=a.querySelector('img'),name=a.querySelector('[data-bili-name]'),src=faceSrc(d.face);
       if(typeof d.url==='string'&&/^https:\/\/space\.bilibili\.com\//.test(d.url))a.href=d.url;
-      if(typeof d.name==='string'&&d.name){if(name)name.textContent=d.name;a.setAttribute('aria-label','作者 '+d.name+' 的 B 站主页');if(img)img.alt=d.name}
+      if(typeof d.name==='string'&&d.name){if(name)name.textContent=d.name;a.setAttribute('aria-label','有问题联系 '+d.name+' 的 B 站主页');if(img)img.alt=d.name}
       if(img&&src&&img.getAttribute('src')!==src)img.src=src;
     }
   }
