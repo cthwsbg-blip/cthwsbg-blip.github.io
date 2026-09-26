@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#3cb032"><meta name="description" content="赛马娘非官方中文育成小工具合集。"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%233cb032'/%3E%3Cpath d='M20 8l3 6 6.5.9-4.7 4.6 1.1 6.5L20 23l-5.9 3 1.1-6.5-4.7-4.6 6.5-.9z' fill='%23fff'/%3E%3C/svg%3E"><title>赛马娘工具箱</title>
+<style>
+:root{--ink:#20283b;--muted:#5f6679;--green:#2f9e3a;--green-d:#23802d;--lime:#b5d913;--pink:#ff79d0;--pink-d:#e8509f;--pink-l:#ffeff7;--blue:#4caeff;--violet:#8c83ff;--yellow:#ffc833;--round:"Hiragino Maru Gothic ProN","Hiragino Maru Gothic Pro","Arial Rounded MT Bold","Yu Gothic UI","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;--latin:"Trebuchet MS","Avenir Next","Segoe UI",Arial,sans-serif;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Segoe UI",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;color:var(--ink);line-height:1.6;background:#f6f4fb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Cg fill-opacity='.55'%3E%3Cpath fill='%23efeaf8' d='M0 0h170L60 150z'/%3E%3Cpath fill='%23fbf9ff' d='M170 0l-110 150 190-40z'/%3E%3Cpath fill='%23ece6f7' d='M170 0h170L250 110z'/%3E%3Cpath fill='%23f3effa' d='M340 0h140v130L250 110z'/%3E%3Cpath fill='%23e9e3f5' d='M60 150l190-40-60 190z'/%3E%3Cpath fill='%23f7f4fc' d='M250 110l230 20-120 170z'/%3E%3Cpath fill='%23f1ecf9' d='M0 0v320l60-170z'/%3E%3Cpath fill='%23fcfbff' d='M0 320l60-170 130 150z'/%3E%3Cpath fill='%23ece7f6' d='M250 110l110 190H190z'/%3E%3Cpath fill='%23f4f0fb' d='M480 130v220L360 300z'/%3E%3Cpath fill='%23eee9f8' d='M0 320l190-20-40 180H0z'/%3E%3Cpath fill='%23f8f6fd' d='M190 300h170l-80 180H150z'/%3E%3Cpath fill='%23ebe5f6' d='M360 300l120 50v130H280z'/%3E%3C/g%3E%3C/svg%3E") fixed}
+.stripe{height:8px;background:repeating-linear-gradient(115deg,var(--green) 0 34px,var(--lime) 34px 52px,#fff 52px 58px,var(--pink) 58px 92px,var(--yellow) 92px 110px,#fff 110px 116px,var(--blue) 116px 150px,#fff 150px 156px)}
+header{position:relative;background:linear-gradient(100deg,#2f9e3a,#3cb032 45%,#8ccb1e);color:#fff;overflow:hidden;box-shadow:0 6px 18px #2f9e3a33}
+header:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,#ffffff14 0 22px,transparent 22px 60px)}
+.head{position:relative;max-width:1080px;margin:auto;padding:44px 28px 48px;display:flex;gap:20px;align-items:center}
+.icon{display:grid;place-items:center;background:#fff;width:72px;height:72px;border-radius:50%;box-shadow:0 5px 0 #1f7a2a,0 10px 22px #0003;flex-shrink:0}.icon svg{width:46px;height:46px}
+small.en{display:block;font:italic 800 12px/1.4 var(--latin);letter-spacing:3px;color:#f1ffe0}
+h1{font-family:var(--round);font-size:34px;margin:2px 0 4px;font-weight:900;letter-spacing:2px;text-shadow:0 3px 0 #1f7a2a}
+.head p{margin:0;font-size:14px;color:#f3ffe8}
+main{flex:1;width:100%;max-width:1080px;margin:auto;padding:36px 28px}
+.tag{display:inline-block;font:italic 900 14px var(--latin);letter-spacing:1.5px;color:#fff;background:var(--pink-d);padding:4px 22px 4px 16px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);margin-bottom:18px}
+.tag span{font:900 13px var(--round);margin-left:8px;letter-spacing:0;font-style:normal}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.card{position:relative;display:block;text-decoration:none;color:var(--ink);background:#fff;border:3px solid #c9ecc2;border-radius:22px;padding:26px 24px 22px;box-shadow:7px 7px 0 #e1f4dc,0 12px 28px #4b3d8a12;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.card:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(115deg,var(--green) 0 24px,var(--lime) 24px 36px,var(--pink) 36px 60px,var(--yellow) 60px 72px)}
+.card:hover{transform:translateY(-4px);box-shadow:9px 11px 0 #e1f4dc,0 16px 32px #4b3d8a1c}
+.card:focus-visible{outline:3px solid var(--pink);outline-offset:4px}
+.num{display:inline-grid;place-items:center;min-width:40px;height:40px;border-radius:999px;background:var(--green);color:#fff;font:italic 900 16px var(--latin);box-shadow:0 3px 0 #0002,inset 0 -3px 0 #0002}
+.card h2{font-family:var(--round);font-size:22px;font-weight:900;margin:14px 0 6px}
+.card p{margin:0 0 16px;font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}.chips span{font-size:12px;font-weight:700;color:var(--green-d);background:#f1faee;border:2px solid #d5eecf;border-radius:999px;padding:1px 10px}
+.go{display:inline-block;background:linear-gradient(90deg,var(--pink-d),var(--pink));color:#fff;font-weight:900;border-radius:999px;padding:8px 22px;box-shadow:0 4px 0 #c43c86}
+.soon{border-style:dashed;border-color:#ddd7ee;box-shadow:none;background:#ffffffb0;color:var(--muted);display:grid;place-items:center;text-align:center;min-height:200px}.soon:before{display:none}.soon:hover{transform:none;box-shadow:none}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:0 20px 40px}footer .stripe{max-width:420px;margin:10px auto 18px;border-radius:999px;height:6px}footer p{margin:4px 0}
+@media(max-width:600px){.head{padding:30px 18px 34px;gap:14px}.icon{width:56px;height:56px}.icon svg{width:36px;height:36px}h1{font-size:26px}small.en{font-size:10px;letter-spacing:2px}main{padding:26px 16px}.grid{grid-template-columns:1fr;gap:18px}}
+</style></head>
+<body>
+<div class="stripe"></div>
+<header><div class="head"><span class="icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9 7c-3 7-3 16 1 22 3 5 7 7 10 7s7-2 10-7c4-6 4-15 1-22l-6 2c2 5 2 12-1 16-1 2-2.5 3-4 3s-3-1-4-3c-3-4-3-11-1-16z" fill="#2f9e3a"/><g fill="#fff"><circle cx="11.5" cy="15" r="1.6"/><circle cx="12.5" cy="22" r="1.6"/><circle cx="28.5" cy="15" r="1.6"/><circle cx="27.5" cy="22" r="1.6"/></g><path d="M20 4l1.6 3.3 3.6.5-2.6 2.5.6 3.6L20 12.2l-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z" fill="#ff79d0"/></svg></span><div><small class="en">UMA TOOLBOX · 中文版</small><h1>赛马娘工具箱</h1><p>非官方中文育成小工具合集 · 全部在浏览器本地运行</p></div></div></header>
+<main>
+<div class="tag">TOOLS<span>工具一览</span></div>
+<div class="grid">
+<a class="card" href="./stamina/"><span class="num">01</span><h2>耐力计算器</h2><p>按赛道、跑法、属性与回体技能估算耐力是否足够，并判断能否避开耐力温存。</p><div class="chips"><span>137 条赛道</span><span>回体 / 减益</span><span>下坡 · 挂起</span><span>全开冲刺</span></div><span class="go">打开计算器 →</span></a>
+<div class="card soon"><div><span class="num" style="background:#cfc8e6">＋</span><p style="margin-top:12px">更多工具筹备中</p></div></div>
+</div>
+</main>
+<footer><div class="stripe" aria-hidden="true"></div><p>非官方同人工具 · 游戏名称与商标归各权利者所有 · 数值仅作育成参考</p></footer>
+</body></html>
