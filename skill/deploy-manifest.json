@@ -1,0 +1,29 @@
+{
+  "keep": 3,
+  "deployments": [
+    {
+      "source": "a248895",
+      "files": [
+        "index-6SPG4Iiu.js",
+        "index-BkzGftBC.css",
+        "worker-DXmkROnm.js"
+      ]
+    },
+    {
+      "source": "9da96a0",
+      "files": [
+        "index-BFw9HTnF.js",
+        "index-Cwxee5EQ.css",
+        "worker-kD0g5WGs.js"
+      ]
+    },
+    {
+      "source": "9f9f0a1",
+      "files": [
+        "index-CMxQM-Ox.css",
+        "index-OqFGbPOQ.js",
+        "worker-kD0g5WGs.js"
+      ]
+    }
+  ]
+}
