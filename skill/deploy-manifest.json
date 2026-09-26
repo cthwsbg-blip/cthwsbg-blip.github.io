@@ -2,14 +2,6 @@
   "keep": 3,
   "deployments": [
     {
-      "source": "a248895",
-      "files": [
-        "index-6SPG4Iiu.js",
-        "index-BkzGftBC.css",
-        "worker-DXmkROnm.js"
-      ]
-    },
-    {
       "source": "9da96a0",
       "files": [
         "index-BFw9HTnF.js",
@@ -23,6 +15,14 @@
         "index-CMxQM-Ox.css",
         "index-OqFGbPOQ.js",
         "worker-kD0g5WGs.js"
+      ]
+    },
+    {
+      "source": "e3deff8",
+      "files": [
+        "index-DUGkS459.js",
+        "index-WpN_QJSF.css",
+        "worker-BbH5mjMG.js"
       ]
     }
   ]
