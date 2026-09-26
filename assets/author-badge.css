@@ -7,3 +7,12 @@
 .bili-badge .bili-go{color:var(--bili);white-space:nowrap;font-weight:900}
 .bili-badge--float{position:absolute;top:18px;right:18px;z-index:50}
 @media(max-width:760px){.bili-badge--compact{padding:3px;gap:0}.bili-badge--compact .bili-tag,.bili-badge--compact .bili-name,.bili-badge--compact .bili-go{display:none}.bili-badge--compact img{width:34px;height:34px}.bili-badge--float{top:22px;right:12px}}
+.uma-nav{--uma-nav-h:36px;box-sizing:border-box;height:var(--uma-nav-h);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 22px;background:#1d7a2b;color:#e6f8e2;font:800 12px/1 "PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;letter-spacing:.02em;position:relative;z-index:60}
+.uma-back{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 12px 0 9px;border-radius:999px;background:#fff;color:#1d7a2b;text-decoration:none;font-weight:900;font-size:12.5px;box-shadow:0 2px 0 #0000002e;transition:transform .15s,box-shadow .15s,background .15s;white-space:nowrap}
+.uma-back:hover{transform:translateY(-1px);box-shadow:0 3px 0 #0000002e;background:#f1fbe9;color:#1d7a2b}
+.uma-back:focus-visible{outline:3px solid #ffe45c;outline-offset:2px}
+.uma-back-arrow{font-size:14px;line-height:1}
+.uma-nav-site{opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html.uma-has-nav .bili-badge--float{top:54px}
+@media(max-width:760px){.uma-nav{padding:0 14px}html.uma-has-nav .bili-badge--float{top:58px}}
+@media print{.uma-nav{display:none}}
