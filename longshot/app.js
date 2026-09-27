@@ -199,7 +199,7 @@
 
   /* ---------------- worker RPC ---------------- */
   function makeWorker() {
-    var w = new Worker('worker.js'), seq = 0, pend = {};
+    var w = new Worker('worker.js?v=2'), seq = 0, pend = {};
     w.onmessage = function (e) {
       var m = e.data;
       if (m.type === 'progress') return;
@@ -280,7 +280,7 @@
       return src.run(function (i) { return (i % sStd === 0 || i % sMed === 0) ? full : null; }, function (i, img) {
         setStage('layout', ++c / smp.length * 0.3);
         return me.worker.call('ov', { idx: i, data: img.data.buffer }, [img.data.buffer]);
-      }).then(function () { return me.worker.call('ovdone'); }).then(function (r) { me.keep = new Set(r.keep); });
+      }).then(function () { return me.worker.call('ovdone'); }).then(function (r) { me.keep = Array.isArray(r.keep) && r.keep.length ? new Set(r.keep) : null; });
     }).then(function () {
       // pass 0: layout samples
       var sStd = me.sStd, sMed = me.sMed, full = { x: 0, y: 0, w: src.W, h: src.H }, cnt = 0, keep = me.keep, base = keep ? 0.3 : 0;
