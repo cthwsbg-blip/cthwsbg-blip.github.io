@@ -2,11 +2,12 @@
 (function () {
   'use strict';
   var LIMIT = { maxBytes: 300 * 1024 * 1024, maxSec: 60, minShort: 720, maxShort: 1080, targetFps: 30 };
+  var PHONE = { minShort: 540, maxShort: 1440 };   // phone box: portrait, short side (width) 540–1440
   var $ = function (id) { return document.getElementById(id); };
   var ui = {
     drop: $('drop'), file: $('file'), pick: $('pick'), upload: $('upload-panel'), work: $('work-panel'), result: $('result-panel'),
     stage: $('stage'), pct: $('pct'), bar: $('bar'), meta: $('meta'), cancel: $('cancel'), err: $('error'), errMsg: $('error-msg'),
-    errReset: $('error-reset'), img: $('result-img'), dl: $('download'), again: $('again'), info: $('result-info'), steps: $('steps')
+    errReset: $('error-reset'), dropPhone: $('drop-phone'), filePhone: $('file-phone'), pickPhone: $('pick-phone'), tabPc: $('tab-pc'), tabPhone: $('tab-phone'), panePc: $('pane-pc'), panePhone: $('pane-phone'), img: $('result-img'), dl: $('download'), again: $('again'), info: $('result-info'), steps: $('steps')
   };
   if (window.Log) { try { Log.setLogLevel(Log.error); Log.error = Log.warn = Log.info = Log.debug = Log.log = function () {}; } catch (e) {} }
 
@@ -14,6 +15,7 @@
   function mb(b) { return (b / 1048576).toFixed(b < 10485760 ? 1 : 0); }
   function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
   var job = null;       // current job {aborted, worker, url, ...}
+  var curMode = 'pc';   // 'pc' | 'phone' — which upload box the current video came from
 
   /* ---------------- UI helpers ---------------- */
   function show(which) {
@@ -23,11 +25,13 @@
   var STAGES = [['read', '读取视频'], ['layout', '识别界面'], ['scroll', '计算滚动'], ['stitch', '拼接画面'], ['cursor', '去除鼠标'], ['png', '生成图片']];
   var WEIGHT = { read: 3, layout: 14, scroll: 33, stitch: 22, cursor: 23, png: 5 };
   function setStage(key, frac, extra) {
+    if (job) { var now = Date.now(); job.tm = job.tm || {}; if (job.tk) job.tm[job.tk] = (job.tm[job.tk] || 0) + now - job.tl; job.tk = key; job.tl = now; }
     var done = 0, i;
     for (i = 0; i < STAGES.length && STAGES[i][0] !== key; i++) done += WEIGHT[STAGES[i][0]];
     var p = Math.min(100, done + WEIGHT[key] * Math.max(0, Math.min(1, frac || 0)));
     ui.bar.style.width = p.toFixed(1) + '%'; ui.pct.textContent = Math.floor(p) + '%';
     var label = ''; for (i = 0; i < STAGES.length; i++) if (STAGES[i][0] === key) label = STAGES[i][1];
+    if (key === 'cursor' && curMode === 'phone') label = '去除触摸特效';
     ui.stage.textContent = label + (extra ? ' · ' + extra : '');
     var lis = ui.steps.children;
     for (i = 0; i < lis.length; i++) { var k = lis[i].getAttribute('data-k'), idx = STAGES.findIndex(function (s) { return s[0] === k; }), cur = STAGES.findIndex(function (s) { return s[0] === key; }); lis[i].className = idx < cur ? 'done' : idx === cur ? 'now' : ''; }
@@ -37,11 +41,15 @@
     switch (err && err.code) {
       case 'NOTVIDEO': return '无法识别为视频文件' + (d.name ? '（' + d.name + '）' : '') + '。请选择 MP4 / MOV 等格式的录屏视频。';
       case 'BROKEN': return '这个文件无法作为视频读取' + (d.name ? '（' + d.name + '）' : '') + '，可能已损坏、没有录完，或者其实不是视频。请重新导出 / 录制后再试（推荐 H.264 编码的 MP4）。';
-      case 'CODEC': if (/MPEG-4 Part 2/.test(d.codec || '')) return '当前浏览器无法解码这个视频（编码：' + d.codec + '）。这种老式编码常见于 QQ录屏 等软件，浏览器都不支持。推荐改用 Windows 自带录屏：按 Win+Alt+R（Xbox Game Bar，输出 H.264 的 MP4），或使用 OBS 录制；已有的视频也可以用剪映、格式工厂、HandBrake 转成 H.264 MP4 后再上传。';
+      case 'CODEC': if (d.mode === 'phone') return '当前浏览器无法解码这个视频' + (d.codec ? '（编码：' + d.codec + '）' : '') + '。' + (/HEVC/.test(d.codec || '') ? 'iPhone／部分安卓手机录屏默认用 HEVC（H.265），电脑上的部分浏览器（如 Linux 版或未装 HEVC 扩展的 Chrome/Edge）解不了。可以：直接在手机 Safari／Chrome 里打开本页上传；或在 iPhone「设置 › 相机 › 格式」选「兼容性最佳」后重新录屏；或用剪映等导出为 H.264 的 MP4。' : '请用剪映等 App 把视频导出为 H.264 编码的 MP4 后再试，或换用手机自带的「屏幕录制」重新录制。');
+        if (/MPEG-4 Part 2/.test(d.codec || '')) return '当前浏览器无法解码这个视频（编码：' + d.codec + '）。这种老式编码常见于 QQ录屏 等软件，浏览器都不支持。推荐改用 Windows 自带录屏：按 Win+Alt+R（Xbox Game Bar，输出 H.264 的 MP4），或使用 OBS 录制；已有的视频也可以用剪映、格式工厂、HandBrake 转成 H.264 MP4 后再上传。';
         return '当前浏览器无法解码这个视频' + (d.codec ? '（编码：' + d.codec + '）' : '') + '。请把视频转成 H.264 编码的 MP4 再试（可用剪映、格式工厂、HandBrake 导出），或用 Windows 自带录屏 Win+Alt+R / OBS 重新录制（默认即 H.264）。';
       case 'TOOBIG': return '文件大小 ' + d.size + ' MB，超过 300 MB 上限。请只录制因子页滚动的那一段（通常 10–30 秒就够），或降低码率后再试。';
       case 'TOOLONG': return '视频时长 ' + d.sec + ' 秒，超过 60 秒上限。请只录制因子页从顶部滑到底部的那一段（通常 10–30 秒）。';
       case 'NODURATION': return '读取不到视频时长，文件可能不完整或已损坏。请重新导出后再试。';
+      case 'USEPHONE': return '这个视频是竖屏（' + d.w + '×' + d.h + '），看起来是手机录屏。请切换到上方的「手机录屏」再上传。';
+      case 'USEPC': return '这个视频是横屏（' + d.w + '×' + d.h + '），看起来是电脑录屏。请切换到上方的「电脑录屏」再上传；如果是手机录的，请竖屏录制。';
+      case 'RESPHONE': return '视频分辨率为 ' + d.w + '×' + d.h + '（宽 ' + d.s + ' 像素），手机录屏仅支持宽 540–1440 像素的竖屏视频（常见的 720×1600、1080×2400、1170×2532 等都可以）。请调整录屏清晰度后重新录制。';
       case 'RES': return '视频分辨率为 ' + d.w + '×' + d.h + '（短边 ' + d.s + ' 像素），本工具仅支持 720p–1080p（短边 720–1080 像素）。请把游戏/录屏分辨率调到 720p–1080p 后重新录制。';
       case 'NOREGION': return '没有在视频里找到上下滚动的列表区域。请确认录制的是「ウマ娘詳細」的因子（継承）页，并在录制过程中上下滑动了列表；录制时尽量不要切换页面或移动窗口。';
       case 'NOSCROLL': return '检测到列表几乎没有滚动（约 ' + (d.px || 0) + ' 像素）。请在录制时把因子列表从顶部一直滑到底部。';
@@ -50,7 +58,7 @@
       default: return '处理失败' + (err && err.message && err.code !== 'FAIL' ? '（' + err.message + '）' : '') + '。请重试，或换一个视频。';
     }
   }
-  function showError(err) { ui.errMsg.textContent = message(err); show('error'); }
+  function showError(err) { if (err) err.detail = Object.assign({ mode: curMode }, err.detail || {}); ui.errMsg.textContent = message(err); show('error'); }
 
   /* ---------------- frame sources ---------------- */
   function isoBmff(file) {
@@ -215,19 +223,21 @@
     if (job.src && job.src.url) { URL.revokeObjectURL(job.src.url); try { job.src.video.removeAttribute('src'); job.src.video.load(); } catch (e) {} }
     job = null;
   }
-  function start(file) {
+  function start(file, mode) {
     cleanup();
+    curMode = mode === 'phone' ? 'phone' : 'pc'; setMode(curMode);
     if (ui.img.src && ui.img.src.indexOf('blob:') === 0) URL.revokeObjectURL(ui.img.src);
     ui.img.removeAttribute('src');
     var me = job = { aborted: false, t0: Date.now() };
     show('work'); setStage('read', 0); ui.meta.textContent = file.name + ' · ' + mb(file.size) + ' MB';
-    run(file, me).then(function () {}, function (err) {
+    run(file, me, curMode).then(function () {}, function (err) {
       if (me.aborted && (!err || err.code === 'ABORT')) return;
       if (job !== me) return;
       cleanup(); showError(err);
     });
   }
-  function run(file, me) {
+  function run(file, me, mode) {
+    var phone = mode === 'phone';
     var ext = (file.name.split('.').pop() || '').toLowerCase();
     var videoExt = ['mp4', 'mov', 'm4v', 'webm', 'mkv', '3gp', 'avi', 'ts', 'm2ts', 'flv', 'wmv', 'hevc', 'qt'];
     if (!/^video\//.test(file.type) && videoExt.indexOf(ext) < 0) return Promise.reject(Object.assign(E('NOTVIDEO'), { detail: { name: file.name } }));
@@ -250,16 +260,35 @@
       var sec = s.duration, shortSide = Math.min(s.W, s.H);
       if (!(sec > 0)) throw E('NODURATION');
       if (sec > LIMIT.maxSec + 0.5) throw Object.assign(E('TOOLONG'), { detail: { sec: sec.toFixed(1) } });
-      if (shortSide < LIMIT.minShort || shortSide > LIMIT.maxShort) throw Object.assign(E('RES'), { detail: { w: s.W, h: s.H, s: shortSide } });
+      if (phone) {
+        if (s.W >= s.H) throw Object.assign(E('USEPC'), { detail: { w: s.W, h: s.H } });
+        if (shortSide < PHONE.minShort || shortSide > PHONE.maxShort) throw Object.assign(E('RESPHONE'), { detail: { w: s.W, h: s.H, s: shortSide } });
+      } else {
+        if (s.H > s.W) throw Object.assign(E('USEPHONE'), { detail: { w: s.W, h: s.H } });
+        if (shortSide < LIMIT.minShort || shortSide > LIMIT.maxShort) throw Object.assign(E('RES'), { detail: { w: s.W, h: s.H, s: shortSide } });
+      }
       ui.meta.textContent = file.name + ' · ' + s.W + '×' + s.H + ' · ' + sec.toFixed(1) + ' 秒 · ' + mb(file.size) + ' MB';
       me.worker = makeWorker();
-      return me.worker.call('init', { W: s.W, H: s.H, n: n });
+      return me.worker.call('init', { W: s.W, H: s.H, n: n, phone: phone });
+    }).then(function () {
+      // phone only: find sampled frames covered by transient overlays (notification shade, control centre…)
+      var sStd = Math.max(1, Math.floor(n / 80)), sMed = Math.max(1, Math.floor(n / 15)), full = { x: 0, y: 0, w: src.W, h: src.H };
+      me.sStd = sStd; me.sMed = sMed; me.keep = null;
+      if (!phone) return;
+      var smp = []; for (var i = 0; i < n; i++) if (i % sStd === 0 || i % sMed === 0) smp.push(i);
+      var c = 0; setStage('layout', 0);
+      return src.run(function (i) { return (i % sStd === 0 || i % sMed === 0) ? full : null; }, function (i, img) {
+        setStage('layout', ++c / smp.length * 0.3);
+        return me.worker.call('ov', { idx: i, data: img.data.buffer }, [img.data.buffer]);
+      }).then(function () { return me.worker.call('ovdone'); }).then(function (r) { me.keep = new Set(r.keep); });
     }).then(function () {
       // pass 0: layout samples
-      var sStd = Math.max(1, Math.floor(n / 80)), sMed = Math.max(1, Math.floor(n / 15)), full = { x: 0, y: 0, w: src.W, h: src.H }, cnt = 0, tot = Math.ceil(n / sStd) + Math.ceil(n / sMed);
-      setStage('layout', 0);
-      return src.run(function (i) { return (i % sStd === 0 || i % sMed === 0) ? full : null; }, function (i, img) {
-        cnt += (i % sStd === 0) + (i % sMed === 0); setStage('layout', cnt / tot * 0.8);
+      var sStd = me.sStd, sMed = me.sMed, full = { x: 0, y: 0, w: src.W, h: src.H }, cnt = 0, keep = me.keep, base = keep ? 0.3 : 0;
+      var use = function (i) { return !keep || keep.has(i); }, tot = 0;
+      for (var q = 0; q < n; q++) if (use(q)) tot += (q % sStd === 0) + (q % sMed === 0);
+      setStage('layout', base);
+      return src.run(function (i) { return ((i % sStd === 0 || i % sMed === 0) && use(i)) ? full : null; }, function (i, img) {
+        cnt += (i % sStd === 0) + (i % sMed === 0); setStage('layout', base + cnt / Math.max(1, tot) * (0.8 - base));
         return me.worker.call('p0', { data: img.data.buffer, std: i % sStd === 0, med: i % sMed === 0 }, [img.data.buffer]);
       });
     }).then(function () { return me.worker.call('layout'); }).then(function (r) {
@@ -312,8 +341,8 @@
       ui.img.src = url; ui.img.width = o.m.w; ui.img.height = o.m.h;
       ui.dl.href = url; ui.dl.download = base + '_长截图.png';
       var secs = ((Date.now() - me.t0) / 1000).toFixed(1);
-      ui.info.textContent = o.m.w + ' × ' + o.m.h + ' 像素 · ' + mb(o.blob.size) + ' MB · 滚动 ' + o.m.info.scroll + ' 像素 · 用时 ' + secs + ' 秒' + (o.m.info.cursor ? ' · 已去除鼠标指针' : '');
-      window.__longshot = { w: o.m.w, h: o.m.h, bytes: o.blob.size, info: o.m.info, secs: +secs, source: src.kind };
+      ui.info.textContent = o.m.w + ' × ' + o.m.h + ' 像素 · ' + mb(o.blob.size) + ' MB · 滚动 ' + o.m.info.scroll + ' 像素 · 用时 ' + secs + ' 秒' + (o.m.info.cursor ? (curMode === 'phone' ? ' · 已去除触摸特效' : ' · 已去除鼠标指针') : '');
+      window.__longshot = { w: o.m.w, h: o.m.h, bytes: o.blob.size, info: o.m.info, secs: +secs, source: src.kind, mode: curMode, stageMs: me.tm };
       if (src.url) { URL.revokeObjectURL(src.url); src.url = null; }
       job = null; show('result');
     });
@@ -329,14 +358,26 @@
   }
 
   /* ---------------- events ---------------- */
-  function pickFile(files) { if (files && files[0]) start(files[0]); }
-  ui.pick.addEventListener('click', function (e) { e.stopPropagation(); ui.file.click(); });
-  ui.drop.addEventListener('click', function () { ui.file.click(); });
-  ui.drop.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ui.file.click(); } });
-  ui.file.addEventListener('change', function () { var f = ui.file.files; pickFile(f); ui.file.value = ''; });
-  ['dragenter', 'dragover'].forEach(function (t) { ui.drop.addEventListener(t, function (e) { e.preventDefault(); ui.drop.classList.add('over'); }); });
-  ['dragleave', 'drop'].forEach(function (t) { ui.drop.addEventListener(t, function (e) { e.preventDefault(); ui.drop.classList.remove('over'); }); });
-  ui.drop.addEventListener('drop', function (e) { pickFile(e.dataTransfer && e.dataTransfer.files); });
+  function setMode(m) {
+    var ph = m === 'phone';
+    ui.tabPc.setAttribute('aria-selected', String(!ph)); ui.tabPhone.setAttribute('aria-selected', String(ph));
+    ui.panePc.hidden = ph; ui.panePhone.hidden = !ph;
+  }
+  ui.tabPc.addEventListener('click', function () { setMode('pc'); });
+  ui.tabPhone.addEventListener('click', function () { setMode('phone'); });
+  [[ui.drop, ui.file, ui.pick, 'pc'], [ui.dropPhone, ui.filePhone, ui.pickPhone, 'phone']].forEach(function (b) {
+    var drop = b[0], input = b[1], pick = b[2], mode = b[3];
+    var pickFile = function (files) { if (files && files[0]) start(files[0], mode); };
+    pick.addEventListener('click', function (e) { e.stopPropagation(); input.click(); });
+    drop.addEventListener('click', function () { input.click(); });
+    drop.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); } });
+    input.addEventListener('change', function () { var f = input.files; pickFile(f); input.value = ''; });
+    ['dragenter', 'dragover'].forEach(function (t) { drop.addEventListener(t, function (e) { e.preventDefault(); drop.classList.add('over'); }); });
+    ['dragleave', 'drop'].forEach(function (t) { drop.addEventListener(t, function (e) { e.preventDefault(); drop.classList.remove('over'); }); });
+    drop.addEventListener('drop', function (e) { pickFile(e.dataTransfer && e.dataTransfer.files); });
+  });
+  // open the phone box by default on phones (or with #phone in the URL)
+  if (/phone/i.test(location.hash) || (/iPhone|iPod|Android.+Mobile/i.test(navigator.userAgent) && !/pc/i.test(location.hash))) setMode('phone');
   window.addEventListener('dragover', function (e) { e.preventDefault(); });
   window.addEventListener('drop', function (e) { e.preventDefault(); });
   function reset() { cleanup(); show('upload'); }

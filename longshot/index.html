@@ -43,6 +43,14 @@ em{font-style:italic;font-family:var(--latin);font-weight:900;color:#fff;backgro
 .tip{background:#fbfaff;border:2px solid #ece8f5;border-radius:14px;padding:12px 14px;font-size:13px;color:var(--muted)}
 .tip kbd{font:600 11px/1 var(--round,inherit);background:#fff;border:1.5px solid #d9d3e8;border-bottom-width:2.5px;border-radius:5px;padding:1px 5px;color:var(--ink);white-space:nowrap}
 .tip b{display:block;color:var(--ink);font-family:var(--round);font-size:14px;margin-bottom:2px}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;background:#f1eff8;border:2px solid #e6e2f2;border-radius:999px;margin:0 0 16px}
+.mode{display:flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:999px;padding:9px 10px;background:transparent;font:900 15px var(--round,inherit);color:#8a8fa3;cursor:pointer;transition:background .15s,color .15s,box-shadow .15s}
+.mode svg{width:18px;height:18px;flex-shrink:0}.mode:hover{color:var(--green-d)}
+.mode[aria-selected=true]{background:#fff;color:var(--green-d);box-shadow:0 3px 0 #d5eecf,0 4px 12px #4b3d8a14}
+#tab-phone[aria-selected=true]{color:var(--pink-d);box-shadow:0 3px 0 #ffc9e7,0 4px 12px #4b3d8a14}
+.drop.phone{border-color:#ffc4e4;background:linear-gradient(180deg,#fff3fa,#fff)}.drop.phone:hover{border-color:var(--pink-d)}
+.drop.phone .drop-icon{background:var(--pink-d);box-shadow:0 5px 0 #c43c86,0 10px 20px #e0409033}
+.drop.phone .chips span{color:var(--pink-d);background:#fff2f9;border-color:#ffd3ec}
 .prog-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .prog-head strong{font-family:var(--round);font-size:18px;font-weight:900}
 .pct{font:italic 900 30px var(--latin);color:var(--green)}
@@ -62,16 +70,21 @@ em{font-style:italic;font-family:var(--latin);font-weight:900;color:#fff;backgro
 .preview img{display:block;margin:auto;max-width:100%;height:auto;box-shadow:0 6px 20px #0002;border-radius:6px}
 footer{text-align:center;color:var(--muted);font-size:12px;padding:0 25px 40px}footer .stripe{max-width:420px;margin:10px auto 18px;border-radius:999px;height:6px}footer p{margin:4px 0}
 [hidden]{display:none!important}
-@media(max-width:760px){main{padding:18px 14px 28px}.head{padding:15px}h1{font-size:19px}h1 .sub{font-size:11px;padding:3px 7px;margin-left:6px;vertical-align:3px}.brand small{font-size:9px;letter-spacing:1.3px}.brand-icon{width:42px;height:42px}.brand-icon svg{width:28px;height:28px}.head .brand{gap:10px}.head-actions{gap:8px}.panel-body{padding:18px}.panel-title{padding:15px 18px 11px}.panel{box-shadow:5px 5px 0 var(--accent-l)}.panel-title small{display:none}.tips{grid-template-columns:1fr;gap:10px}.drop{min-height:200px}.intro{font-size:12px}.preview{max-height:70vh;padding:6px}}
+@media(max-width:760px){main{padding:18px 14px 28px}.head{padding:15px}h1{font-size:19px}h1 .sub{font-size:11px;padding:3px 7px;margin-left:6px;vertical-align:3px}.brand small{font-size:9px;letter-spacing:1.3px}.brand-icon{width:42px;height:42px}.brand-icon svg{width:28px;height:28px}.head .brand{gap:10px}.head-actions{gap:8px}.panel-body{padding:18px}.panel-title{padding:15px 18px 11px}.panel{box-shadow:5px 5px 0 var(--accent-l)}.panel-title small{display:none}.tips{grid-template-columns:1fr;gap:10px}.mode{font-size:14px;padding:8px 6px}.drop{min-height:200px}.intro{font-size:12px}.preview{max-height:70vh;padding:6px}}
 @media(max-width:420px){h1{font-size:17px;letter-spacing:.5px}h1 .sub{display:block;width:max-content;margin:3px 0 0;vertical-align:0}.brand small{display:none}.btn{padding:10px 18px}.actions{width:100%}.actions .btn{flex:1}}
 </style><link rel="stylesheet" href="/assets/author-badge.css"><script src="/assets/author-badge.js" defer></script></head>
 <body>
 <div class="stripe"></div>
 <header><div class="head"><a class="brand" href="#top"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9 7c-3 7-3 16 1 22 3 5 7 7 10 7s7-2 10-7c4-6 4-15 1-22l-6 2c2 5 2 12-1 16-1 2-2.5 3-4 3s-3-1-4-3c-3-4-3-11-1-16z" fill="#2f9e3a"/><g fill="#fff"><circle cx="11.5" cy="15" r="1.6"/><circle cx="12.5" cy="22" r="1.6"/><circle cx="28.5" cy="15" r="1.6"/><circle cx="27.5" cy="22" r="1.6"/></g><path d="M20 4l1.6 3.3 3.6.5-2.6 2.5.6 3.6L20 12.2l-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z" fill="#ff79d0"/></svg></span><span><small>VIDEO → LONG SCREENSHOT</small><h1>视频生成长截图<span class="sub">因子页制作</span></h1></span></a><div class="head-actions"><a class="bili-badge bili-badge--compact" data-bili-badge href="https://space.bilibili.com/212027" target="_blank" rel="noopener" aria-label="有问题联系 61444不玩赛马娘攻略组 的 B 站主页"><span class="bili-tag">有问题联系</span><img src="https://i2.hdslb.com/bfs/face/a0b5f45b66472758d03d5342e06bf64e4667ba5a.jpg@128w_128h_1c.webp" alt="61444不玩赛马娘攻略组" width="32" height="32" referrerpolicy="no-referrer" loading="lazy"><span class="bili-name" data-bili-name>61444不玩赛马娘攻略组</span><span class="bili-go">· B站主页 ↗</span></a></div></div></header>
 <main id="top">
-<div class="intro"><span class="dot"></span><span>把「ウマ娘詳細」因子页的滚动录屏拼成一张完整长图 · 视频只在你的浏览器里处理，不会上传</span></div>
+<div class="intro"><span class="dot"></span><span>把「ウマ娘詳細」因子页的滚动录屏拼成一张完整长图 · 支持电脑录屏和手机录屏 · 视频只在你的浏览器里处理，不会上传</span></div>
 
 <section class="panel" id="upload-panel"><div class="panel-title"><h2><em>01</em>上传录屏视频</h2><small>UPLOAD</small></div><div class="panel-body">
+<div class="modes" role="tablist" aria-label="录屏来源">
+<button type="button" class="mode" role="tab" id="tab-pc" aria-controls="pane-pc" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>电脑录屏</button>
+<button type="button" class="mode" role="tab" id="tab-phone" aria-controls="pane-phone" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>手机录屏</button>
+</div>
+<div id="pane-pc" role="tabpanel" aria-labelledby="tab-pc">
 <div class="drop" id="drop" tabindex="0" role="button" aria-label="选择或拖入视频文件">
 <div><div class="drop-icon" aria-hidden="true" style="margin:0 auto 10px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6.5 9.5 12 4l5.5 5.5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
 <strong>点击选择视频，或把视频拖到这里</strong><p>支持 MP4 / MOV（推荐 H.264 编码）</p>
@@ -82,7 +95,22 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 25px 40px}f
 <div class="tips">
 <div class="tip"><b>① 打开因子页</b>育成／角色详情里的「ウマ娘詳細」，切到「継承」标签。</div>
 <div class="tip"><b>② 录屏并慢慢滑动</b>从列表顶部开始录，匀速滑到最底部；中途停顿没关系。推荐用 <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd> 录屏（QQ录屏可能不支持）。</div>
-<div class="tip"><b>③ 上传视频</b>自动识别固定标题栏与滚动列表，拼接并去掉鼠标指针。</div>
+<div class="tip"><b>③ 上传视频</b>自动识别固定标题栏与滚动列表，拼接并去掉鼠标指针。手机录的视频请切换到「手机录屏」。</div>
+</div>
+</div>
+<div id="pane-phone" role="tabpanel" aria-labelledby="tab-phone" hidden>
+<div class="drop phone" id="drop-phone" tabindex="0" role="button" aria-label="选择或拖入手机录屏视频">
+<div><div class="drop-icon" aria-hidden="true" style="margin:0 auto 10px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6.5 9.5 12 4l5.5 5.5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
+<strong>选择手机竖屏录屏，或拖到这里</strong><p>支持 MP4 / MOV（推荐 H.264 编码）</p>
+<button type="button" class="btn" id="pick-phone">选择手机录屏</button>
+<div class="chips"><span>竖屏 · 宽 540–1440</span><span>≤ 60 秒</span><span>≤ 300 MB</span><span>本地处理</span></div></div>
+</div>
+<input type="file" id="file-phone" accept="video/*,.mp4,.mov,.m4v,.webm,.mkv" hidden>
+<div class="tips">
+<div class="tip"><b>① 打开因子页</b>游戏里打开「ウマ娘詳細」，切到「継承」标签。</div>
+<div class="tip"><b>② 系统录屏并慢慢滑动</b>用手机自带的「屏幕录制」（iPhone 控制中心／安卓下拉菜单），竖屏从列表顶部匀速滑到最底部。</div>
+<div class="tip"><b>③ 上传视频</b>自动跳过状态栏、下拉菜单等画面并去除触摸特效。录完下拉结束录制也没关系。</div>
+</div>
 </div>
 </div></section>
 

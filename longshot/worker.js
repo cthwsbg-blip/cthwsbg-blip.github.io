@@ -30,6 +30,29 @@ function p0med(rgba) {
   (S.medFrames = S.medFrames || []).push(rgb);
 }
 
+/* ---------- phone pre-pass: drop samples covered by transient overlays ---------- */
+// (notification shade / control centre pulled down to stop the recording, popups): they differ from the
+// temporal median on pixels that are otherwise static. Works on a 1/4-scale grey copy.
+function ovAdd(idx, rgba) {
+  const F = 4, w = Math.floor(S.W / F), h = Math.floor(S.H / F), g = new Uint8Array(w * h), W = S.W;
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) { let s = 0; for (let j = 0; j < F; j++) { let o = ((y * F + j) * W + x * F) * 4; for (let i = 0; i < F; i++, o += 4) s += gray(rgba[o], rgba[o + 1], rgba[o + 2]); } g[y * w + x] = (s + 8) >> 4; }
+  (S.ov = S.ov || []).push({ idx, g }); S.ovw = w * h;
+}
+function ovDone() {
+  const L = S.ov || [], M = L.length, n = S.ovw || 0; S.ov = null;
+  if (M < 5) return { keep: L.map(o => o.idx) };
+  const buf = new Float64Array(M), med = new Float32Array(n), stat = new Uint8Array(n); let ns = 0;
+  for (let i = 0; i < n; i++) {
+    for (let k = 0; k < M; k++) buf[k] = L[k].g[i]; const b = Float64Array.from(buf).sort(); med[i] = medianSorted(b, M);
+    let c = 0; for (let k = 0; k < M; k++) if (Math.abs(buf[k] - med[i]) < 10) c++;
+    if (c / M > 0.85) { stat[i] = 1; ns++; }
+  }
+  if (ns < 0.05 * n) return { keep: L.map(o => o.idx) };
+  const dev = L.map(o => { let s = 0; for (let i = 0; i < n; i++) if (stat[i]) s += Math.abs(o.g[i] - med[i]); return s / ns; });
+  const thr = Math.max(4, 3 * median(dev) + 2), keep = L.filter((o, k) => dev[k] < thr).map(o => o.idx);
+  return { keep: keep.length >= Math.max(5, 0.5 * M) ? keep : L.map(o => o.idx), dropped: M - keep.length };
+}
+
 function detectLayout() {
   const { W, H } = S, N = S.nstd, sum = S.sum, sq = S.sq;
   if (!N || !S.medFrames || !S.medFrames.length) fail('NOREGION');
@@ -83,6 +106,7 @@ function detectLayout() {
   const y0 = tops.length ? tops[0] + 1 : 0, y1 = bots.length ? bots[bots.length - 1] + 1 : H;
   const cw = c0 + Math.floor((c1 - c0) * 0.92);
   S.L = { v0, v1, c0, c1, x0, x1, y0, y1, cw, vh: v1 - v0 };
+  S.win = S.phone ? Math.max(40, Math.round((v1 - v0) * 0.12)) : 40;   // search window around the predicted offset; phone flicks accelerate harder (scales with resolution)
   if (x1 - x0 < 60 || v0 - y0 < 0.08 * S.H || v1 - v0 > 0.8 * S.H) fail('NOREGION');   // the page always has a fixed header above the scrolling list
 
   // header reference (median of the sampled frames) + drop threshold for transitions/popups
@@ -105,16 +129,17 @@ function makeCrop(rgba, rw, rx, ry) {       // gray crop of viewport rows x cont
   for (let y = 0; y < h; y++) { let j = ((v0 - ry + y) * rw + (c0 - rx)) * 4; const o = y * w; for (let x = 0; x < w; x++, j += 4) g[o + x] = gray(rgba[j], rgba[j + 1], rgba[j + 2]); }
   return { g, w, h };
 }
-function sad(A, C, d, rs) {  // mean |A[r+d] - C[r]| (content row r of A appears at row r-d of C); cols step 2, rows step rs
-  const n = A.h, w = A.w; let s = 0, c = 0;
+function sad(A, C, d, rs, cs) {  // mean |A[r+d] - C[r]| (content row r of A appears at row r-d of C); cols step cs (2), rows step rs
+  cs = cs || 2; const n = A.h, w = A.w; let s = 0, c = 0;
   const r0 = d >= 0 ? d : 0, r1 = d >= 0 ? n : n + d;
-  for (let r = r0; r < r1; r += rs) { const oa = r * w, oc = (r - d) * w; for (let x = 0; x < w; x += 2) s += Math.abs(A.g[oa + x] - C.g[oc + x]); c += (w + 1) >> 1; }
+  for (let r = r0; r < r1; r += rs) { const oa = r * w, oc = (r - d) * w; for (let x = 0; x < w; x += cs) s += Math.abs(A.g[oa + x] - C.g[oc + x]); c += Math.ceil(w / cs); }
   return c ? s / c : Infinity;
 }
 function search(A, C, lo, hi) {   // like stitch.py sad_curve + best: exhaustive coarse pass (rows step 2), exact refine around the minimum
   const n = A.h, valid = d => Math.abs(d) <= n - 60;
   let cd = null, ce = Infinity;
-  for (let d = lo; d <= hi; d++) if (valid(d)) { const e = sad(A, C, d, 2); if (e < ce) { ce = e; cd = d; } }
+  const big = S.phone && A.h * A.w > 300000, rs = big ? 4 : 2, cs = big ? 4 : 2;   // large phone frames: sparser coarse pass (exact refine follows)
+  for (let d = lo; d <= hi; d++) if (valid(d)) { const e = sad(A, C, d, rs, cs); if (e < ce) { ce = e; cd = d; } }
   if (cd === null) return null;
   const res = new Map();
   for (let d = cd - 2; d <= cd + 2; d++) if (d >= lo && d <= hi && valid(d)) res.set(d, sad(A, C, d, 1));
@@ -133,7 +158,7 @@ function p1(idx, rgba, rect) {
   const C = makeCrop(rgba, W, rect.x, rect.y), T = S.track;
   if (!T.anc) { T.anc = C; T.ancPos = 0; T.prevPos = 0; T.vel = 0; S.pos[idx] = 0; S.ok[idx] = 1; return; }
   const R = Math.trunc(vh * 0.6), pred = T.prevPos + T.vel - T.ancPos;
-  let r = search(T.anc, C, Math.trunc(Math.max(-R, pred - 40)), Math.trunc(Math.min(R, pred + 40)));
+  let r = search(T.anc, C, Math.trunc(Math.max(-R, pred - S.win)), Math.trunc(Math.min(R, pred + S.win)));
   if (!r || r[1] > 12) { const r2 = search(T.anc, C, -R, R); if (r2) r = r2; }
   if (!r) return;
   const pos = T.ancPos + r[0];
@@ -284,7 +309,7 @@ function components(m, h, w) {     // 8-connected components -> stats
 function p3start() {
   const w = S.L.x1 - S.L.x0;
   S.canvas1 = compose(false);
-  S.cblur = blur5(S.canvas1, S.total, w);
+  S.cblur = S.phone ? null : blur5(S.canvas1, S.total, w);
   S.cands = [];
   S.res = new Float64Array(w); S.resN = 0;
   S.sbFrom = Math.floor(w * 0.85);
@@ -305,6 +330,7 @@ function p3(idx, rgba, rect) {
     const hw = w - S.sbFrom;
     for (let y = 0; y < vh; y++) for (let x = S.sbFrom; x < w; x++) { const i = (y * w + x) * 3; for (let c = 0; c < 3; c++) S.hist[((x - S.sbFrom) * 3 + c) * 256 + st[i + c]]++; }
     S.histN += vh;
+    if (S.phone) return;                                  // no pointer on phone recordings
     // pointer candidates: compact blobs that differ from the consensus
     const sb = blur5(st, vh, w), m = new Uint8Array(vh * w);
     for (let i = 0; i < vh * w; i++) { let d = 0; for (let c = 0; c < 3; c++) d = Math.max(d, Math.abs(sb[i * 3 + c] - S.cblur[base + i * 3 + c])); m[i] = d > 50 ? 1 : 0; }
@@ -336,7 +362,7 @@ function learnCursor() {
 }
 function p3done() {
   const w = S.L.x1 - S.L.x0;
-  S.tpl = learnCursor();
+  S.tpl = S.phone ? null : learnCursor();   // phone: touch effects are transient, the median already removes them
   // scrollbar columns
   const res = Array.from(S.res, v => v / Math.max(1, S.resN)), mres = median(res);
   const sb = res.map((r, x) => r > 2.5 * mres + 2 && x > w * 0.85);
@@ -451,7 +477,9 @@ onmessage = e => {
   try {
     let reply = {};
     switch (m.type) {
-      case 'init': S = { W: m.W, H: m.H, n: m.n, pos: new Float64Array(m.n).fill(NaN), ok: new Uint8Array(m.n), track: {} }; break;
+      case 'ov': ovAdd(m.idx, new Uint8ClampedArray(m.data)); break;
+      case 'ovdone': reply = ovDone(); break;
+      case 'init': S = { W: m.W, H: m.H, n: m.n, phone: !!m.phone, pos: new Float64Array(m.n).fill(NaN), ok: new Uint8Array(m.n), track: {} }; break;
       case 'p0': { const d = new Uint8ClampedArray(m.data); if (m.std) p0std(d); if (m.med) p0med(d); break; }
       case 'layout': reply = { L: detectLayout() }; break;
       case 'p1': p1(m.idx, new Uint8ClampedArray(m.data), m.rect); break;
