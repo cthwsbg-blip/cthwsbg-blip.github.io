@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#3cb032"><meta name="description" content="上传赛马娘「ウマ娘詳細」因子页的滚动录屏，在浏览器本地自动拼接成一张完整的长截图。"><link rel="icon" href="/assets/favicon.ico" sizes="32x32"><link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32"><title>视频生成长截图 · 因子页制作 · 赛马娘工具箱</title>
+<style>
+:root{color-scheme:light;--bg:#f6f4fb;--ink:#20283b;--muted:#5f6679;--green:#2f9e3a;--green-d:#23802d;--lime:#b5d913;--pink:#ff79d0;--pink-d:#e8509f;--pink-l:#ffeff7;--blue:#4caeff;--violet:#8c83ff;--yellow:#ffc833;--radius:20px;--round:"Hiragino Maru Gothic ProN","Hiragino Maru Gothic Pro","Arial Rounded MT Bold","Yu Gothic UI","PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",sans-serif;--latin:"Trebuchet MS","Avenir Next","Segoe UI",Arial,sans-serif;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","Segoe UI",sans-serif;font-size:16px}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;color:var(--ink);line-height:1.6;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Cg fill-opacity='.55'%3E%3Cpath fill='%23efeaf8' d='M0 0h170L60 150z'/%3E%3Cpath fill='%23fbf9ff' d='M170 0l-110 150 190-40z'/%3E%3Cpath fill='%23ece6f7' d='M170 0h170L250 110z'/%3E%3Cpath fill='%23f3effa' d='M340 0h140v130L250 110z'/%3E%3Cpath fill='%23e9e3f5' d='M60 150l190-40-60 190z'/%3E%3Cpath fill='%23f7f4fc' d='M250 110l230 20-120 170z'/%3E%3Cpath fill='%23f1ecf9' d='M0 0v320l60-170z'/%3E%3Cpath fill='%23fcfbff' d='M0 320l60-170 130 150z'/%3E%3Cpath fill='%23ece7f6' d='M250 110l110 190H190z'/%3E%3Cpath fill='%23f4f0fb' d='M480 130v220L360 300z'/%3E%3Cpath fill='%23eee9f8' d='M0 320l190-20-40 180H0z'/%3E%3Cpath fill='%23f8f6fd' d='M190 300h170l-80 180H150z'/%3E%3Cpath fill='%23ebe5f6' d='M360 300l120 50v130H280z'/%3E%3C/g%3E%3C/svg%3E") fixed}
+button,input{font:inherit}button{cursor:pointer}button,a{touch-action:manipulation}
+button:focus-visible,a:focus-visible,.drop:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.stripe{height:8px;background:repeating-linear-gradient(115deg,var(--green) 0 34px,var(--lime) 34px 52px,#fff 52px 58px,var(--pink) 58px 92px,var(--yellow) 92px 110px,#fff 110px 116px,var(--blue) 116px 150px,#fff 150px 156px)}
+header{position:relative;background:linear-gradient(100deg,#2f9e3a 0%,#3cb032 45%,#8ccb1e 100%);color:#fff;overflow:hidden;box-shadow:0 6px 18px #2f9e3a33}
+header:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,#ffffff14 0 22px,transparent 22px 60px);pointer-events:none}
+header:after{content:"";position:absolute;right:-40px;bottom:-60px;width:360px;height:160px;border-radius:50%;background:radial-gradient(closest-side,#ffffff30,transparent);pointer-events:none}
+.head{position:relative;z-index:1;max-width:1080px;margin:auto;padding:20px 28px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;min-width:0}
+.brand-icon{display:grid;place-items:center;background:#fff;width:52px;height:52px;border-radius:50%;box-shadow:0 4px 0 #1f7a2a,0 8px 18px #0003;flex-shrink:0}.brand-icon svg{width:34px;height:34px}
+.brand small{display:block;font:italic 800 11px/1.4 var(--latin);letter-spacing:2.5px;color:#f1ffe0;text-shadow:0 1px 0 #0002}
+h1{font-family:var(--round);font-size:23px;margin:0;font-weight:900;letter-spacing:1px;text-shadow:0 2px 0 #1f7a2a;white-space:nowrap}
+h1 .sub{display:inline-block;color:var(--pink-d);background:#fff;border-radius:999px;font:900 12px/1 var(--round);padding:4px 9px;vertical-align:4px;margin-left:8px;text-shadow:none;letter-spacing:.5px}
+.head-actions{display:flex;align-items:center;gap:12px;min-width:0}
+main{flex:1;width:100%;max-width:1080px;margin:auto;padding:26px 28px 36px}
+.intro{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:0 0 22px;font-size:13px;color:var(--muted)}
+.dot{width:10px;height:10px;background:var(--green);border-radius:50%;box-shadow:0 0 0 3px #2f9e3a33;flex-shrink:0}
+.panel{--accent:var(--green);--accent-l:#e7f6e3;--accent-s:#d5eecf;background:#fff;border:3px solid var(--accent-s);border-radius:var(--radius);box-shadow:7px 7px 0 var(--accent-l),0 10px 26px #4b3d8a12;position:relative;margin-bottom:26px}
+.panel.pink{--accent:var(--pink-d);--accent-l:#ffe7f4;--accent-s:#ffc9e7}.panel.blue{--accent:#3b8fe0;--accent-l:#e3f1ff;--accent-s:#c3e1ff}.panel.violet{--accent:var(--violet);--accent-l:#eeecff;--accent-s:#d6d2ff}
+.panel-title{padding:18px 24px 13px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:2px dashed var(--accent-s)}
+h2{font-family:var(--round);font-size:20px;margin:0;font-weight:900;letter-spacing:.5px;display:flex;align-items:center;gap:12px}
+.panel-title small{font:italic 900 13px var(--latin);letter-spacing:1.5px;color:#fff;background:var(--accent);padding:3px 18px 3px 14px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);white-space:nowrap}
+em{font-style:italic;font-family:var(--latin);font-weight:900;color:#fff;background:var(--accent,var(--green));border-radius:999px;min-width:38px;height:38px;display:inline-grid;place-items:center;font-size:16px;box-shadow:0 3px 0 #0002,inset 0 -3px 0 #0002;padding:0 6px}
+.panel-body{padding:22px 24px 24px}
+.drop{display:grid;place-items:center;text-align:center;gap:6px;min-height:230px;border:3px dashed #bfe3b7;border-radius:18px;background:linear-gradient(180deg,#f3fbf0,#fff);padding:26px 18px;cursor:pointer;transition:border-color .15s,background .15s,transform .15s}
+.drop:hover{border-color:var(--green)}.drop.over{border-color:var(--pink-d);background:linear-gradient(180deg,#fff0f8,#fff);transform:scale(1.01)}
+.drop-icon{width:64px;height:64px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 5px 0 #1f7a2a,0 10px 20px #2f9e3a33;margin-bottom:6px}.drop-icon svg{width:34px;height:34px}
+.drop strong{font-family:var(--round);font-size:19px;font-weight:900}
+.drop p{margin:0;color:var(--muted);font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:999px;padding:10px 24px;font-weight:900;font-size:15px;color:#fff;background:linear-gradient(90deg,var(--pink-d),var(--pink));box-shadow:0 4px 0 #c43c86;text-decoration:none;transition:transform .15s,box-shadow .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 #c43c86;color:#fff}
+.btn.green{background:linear-gradient(90deg,var(--green-d),#46b83a);box-shadow:0 4px 0 #1f6e27}.btn.green:hover{box-shadow:0 6px 0 #1f6e27}
+.btn.ghost{background:#fff;color:var(--green-d);border:2px solid #cfe9c9;box-shadow:0 3px 0 #e1f4dc}.btn.ghost:hover{color:var(--pink-d);box-shadow:0 5px 0 #e1f4dc}
+.drop .btn{margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:12px}.chips span{font-size:12px;font-weight:700;color:var(--green-d);background:#f1faee;border:2px solid #d5eecf;border-radius:999px;padding:1px 10px}
+.tips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}
+.tip{background:#fbfaff;border:2px solid #ece8f5;border-radius:14px;padding:12px 14px;font-size:13px;color:var(--muted)}
+.tip kbd{font:600 11px/1 var(--round,inherit);background:#fff;border:1.5px solid #d9d3e8;border-bottom-width:2.5px;border-radius:5px;padding:1px 5px;color:var(--ink);white-space:nowrap}
+.tip b{display:block;color:var(--ink);font-family:var(--round);font-size:14px;margin-bottom:2px}
+.prog-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.prog-head strong{font-family:var(--round);font-size:18px;font-weight:900}
+.pct{font:italic 900 30px var(--latin);color:var(--green)}
+.track{height:16px;border-radius:999px;background:#eef2ec;overflow:hidden;box-shadow:inset 0 1px 3px #0001;margin:8px 0 14px}
+.bar{height:100%;width:0;background:repeating-linear-gradient(115deg,var(--green) 0 16px,#46b83a 16px 32px);border-radius:999px;transition:width .25s}
+.steps{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0 0 12px}
+.steps li{font-size:12px;font-weight:800;color:#9aa0b2;background:#f4f3f8;border-radius:999px;padding:2px 11px}
+.steps li.done{color:var(--green-d);background:#e7f6e3}.steps li.now{color:#fff;background:var(--pink-d)}
+.meta{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin:0 0 14px}
+.note{font-size:12px;color:var(--muted);margin:10px 0 0}
+.error{--accent:#e05262;--accent-l:#ffe9ec;--accent-s:#ffc9d0}
+.error-msg{margin:0 0 16px;font-weight:700;line-height:1.75}
+.result-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:14px}
+.result-info{font-size:13px;color:var(--muted);font-weight:700}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.preview{max-height:78vh;overflow:auto;border:2px solid #ece8f5;border-radius:14px;background:repeating-conic-gradient(#f4f2f9 0 25%,#fff 0 50%) 0 0/20px 20px;text-align:center;padding:10px}
+.preview img{display:block;margin:auto;max-width:100%;height:auto;box-shadow:0 6px 20px #0002;border-radius:6px}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:0 25px 40px}footer .stripe{max-width:420px;margin:10px auto 18px;border-radius:999px;height:6px}footer p{margin:4px 0}
+[hidden]{display:none!important}
+@media(max-width:760px){main{padding:18px 14px 28px}.head{padding:15px}h1{font-size:19px}h1 .sub{font-size:11px;padding:3px 7px;margin-left:6px;vertical-align:3px}.brand small{font-size:9px;letter-spacing:1.3px}.brand-icon{width:42px;height:42px}.brand-icon svg{width:28px;height:28px}.head .brand{gap:10px}.head-actions{gap:8px}.panel-body{padding:18px}.panel-title{padding:15px 18px 11px}.panel{box-shadow:5px 5px 0 var(--accent-l)}.panel-title small{display:none}.tips{grid-template-columns:1fr;gap:10px}.drop{min-height:200px}.intro{font-size:12px}.preview{max-height:70vh;padding:6px}}
+@media(max-width:420px){h1{font-size:17px;letter-spacing:.5px}h1 .sub{display:block;width:max-content;margin:3px 0 0;vertical-align:0}.brand small{display:none}.btn{padding:10px 18px}.actions{width:100%}.actions .btn{flex:1}}
+</style><link rel="stylesheet" href="/assets/author-badge.css"><script src="/assets/author-badge.js" defer></script></head>
+<body>
+<div class="stripe"></div>
+<header><div class="head"><a class="brand" href="#top"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9 7c-3 7-3 16 1 22 3 5 7 7 10 7s7-2 10-7c4-6 4-15 1-22l-6 2c2 5 2 12-1 16-1 2-2.5 3-4 3s-3-1-4-3c-3-4-3-11-1-16z" fill="#2f9e3a"/><g fill="#fff"><circle cx="11.5" cy="15" r="1.6"/><circle cx="12.5" cy="22" r="1.6"/><circle cx="28.5" cy="15" r="1.6"/><circle cx="27.5" cy="22" r="1.6"/></g><path d="M20 4l1.6 3.3 3.6.5-2.6 2.5.6 3.6L20 12.2l-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z" fill="#ff79d0"/></svg></span><span><small>VIDEO → LONG SCREENSHOT</small><h1>视频生成长截图<span class="sub">因子页制作</span></h1></span></a><div class="head-actions"><a class="bili-badge bili-badge--compact" data-bili-badge href="https://space.bilibili.com/212027" target="_blank" rel="noopener" aria-label="有问题联系 61444不玩赛马娘攻略组 的 B 站主页"><span class="bili-tag">有问题联系</span><img src="https://i2.hdslb.com/bfs/face/a0b5f45b66472758d03d5342e06bf64e4667ba5a.jpg@128w_128h_1c.webp" alt="61444不玩赛马娘攻略组" width="32" height="32" referrerpolicy="no-referrer" loading="lazy"><span class="bili-name" data-bili-name>61444不玩赛马娘攻略组</span><span class="bili-go">· B站主页 ↗</span></a></div></div></header>
+<main id="top">
+<div class="intro"><span class="dot"></span><span>把「ウマ娘詳細」因子页的滚动录屏拼成一张完整长图 · 视频只在你的浏览器里处理，不会上传</span></div>
+
+<section class="panel" id="upload-panel"><div class="panel-title"><h2><em>01</em>上传录屏视频</h2><small>UPLOAD</small></div><div class="panel-body">
+<div class="drop" id="drop" tabindex="0" role="button" aria-label="选择或拖入视频文件">
+<div><div class="drop-icon" aria-hidden="true" style="margin:0 auto 10px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6.5 9.5 12 4l5.5 5.5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
+<strong>点击选择视频，或把视频拖到这里</strong><p>支持 MP4 / MOV（推荐 H.264 编码）</p>
+<button type="button" class="btn green" id="pick">选择视频</button>
+<div class="chips"><span>720p – 1080p</span><span>≤ 60 秒</span><span>≤ 300 MB</span><span>本地处理</span></div></div>
+</div>
+<input type="file" id="file" accept="video/*,.mp4,.mov,.m4v,.webm,.mkv" hidden>
+<div class="tips">
+<div class="tip"><b>① 打开因子页</b>育成／角色详情里的「ウマ娘詳細」，切到「継承」标签。</div>
+<div class="tip"><b>② 录屏并慢慢滑动</b>从列表顶部开始录，匀速滑到最底部；中途停顿没关系。推荐用 <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd> 录屏（QQ录屏可能不支持）。</div>
+<div class="tip"><b>③ 上传视频</b>自动识别固定标题栏与滚动列表，拼接并去掉鼠标指针。</div>
+</div>
+</div></section>
+
+<section class="panel blue" id="work-panel" hidden><div class="panel-title"><h2><em>02</em>正在生成</h2><small>PROCESSING</small></div><div class="panel-body">
+<div class="prog-head"><strong id="stage" aria-live="polite">读取视频</strong><span class="pct" id="pct">0%</span></div>
+<div class="track" role="progressbar" aria-label="处理进度"><div class="bar" id="bar"></div></div>
+<ul class="steps" id="steps"><li data-k="read">读取视频</li><li data-k="layout">识别界面</li><li data-k="scroll">计算滚动</li><li data-k="stitch">拼接画面</li><li data-k="cursor">去除鼠标</li><li data-k="png">生成图片</li></ul>
+<p class="meta" id="meta"></p>
+<button type="button" class="btn ghost" id="cancel">取消</button>
+<p class="note">处理时请保持本页面在前台；手机上较长的视频可能需要一两分钟。</p>
+</div></section>
+
+<section class="panel error" id="error" hidden><div class="panel-title"><h2><em>!</em>没能生成长截图</h2><small>ERROR</small></div><div class="panel-body">
+<p class="error-msg" id="error-msg" role="alert"></p>
+<button type="button" class="btn green" id="error-reset">换一个视频</button>
+</div></section>
+
+<section class="panel pink" id="result-panel" hidden><div class="panel-title"><h2><em>03</em>长截图</h2><small>RESULT</small></div><div class="panel-body">
+<div class="result-top"><span class="result-info" id="result-info"></span><div class="actions"><a class="btn" id="download" href="#" download="longshot.png">下载 PNG</a><button type="button" class="btn ghost" id="again">换一个视频</button></div></div>
+<div class="preview"><img id="result-img" alt="拼接好的长截图"></div>
+<p class="note">手机上也可以长按图片保存到相册。</p>
+</div></section>
+</main>
+<footer><div class="stripe" aria-hidden="true"></div><p>非官方同人工具 · 游戏名称与商标归各权利者所有 · 视频仅在本地处理</p><p>视频解析使用 <a href="https://github.com/gpac/mp4box.js" target="_blank" rel="noopener" style="color:var(--muted)">mp4box.js</a>（BSD-3-Clause）</p></footer>
+<script src="mp4box.all.min.js"></script>
+<script src="app.js"></script>
+</body></html>
