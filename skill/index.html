@@ -14,7 +14,7 @@
     <script>
     /* uma-site loader: CDN (jsDelivr, SRI-pinned) with same-origin fallback; runs the entry module exactly once. */
     (function(){
-    var C={"cdn":"https://cdn.jsdelivr.net/gh/cthwsbg-blip/cthwsbg-blip.github.io@95bfc6a81f72a3c0af400a077fd6282638002fcd/skill/assets/","local":"/skill/assets/","js":"index-CWfOir_I.js","jsSri":"sha384-0Mu10no4qEpwc6z6ZgKnZePhxCixCDJJXah9bDKx0dZhW8O87pV2EoHLzuDy3vTF","css":"index-DQIU2Lqu.css","cssSri":"sha384-cwFuFJgikXQ+DeeGmugFIW7ForKbzE1Bl2SHcSfo1undDj8ACsJb4a+Sp+r6GGH3"},d=document,ran=false,started=0,fails=0,originStarted=false,ctrls=[];
+    var C={"cdn":"","local":"/skill/assets/","js":"index-TmiHbEI6.js","jsSri":"sha384-W0uMIn41mKKuNeaT7E76l+Nzt9dHg45TZgwalB1T8akbhY5QMxcQYjkmCxTCZ7st","css":"index-DQIU2Lqu.css","cssSri":"sha384-cwFuFJgikXQ+DeeGmugFIW7ForKbzE1Bl2SHcSfo1undDj8ACsJb4a+Sp+r6GGH3"},d=document,ran=false,started=0,fails=0,originStarted=false,ctrls=[];
     function booted(){return !d.getElementById('uma-boot')}
     function say(m,s,err){var b=d.getElementById('uma-boot');if(!b)return;d.getElementById('uma-boot-msg').textContent=m;d.getElementById('uma-boot-sub').textContent=s||'';
       if(err&&!b.querySelector('button')){b.className='ub-err';var k=d.createElement('button');k.type='button';k.textContent='刷新页面';k.onclick=function(){location.reload()};b.firstChild.appendChild(k)}}
