@@ -1,0 +1,7189 @@
+{
+  "source": "https://github.com/alpha123/uma-skill-tools",
+  "license": "GPL-3.0",
+  "courses": [
+    {
+      "id": 10101,
+      "track": 10001,
+      "distance": 1200,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            400,
+            275
+          ],
+          [
+            675,
+            259
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            400,
+            2
+          ],
+          [
+            934,
+            1200,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10102,
+      "track": 10001,
+      "distance": 1500,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            150,
+            275
+          ],
+          [
+            700,
+            275
+          ],
+          [
+            975,
+            259
+          ]
+        ],
+        "straights": [
+          [
+            425,
+            700,
+            2
+          ],
+          [
+            1234,
+            1500,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10103,
+      "track": 10001,
+      "distance": 1800,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            175,
+            275
+          ],
+          [
+            450,
+            275
+          ],
+          [
+            1000,
+            275
+          ],
+          [
+            1275,
+            259
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            175,
+            1
+          ],
+          [
+            725,
+            1000,
+            2
+          ],
+          [
+            1534,
+            1800,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10104,
+      "track": 10001,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            375,
+            275
+          ],
+          [
+            650,
+            275
+          ],
+          [
+            1200,
+            275
+          ],
+          [
+            1475,
+            259
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            375,
+            1
+          ],
+          [
+            925,
+            1200,
+            2
+          ],
+          [
+            1734,
+            2000,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10105,
+      "track": 10001,
+      "distance": 2600,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            175,
+            275
+          ],
+          [
+            450,
+            275
+          ],
+          [
+            975,
+            275
+          ],
+          [
+            1250,
+            275
+          ],
+          [
+            1800,
+            275
+          ],
+          [
+            2075,
+            259
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            175,
+            2
+          ],
+          [
+            725,
+            975,
+            1
+          ],
+          [
+            1525,
+            1800,
+            2
+          ],
+          [
+            2334,
+            2600,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10107,
+      "track": 10001,
+      "distance": 1700,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            240,
+            230
+          ],
+          [
+            470,
+            230
+          ],
+          [
+            980,
+            230
+          ],
+          [
+            1210,
+            226
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            240,
+            1
+          ],
+          [
+            700,
+            980,
+            2
+          ],
+          [
+            1436,
+            1700,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10201,
+      "track": 10002,
+      "distance": 1000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            310,
+            220
+          ],
+          [
+            530,
+            208
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            310,
+            2
+          ],
+          [
+            738,
+            1000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            555,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10202,
+      "track": 10002,
+      "distance": 1200,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            510,
+            220
+          ],
+          [
+            730,
+            208
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            510,
+            2
+          ],
+          [
+            938,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            755,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10203,
+      "track": 10002,
+      "distance": 1800,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            320,
+            220
+          ],
+          [
+            540,
+            220
+          ],
+          [
+            1110,
+            220
+          ],
+          [
+            1330,
+            208
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            320,
+            1
+          ],
+          [
+            760,
+            1110,
+            2
+          ],
+          [
+            1538,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            220,
+            200,
+            -10000
+          ],
+          [
+            665,
+            720,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10204,
+      "track": 10002,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            520,
+            220
+          ],
+          [
+            740,
+            220
+          ],
+          [
+            1310,
+            220
+          ],
+          [
+            1530,
+            208
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            520,
+            1
+          ],
+          [
+            960,
+            1310,
+            2
+          ],
+          [
+            1738,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            420,
+            200,
+            -10000
+          ],
+          [
+            865,
+            720,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10205,
+      "track": 10002,
+      "distance": 2600,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            260,
+            240
+          ],
+          [
+            500,
+            230
+          ],
+          [
+            1120,
+            220
+          ],
+          [
+            1340,
+            220
+          ],
+          [
+            1910,
+            220
+          ],
+          [
+            2130,
+            208
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            260,
+            2
+          ],
+          [
+            730,
+            1120,
+            1
+          ],
+          [
+            1560,
+            1910,
+            2
+          ],
+          [
+            2338,
+            2600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            495,
+            10000
+          ],
+          [
+            970,
+            200,
+            -10000
+          ],
+          [
+            1425,
+            720,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10207,
+      "track": 10002,
+      "distance": 1700,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            350,
+            190
+          ],
+          [
+            540,
+            190
+          ],
+          [
+            1070,
+            190
+          ],
+          [
+            1260,
+            180
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            350,
+            1
+          ],
+          [
+            730,
+            1070,
+            2
+          ],
+          [
+            1440,
+            1700,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            275,
+            340,
+            -10000
+          ],
+          [
+            615,
+            670,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10301,
+      "track": 10003,
+      "distance": 1000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 4,
+      "turnLabel": "直线",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [],
+        "straights": [
+          [
+            0,
+            1000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            240,
+            10000
+          ],
+          [
+            240,
+            60,
+            -10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10302,
+      "track": 10003,
+      "distance": 1200,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            450,
+            200
+          ],
+          [
+            650,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            450,
+            2
+          ],
+          [
+            842,
+            1200,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10303,
+      "track": 10003,
+      "distance": 1400,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            650,
+            200
+          ],
+          [
+            850,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            650,
+            2
+          ],
+          [
+            1042,
+            1400,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10304,
+      "track": 10003,
+      "distance": 1600,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            550,
+            200
+          ],
+          [
+            750,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            550,
+            2
+          ],
+          [
+            942,
+            1600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            250,
+            350,
+            10000
+          ],
+          [
+            600,
+            300,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10305,
+      "track": 10003,
+      "distance": 1800,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            750,
+            200
+          ],
+          [
+            950,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            750,
+            2
+          ],
+          [
+            1142,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            450,
+            350,
+            10000
+          ],
+          [
+            800,
+            300,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10306,
+      "track": 10003,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            420,
+            200
+          ],
+          [
+            620,
+            200
+          ],
+          [
+            1250,
+            200
+          ],
+          [
+            1450,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            420,
+            1
+          ],
+          [
+            820,
+            1250,
+            2
+          ],
+          [
+            1642,
+            2000,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10307,
+      "track": 10003,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            950,
+            200
+          ],
+          [
+            1150,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            950,
+            2
+          ],
+          [
+            1342,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            650,
+            350,
+            10000
+          ],
+          [
+            1000,
+            300,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10308,
+      "track": 10003,
+      "distance": 2200,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            650,
+            200
+          ],
+          [
+            850,
+            200
+          ],
+          [
+            1450,
+            200
+          ],
+          [
+            1650,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            650,
+            1
+          ],
+          [
+            1050,
+            1450,
+            2
+          ],
+          [
+            1842,
+            2200,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10309,
+      "track": 10003,
+      "distance": 2400,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            810,
+            200
+          ],
+          [
+            1010,
+            200
+          ],
+          [
+            1650,
+            200
+          ],
+          [
+            1850,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            810,
+            1
+          ],
+          [
+            1210,
+            1650,
+            2
+          ],
+          [
+            2042,
+            2400,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10310,
+      "track": 10003,
+      "distance": 1200,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            540,
+            160
+          ],
+          [
+            700,
+            147
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            540,
+            2
+          ],
+          [
+            847,
+            1200,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10311,
+      "track": 10003,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            400,
+            160
+          ],
+          [
+            560,
+            160
+          ],
+          [
+            1140,
+            160
+          ],
+          [
+            1300,
+            147
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            400,
+            1
+          ],
+          [
+            720,
+            1140,
+            2
+          ],
+          [
+            1447,
+            1800,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10401,
+      "track": 10004,
+      "distance": 1200,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            420,
+            300
+          ],
+          [
+            720,
+            188
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            420,
+            2
+          ],
+          [
+            908,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            180,
+            100,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10402,
+      "track": 10004,
+      "distance": 1800,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            330,
+            200
+          ],
+          [
+            530,
+            200
+          ],
+          [
+            1020,
+            300
+          ],
+          [
+            1320,
+            188
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            330,
+            1
+          ],
+          [
+            730,
+            1020,
+            2
+          ],
+          [
+            1508,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            780,
+            100,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10403,
+      "track": 10004,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            530,
+            200
+          ],
+          [
+            730,
+            200
+          ],
+          [
+            1220,
+            300
+          ],
+          [
+            1520,
+            188
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            530,
+            1
+          ],
+          [
+            930,
+            1220,
+            2
+          ],
+          [
+            1708,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            980,
+            100,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10404,
+      "track": 10004,
+      "distance": 2600,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            220,
+            300
+          ],
+          [
+            520,
+            200
+          ],
+          [
+            1130,
+            200
+          ],
+          [
+            1330,
+            200
+          ],
+          [
+            1820,
+            300
+          ],
+          [
+            2120,
+            188
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            220,
+            2
+          ],
+          [
+            720,
+            1130,
+            1
+          ],
+          [
+            1530,
+            1820,
+            2
+          ],
+          [
+            2308,
+            2600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            80,
+            15000
+          ],
+          [
+            1580,
+            100,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10405,
+      "track": 10004,
+      "distance": 1150,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            210
+          ],
+          [
+            710,
+            145
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            500,
+            2
+          ],
+          [
+            855,
+            1150,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 10406,
+      "track": 10004,
+      "distance": 1700,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            360,
+            170
+          ],
+          [
+            530,
+            170
+          ],
+          [
+            1050,
+            210
+          ],
+          [
+            1260,
+            145
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            360,
+            1
+          ],
+          [
+            700,
+            1050,
+            2
+          ],
+          [
+            1405,
+            1700,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            285,
+            320,
+            -10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10501,
+      "track": 10005,
+      "distance": 1200,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            300,
+            350
+          ],
+          [
+            650,
+            240
+          ]
+        ],
+        "straights": [
+          [
+            890,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            200,
+            -15000
+          ],
+          [
+            1025,
+            110,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10502,
+      "track": 10005,
+      "distance": 1600,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            50,
+            450
+          ],
+          [
+            700,
+            350
+          ],
+          [
+            1050,
+            240
+          ]
+        ],
+        "straights": [
+          [
+            1290,
+            1600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            300,
+            300,
+            -15000
+          ],
+          [
+            1425,
+            110,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10503,
+      "track": 10005,
+      "distance": 1800,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            175,
+            250
+          ],
+          [
+            425,
+            250
+          ],
+          [
+            1000,
+            250
+          ],
+          [
+            1250,
+            240
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            175,
+            1
+          ],
+          [
+            675,
+            1000,
+            2
+          ],
+          [
+            1490,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            1,
+            35,
+            20000
+          ],
+          [
+            125,
+            200,
+            15000
+          ],
+          [
+            425,
+            400,
+            -15000
+          ],
+          [
+            1625,
+            110,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10504,
+      "track": 10005,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            375,
+            250
+          ],
+          [
+            625,
+            250
+          ],
+          [
+            1200,
+            250
+          ],
+          [
+            1450,
+            240
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            375,
+            1
+          ],
+          [
+            875,
+            1200,
+            2
+          ],
+          [
+            1690,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            125,
+            110,
+            20000
+          ],
+          [
+            325,
+            200,
+            15000
+          ],
+          [
+            625,
+            400,
+            -15000
+          ],
+          [
+            1825,
+            110,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10505,
+      "track": 10005,
+      "distance": 2200,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            403,
+            247
+          ],
+          [
+            650,
+            450
+          ],
+          [
+            1300,
+            350
+          ],
+          [
+            1650,
+            240
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            403,
+            1
+          ],
+          [
+            1890,
+            2200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            153,
+            110,
+            20000
+          ],
+          [
+            353,
+            200,
+            15000
+          ],
+          [
+            900,
+            300,
+            -15000
+          ],
+          [
+            2025,
+            110,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10506,
+      "track": 10005,
+      "distance": 2500,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            100,
+            146
+          ],
+          [
+            246,
+            250
+          ],
+          [
+            875,
+            250
+          ],
+          [
+            1125,
+            250
+          ],
+          [
+            1700,
+            250
+          ],
+          [
+            1950,
+            240
+          ]
+        ],
+        "straights": [
+          [
+            496,
+            875,
+            1
+          ],
+          [
+            1375,
+            1700,
+            2
+          ],
+          [
+            2190,
+            2500,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            621,
+            110,
+            20000
+          ],
+          [
+            825,
+            200,
+            15000
+          ],
+          [
+            1125,
+            400,
+            -15000
+          ],
+          [
+            2325,
+            110,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10507,
+      "track": 10005,
+      "distance": 3600,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 4,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            290,
+            250
+          ],
+          [
+            540,
+            250
+          ],
+          [
+            1115,
+            250
+          ],
+          [
+            1365,
+            250
+          ],
+          [
+            1975,
+            250
+          ],
+          [
+            2225,
+            250
+          ],
+          [
+            2800,
+            250
+          ],
+          [
+            3050,
+            240
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            290,
+            1
+          ],
+          [
+            790,
+            1115,
+            2
+          ],
+          [
+            1615,
+            1975,
+            1
+          ],
+          [
+            2475,
+            2800,
+            2
+          ],
+          [
+            3290,
+            3600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            40,
+            110,
+            20000
+          ],
+          [
+            240,
+            200,
+            15000
+          ],
+          [
+            540,
+            400,
+            -15000
+          ],
+          [
+            1740,
+            110,
+            20000
+          ],
+          [
+            1925,
+            200,
+            15000
+          ],
+          [
+            2225,
+            400,
+            -15000
+          ],
+          [
+            3425,
+            110,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10508,
+      "track": 10005,
+      "distance": 1200,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            200
+          ],
+          [
+            700,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            500,
+            2
+          ],
+          [
+            892,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            175,
+            175,
+            -15000
+          ],
+          [
+            1000,
+            175,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10509,
+      "track": 10005,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            350,
+            200
+          ],
+          [
+            550,
+            200
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            1300,
+            192
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            350,
+            1
+          ],
+          [
+            750,
+            1100,
+            1
+          ],
+          [
+            1492,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            100,
+            175,
+            15000
+          ],
+          [
+            350,
+            175,
+            10000
+          ],
+          [
+            775,
+            175,
+            -15000
+          ],
+          [
+            1600,
+            175,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10601,
+      "track": 10006,
+      "distance": 1400,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            350,
+            275
+          ],
+          [
+            625,
+            250
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            350,
+            2
+          ],
+          [
+            875,
+            1400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            125,
+            75,
+            20000
+          ],
+          [
+            250,
+            250,
+            -15000
+          ],
+          [
+            950,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10602,
+      "track": 10006,
+      "distance": 1600,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            550,
+            275
+          ],
+          [
+            825,
+            250
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            550,
+            2
+          ],
+          [
+            1075,
+            1600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            325,
+            75,
+            20000
+          ],
+          [
+            450,
+            250,
+            -15000
+          ],
+          [
+            1150,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10603,
+      "track": 10006,
+      "distance": 1800,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            75,
+            250
+          ],
+          [
+            750,
+            275
+          ],
+          [
+            1025,
+            250
+          ]
+        ],
+        "straights": [
+          [
+            325,
+            750,
+            2
+          ],
+          [
+            1275,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            525,
+            75,
+            20000
+          ],
+          [
+            650,
+            250,
+            -15000
+          ],
+          [
+            1350,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10604,
+      "track": 10006,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            200,
+            200
+          ],
+          [
+            950,
+            275
+          ],
+          [
+            1225,
+            250
+          ]
+        ],
+        "straights": [
+          [
+            400,
+            950,
+            2
+          ],
+          [
+            1475,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            725,
+            75,
+            20000
+          ],
+          [
+            850,
+            250,
+            -15000
+          ],
+          [
+            1550,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10605,
+      "track": 10006,
+      "distance": 2300,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            225,
+            250
+          ],
+          [
+            475,
+            325
+          ],
+          [
+            1250,
+            275
+          ],
+          [
+            1525,
+            250
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            225,
+            1
+          ],
+          [
+            800,
+            1250,
+            2
+          ],
+          [
+            1775,
+            2300,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            1025,
+            75,
+            20000
+          ],
+          [
+            1150,
+            250,
+            -15000
+          ],
+          [
+            1850,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10606,
+      "track": 10006,
+      "distance": 2400,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            325,
+            250
+          ],
+          [
+            575,
+            325
+          ],
+          [
+            1350,
+            275
+          ],
+          [
+            1625,
+            250
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            325,
+            1
+          ],
+          [
+            900,
+            1350,
+            2
+          ],
+          [
+            1875,
+            2400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            40,
+            15000
+          ],
+          [
+            1125,
+            75,
+            20000
+          ],
+          [
+            1250,
+            250,
+            -15000
+          ],
+          [
+            1950,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10607,
+      "track": 10006,
+      "distance": 2500,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            425,
+            250
+          ],
+          [
+            675,
+            325
+          ],
+          [
+            1450,
+            275
+          ],
+          [
+            1725,
+            250
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            425,
+            1
+          ],
+          [
+            1000,
+            1450,
+            2
+          ],
+          [
+            1975,
+            2500,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            140,
+            15000
+          ],
+          [
+            1225,
+            75,
+            20000
+          ],
+          [
+            1350,
+            250,
+            -15000
+          ],
+          [
+            2050,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10608,
+      "track": 10006,
+      "distance": 3400,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            292,
+            275
+          ],
+          [
+            567,
+            275
+          ],
+          [
+            1325,
+            250
+          ],
+          [
+            1575,
+            325
+          ],
+          [
+            2350,
+            275
+          ],
+          [
+            2625,
+            250
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            292,
+            2
+          ],
+          [
+            842,
+            1325,
+            1
+          ],
+          [
+            1900,
+            2350,
+            2
+          ],
+          [
+            2875,
+            3400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            67,
+            75,
+            20000
+          ],
+          [
+            192,
+            250,
+            -15000
+          ],
+          [
+            892,
+            150,
+            15000
+          ],
+          [
+            2125,
+            75,
+            20000
+          ],
+          [
+            2250,
+            250,
+            -15000
+          ],
+          [
+            2950,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10609,
+      "track": 10006,
+      "distance": 1300,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            350,
+            225
+          ],
+          [
+            575,
+            224
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            350,
+            2
+          ],
+          [
+            799,
+            1300,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            275,
+            200,
+            -10000
+          ],
+          [
+            800,
+            250,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10610,
+      "track": 10006,
+      "distance": 1400,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            450,
+            225
+          ],
+          [
+            675,
+            224
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            450,
+            2
+          ],
+          [
+            899,
+            1400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            375,
+            200,
+            -10000
+          ],
+          [
+            900,
+            250,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10611,
+      "track": 10006,
+      "distance": 1600,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            650,
+            225
+          ],
+          [
+            875,
+            224
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            650,
+            2
+          ],
+          [
+            1099,
+            1600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            575,
+            200,
+            -10000
+          ],
+          [
+            1100,
+            250,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10612,
+      "track": 10006,
+      "distance": 2100,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            200,
+            250
+          ],
+          [
+            450,
+            250
+          ],
+          [
+            1150,
+            225
+          ],
+          [
+            1375,
+            224
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            200,
+            1
+          ],
+          [
+            700,
+            1150,
+            2
+          ],
+          [
+            1599,
+            2100,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            1075,
+            200,
+            -10000
+          ],
+          [
+            1600,
+            250,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10701,
+      "track": 10007,
+      "distance": 1200,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            300,
+            250
+          ],
+          [
+            550,
+            238
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            2
+          ],
+          [
+            788,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            100,
+            775,
+            -10000
+          ],
+          [
+            875,
+            100,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10702,
+      "track": 10007,
+      "distance": 1400,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            250
+          ],
+          [
+            750,
+            238
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            500,
+            2
+          ],
+          [
+            988,
+            1400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            300,
+            775,
+            -10000
+          ],
+          [
+            1075,
+            100,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10703,
+      "track": 10007,
+      "distance": 1600,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            150,
+            150
+          ],
+          [
+            700,
+            250
+          ],
+          [
+            950,
+            238
+          ]
+        ],
+        "straights": [
+          [
+            300,
+            700,
+            2
+          ],
+          [
+            1188,
+            1600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            500,
+            775,
+            -10000
+          ],
+          [
+            1275,
+            100,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10704,
+      "track": 10007,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            300,
+            200
+          ],
+          [
+            500,
+            200
+          ],
+          [
+            1100,
+            250
+          ],
+          [
+            1350,
+            238
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            1
+          ],
+          [
+            700,
+            1100,
+            2
+          ],
+          [
+            1588,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            50,
+            20000
+          ],
+          [
+            900,
+            775,
+            -10000
+          ],
+          [
+            1675,
+            100,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10705,
+      "track": 10007,
+      "distance": 2200,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            200
+          ],
+          [
+            700,
+            200
+          ],
+          [
+            1300,
+            250
+          ],
+          [
+            1550,
+            238
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            500,
+            1
+          ],
+          [
+            900,
+            1300,
+            2
+          ],
+          [
+            1788,
+            2200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            150,
+            -10000
+          ],
+          [
+            150,
+            100,
+            20000
+          ],
+          [
+            1100,
+            775,
+            -10000
+          ],
+          [
+            1875,
+            100,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10707,
+      "track": 10007,
+      "distance": 1400,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            600,
+            200
+          ],
+          [
+            800,
+            190
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            600,
+            2
+          ],
+          [
+            990,
+            1400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            425,
+            600,
+            -15000
+          ],
+          [
+            1025,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10708,
+      "track": 10007,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            270,
+            165
+          ],
+          [
+            435,
+            165
+          ],
+          [
+            1000,
+            200
+          ],
+          [
+            1200,
+            190
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            270,
+            1
+          ],
+          [
+            600,
+            1000,
+            2
+          ],
+          [
+            1390,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            50,
+            15000
+          ],
+          [
+            825,
+            600,
+            -15000
+          ],
+          [
+            1425,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10801,
+      "track": 10008,
+      "distance": 1200,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            320,
+            275
+          ],
+          [
+            595,
+            277
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            320,
+            2
+          ],
+          [
+            872,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            120,
+            175,
+            15000
+          ],
+          [
+            420,
+            150,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10802,
+      "track": 10008,
+      "distance": 1400,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            520,
+            275
+          ],
+          [
+            795,
+            277
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            520,
+            2
+          ],
+          [
+            1072,
+            1400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            320,
+            175,
+            15000
+          ],
+          [
+            620,
+            150,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10803,
+      "track": 10008,
+      "distance": 1400,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            250
+          ],
+          [
+            750,
+            247
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            500,
+            2
+          ],
+          [
+            997,
+            1400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            250,
+            100,
+            20000
+          ],
+          [
+            350,
+            225,
+            10000
+          ],
+          [
+            575,
+            150,
+            -20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10804,
+      "track": 10008,
+      "distance": 1600,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            720,
+            275
+          ],
+          [
+            995,
+            277
+          ]
+        ],
+        "straights": [
+          [
+            200,
+            720,
+            2
+          ],
+          [
+            1272,
+            1600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            520,
+            175,
+            15000
+          ],
+          [
+            820,
+            150,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10805,
+      "track": 10008,
+      "distance": 1600,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            700,
+            250
+          ],
+          [
+            950,
+            247
+          ]
+        ],
+        "straights": [
+          [
+            200,
+            700,
+            2
+          ],
+          [
+            1197,
+            1600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            450,
+            100,
+            20000
+          ],
+          [
+            550,
+            225,
+            10000
+          ],
+          [
+            775,
+            150,
+            -20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10806,
+      "track": 10008,
+      "distance": 1800,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            900,
+            250
+          ],
+          [
+            1150,
+            247
+          ]
+        ],
+        "straights": [
+          [
+            400,
+            900,
+            2
+          ],
+          [
+            1397,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            650,
+            100,
+            20000
+          ],
+          [
+            750,
+            225,
+            10000
+          ],
+          [
+            975,
+            150,
+            -20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10807,
+      "track": 10008,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            400,
+            185
+          ],
+          [
+            585,
+            185
+          ],
+          [
+            1120,
+            275
+          ],
+          [
+            1395,
+            277
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            400,
+            1
+          ],
+          [
+            770,
+            1120,
+            2
+          ],
+          [
+            1672,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            970,
+            175,
+            15000
+          ],
+          [
+            1270,
+            150,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10808,
+      "track": 10008,
+      "distance": 2200,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            400,
+            200
+          ],
+          [
+            600,
+            200
+          ],
+          [
+            1300,
+            250
+          ],
+          [
+            1550,
+            247
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            400,
+            1
+          ],
+          [
+            800,
+            1300,
+            2
+          ],
+          [
+            1797,
+            2200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            1050,
+            100,
+            20000
+          ],
+          [
+            1150,
+            225,
+            10000
+          ],
+          [
+            1375,
+            150,
+            -20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10809,
+      "track": 10008,
+      "distance": 2400,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            600,
+            200
+          ],
+          [
+            800,
+            200
+          ],
+          [
+            1500,
+            250
+          ],
+          [
+            1750,
+            247
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            600,
+            1
+          ],
+          [
+            1000,
+            1500,
+            2
+          ],
+          [
+            1997,
+            2400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            1250,
+            100,
+            20000
+          ],
+          [
+            1350,
+            225,
+            10000
+          ],
+          [
+            1575,
+            150,
+            -20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10810,
+      "track": 10008,
+      "distance": 3000,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            261,
+            250
+          ],
+          [
+            511,
+            250
+          ],
+          [
+            1250,
+            200
+          ],
+          [
+            1450,
+            200
+          ],
+          [
+            2100,
+            250
+          ],
+          [
+            2350,
+            247
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            261,
+            2
+          ],
+          [
+            761,
+            1250,
+            1
+          ],
+          [
+            1650,
+            2100,
+            2
+          ],
+          [
+            2597,
+            3000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            11,
+            100,
+            20000
+          ],
+          [
+            111,
+            225,
+            10000
+          ],
+          [
+            336,
+            150,
+            -20000
+          ],
+          [
+            1850,
+            100,
+            20000
+          ],
+          [
+            1950,
+            225,
+            10000
+          ],
+          [
+            2175,
+            150,
+            -20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10811,
+      "track": 10008,
+      "distance": 3200,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 4,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            458,
+            250
+          ],
+          [
+            708,
+            250
+          ],
+          [
+            1450,
+            200
+          ],
+          [
+            1650,
+            200
+          ],
+          [
+            2300,
+            250
+          ],
+          [
+            2550,
+            247
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            458,
+            2
+          ],
+          [
+            958,
+            1450,
+            1
+          ],
+          [
+            1850,
+            2300,
+            2
+          ],
+          [
+            2797,
+            3200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            208,
+            100,
+            20000
+          ],
+          [
+            308,
+            225,
+            10000
+          ],
+          [
+            533,
+            150,
+            -20000
+          ],
+          [
+            2050,
+            100,
+            20000
+          ],
+          [
+            2150,
+            225,
+            10000
+          ],
+          [
+            2375,
+            150,
+            -20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10812,
+      "track": 10008,
+      "distance": 1200,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            400,
+            225
+          ],
+          [
+            625,
+            246
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            400,
+            2
+          ],
+          [
+            871,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            175,
+            200,
+            15000
+          ],
+          [
+            475,
+            200,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10813,
+      "track": 10008,
+      "distance": 1400,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            600,
+            225
+          ],
+          [
+            825,
+            246
+          ]
+        ],
+        "straights": [
+          [
+            100,
+            600,
+            2
+          ],
+          [
+            1071,
+            1400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            375,
+            200,
+            15000
+          ],
+          [
+            675,
+            200,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10814,
+      "track": 10008,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            300,
+            150
+          ],
+          [
+            450,
+            150
+          ],
+          [
+            1000,
+            225
+          ],
+          [
+            1225,
+            246
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            1
+          ],
+          [
+            600,
+            1000,
+            2
+          ],
+          [
+            1471,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            775,
+            200,
+            15000
+          ],
+          [
+            1075,
+            200,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10815,
+      "track": 10008,
+      "distance": 1900,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            400,
+            150
+          ],
+          [
+            550,
+            150
+          ],
+          [
+            1100,
+            225
+          ],
+          [
+            1325,
+            246
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            400,
+            1
+          ],
+          [
+            700,
+            1100,
+            2
+          ],
+          [
+            1571,
+            1900,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            875,
+            200,
+            15000
+          ],
+          [
+            1175,
+            200,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10901,
+      "track": 10009,
+      "distance": 1200,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            250,
+            300
+          ],
+          [
+            550,
+            294
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            250,
+            2
+          ],
+          [
+            844,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            400,
+            595,
+            -10000
+          ],
+          [
+            1000,
+            125,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10902,
+      "track": 10009,
+      "distance": 1400,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            450,
+            300
+          ],
+          [
+            750,
+            294
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            450,
+            2
+          ],
+          [
+            1044,
+            1400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            600,
+            595,
+            -10000
+          ],
+          [
+            1200,
+            125,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10903,
+      "track": 10009,
+      "distance": 1600,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            450,
+            350
+          ],
+          [
+            800,
+            327
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            450,
+            2
+          ],
+          [
+            1127,
+            1600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            950,
+            400,
+            -10000
+          ],
+          [
+            1405,
+            120,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10904,
+      "track": 10009,
+      "distance": 1800,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            650,
+            350
+          ],
+          [
+            1000,
+            327
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            650,
+            2
+          ],
+          [
+            1327,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            1150,
+            400,
+            -10000
+          ],
+          [
+            1605,
+            120,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10905,
+      "track": 10009,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            320,
+            190
+          ],
+          [
+            510,
+            190
+          ],
+          [
+            1050,
+            300
+          ],
+          [
+            1350,
+            294
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            320,
+            1
+          ],
+          [
+            700,
+            1050,
+            2
+          ],
+          [
+            1644,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            90,
+            -10000
+          ],
+          [
+            95,
+            125,
+            20000
+          ],
+          [
+            1200,
+            595,
+            -10000
+          ],
+          [
+            1800,
+            125,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10906,
+      "track": 10009,
+      "distance": 2200,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            520,
+            190
+          ],
+          [
+            710,
+            190
+          ],
+          [
+            1250,
+            300
+          ],
+          [
+            1550,
+            294
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            520,
+            1
+          ],
+          [
+            900,
+            1250,
+            2
+          ],
+          [
+            1844,
+            2200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            290,
+            -10000
+          ],
+          [
+            295,
+            125,
+            20000
+          ],
+          [
+            1400,
+            595,
+            -10000
+          ],
+          [
+            2000,
+            125,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10907,
+      "track": 10009,
+      "distance": 2400,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            370,
+            190
+          ],
+          [
+            560,
+            190
+          ],
+          [
+            1250,
+            350
+          ],
+          [
+            1600,
+            327
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            370,
+            1
+          ],
+          [
+            750,
+            1250,
+            2
+          ],
+          [
+            1927,
+            2400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            115,
+            -10000
+          ],
+          [
+            170,
+            120,
+            20000
+          ],
+          [
+            1750,
+            400,
+            -10000
+          ],
+          [
+            2205,
+            120,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10908,
+      "track": 10009,
+      "distance": 2600,
+      "ground": 1,
+      "inout": 3,
+      "inoutLabel": "外",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            570,
+            190
+          ],
+          [
+            760,
+            190
+          ],
+          [
+            1450,
+            350
+          ],
+          [
+            1800,
+            327
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            570,
+            1
+          ],
+          [
+            950,
+            1450,
+            2
+          ],
+          [
+            2127,
+            2600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            315,
+            -10000
+          ],
+          [
+            370,
+            120,
+            20000
+          ],
+          [
+            1950,
+            400,
+            -10000
+          ],
+          [
+            2405,
+            120,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10909,
+      "track": 10009,
+      "distance": 3000,
+      "ground": 1,
+      "inout": 2,
+      "inoutLabel": "内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            345,
+            300
+          ],
+          [
+            645,
+            294
+          ],
+          [
+            1320,
+            190
+          ],
+          [
+            1510,
+            190
+          ],
+          [
+            2050,
+            300
+          ],
+          [
+            2350,
+            294
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            345,
+            2
+          ],
+          [
+            939,
+            1320,
+            1
+          ],
+          [
+            1700,
+            2050,
+            2
+          ],
+          [
+            2644,
+            3000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            495,
+            595,
+            -10000
+          ],
+          [
+            1095,
+            125,
+            20000
+          ],
+          [
+            2200,
+            595,
+            -10000
+          ],
+          [
+            2800,
+            125,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10914,
+      "track": 10009,
+      "distance": 3200,
+      "ground": 1,
+      "inout": 4,
+      "inoutLabel": "外→内",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 4,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            370,
+            350
+          ],
+          [
+            720,
+            350
+          ],
+          [
+            1520,
+            190
+          ],
+          [
+            1710,
+            190
+          ],
+          [
+            2250,
+            300
+          ],
+          [
+            2550,
+            294
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            370,
+            2
+          ],
+          [
+            1070,
+            1520,
+            1
+          ],
+          [
+            1900,
+            2250,
+            2
+          ],
+          [
+            2844,
+            3200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            870,
+            400,
+            -10000
+          ],
+          [
+            1325,
+            120,
+            20000
+          ],
+          [
+            2400,
+            595,
+            -10000
+          ],
+          [
+            3000,
+            125,
+            20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10911,
+      "track": 10009,
+      "distance": 1400,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            550,
+            250
+          ],
+          [
+            800,
+            248
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            550,
+            2
+          ],
+          [
+            1048,
+            1400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            400,
+            800,
+            -10000
+          ],
+          [
+            1200,
+            125,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10912,
+      "track": 10009,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            300,
+            150
+          ],
+          [
+            450,
+            150
+          ],
+          [
+            950,
+            250
+          ],
+          [
+            1200,
+            248
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            1
+          ],
+          [
+            600,
+            950,
+            2
+          ],
+          [
+            1448,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            75,
+            125,
+            15000
+          ],
+          [
+            800,
+            800,
+            -10000
+          ],
+          [
+            1600,
+            125,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 10913,
+      "track": 10009,
+      "distance": 2000,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            150
+          ],
+          [
+            650,
+            150
+          ],
+          [
+            1150,
+            250
+          ],
+          [
+            1400,
+            248
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            500,
+            1
+          ],
+          [
+            800,
+            1150,
+            2
+          ],
+          [
+            1648,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            275,
+            -10000
+          ],
+          [
+            275,
+            125,
+            15000
+          ],
+          [
+            1000,
+            800,
+            -10000
+          ],
+          [
+            1800,
+            125,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11001,
+      "track": 10010,
+      "distance": 1200,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            205
+          ],
+          [
+            705,
+            202
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            500,
+            2
+          ],
+          [
+            907,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            60,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11002,
+      "track": 10010,
+      "distance": 1800,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            290,
+            205
+          ],
+          [
+            495,
+            205
+          ],
+          [
+            1100,
+            205
+          ],
+          [
+            1305,
+            202
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            290,
+            1
+          ],
+          [
+            700,
+            1100,
+            2
+          ],
+          [
+            1507,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            280,
+            255,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11003,
+      "track": 10010,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            490,
+            205
+          ],
+          [
+            695,
+            205
+          ],
+          [
+            1300,
+            205
+          ],
+          [
+            1505,
+            202
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            490,
+            1
+          ],
+          [
+            900,
+            1300,
+            2
+          ],
+          [
+            1707,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            480,
+            255,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11004,
+      "track": 10010,
+      "distance": 2600,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 4,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            309,
+            205
+          ],
+          [
+            514,
+            205
+          ],
+          [
+            1110,
+            205
+          ],
+          [
+            1315,
+            205
+          ],
+          [
+            1900,
+            205
+          ],
+          [
+            2105,
+            202
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            309,
+            2
+          ],
+          [
+            719,
+            1110,
+            1
+          ],
+          [
+            1520,
+            1900,
+            2
+          ],
+          [
+            2307,
+            2600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            1100,
+            255,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11006,
+      "track": 10010,
+      "distance": 1700,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            340,
+            180
+          ],
+          [
+            520,
+            180
+          ],
+          [
+            1060,
+            180
+          ],
+          [
+            1240,
+            169
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            340,
+            1
+          ],
+          [
+            700,
+            1060,
+            2
+          ],
+          [
+            1409,
+            1700,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            370,
+            150,
+            15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11101,
+      "track": 10101,
+      "distance": 1200,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            500,
+            150
+          ],
+          [
+            650,
+            164
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            500,
+            2
+          ],
+          [
+            814,
+            1200,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11102,
+      "track": 10101,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            300,
+            150
+          ],
+          [
+            450,
+            150
+          ],
+          [
+            1100,
+            150
+          ],
+          [
+            1250,
+            164
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            1
+          ],
+          [
+            600,
+            1100,
+            2
+          ],
+          [
+            1414,
+            1800,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11103,
+      "track": 10101,
+      "distance": 2000,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            500,
+            150
+          ],
+          [
+            650,
+            150
+          ],
+          [
+            1300,
+            150
+          ],
+          [
+            1450,
+            164
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            500,
+            1
+          ],
+          [
+            800,
+            1300,
+            2
+          ],
+          [
+            1614,
+            2000,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11301,
+      "track": 10103,
+      "distance": 1400,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            300,
+            100
+          ],
+          [
+            400,
+            100
+          ],
+          [
+            900,
+            100
+          ],
+          [
+            1000,
+            100
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            1
+          ],
+          [
+            500,
+            900,
+            2
+          ],
+          [
+            1100,
+            1400,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11302,
+      "track": 10103,
+      "distance": 1600,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            500,
+            100
+          ],
+          [
+            600,
+            100
+          ],
+          [
+            1100,
+            100
+          ],
+          [
+            1200,
+            100
+          ]
+        ],
+        "straights": [
+          [
+            100,
+            500,
+            1
+          ],
+          [
+            700,
+            1100,
+            2
+          ],
+          [
+            1300,
+            1600,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11303,
+      "track": 10103,
+      "distance": 2100,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            400,
+            100
+          ],
+          [
+            500,
+            100
+          ],
+          [
+            1000,
+            100
+          ],
+          [
+            1100,
+            100
+          ],
+          [
+            1600,
+            100
+          ],
+          [
+            1700,
+            100
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            400,
+            2
+          ],
+          [
+            600,
+            1000,
+            1
+          ],
+          [
+            1200,
+            1600,
+            2
+          ],
+          [
+            1800,
+            2100,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11401,
+      "track": 10104,
+      "distance": 1000,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            370,
+            170
+          ],
+          [
+            540,
+            152
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            370,
+            2
+          ],
+          [
+            692,
+            1000,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11402,
+      "track": 10104,
+      "distance": 1600,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            260,
+            180
+          ],
+          [
+            440,
+            160
+          ],
+          [
+            970,
+            170
+          ],
+          [
+            1140,
+            152
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            260,
+            1
+          ],
+          [
+            600,
+            970,
+            2
+          ],
+          [
+            1292,
+            1600,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11403,
+      "track": 10104,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            460,
+            180
+          ],
+          [
+            640,
+            160
+          ],
+          [
+            1170,
+            170
+          ],
+          [
+            1340,
+            152
+          ]
+        ],
+        "straights": [
+          [
+            90,
+            460,
+            1
+          ],
+          [
+            800,
+            1170,
+            2
+          ],
+          [
+            1492,
+            1800,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11404,
+      "track": 10104,
+      "distance": 2400,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            370,
+            170
+          ],
+          [
+            540,
+            150
+          ],
+          [
+            1060,
+            180
+          ],
+          [
+            1240,
+            160
+          ],
+          [
+            1770,
+            170
+          ],
+          [
+            1940,
+            152
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            370,
+            2
+          ],
+          [
+            690,
+            1060,
+            1
+          ],
+          [
+            1400,
+            1770,
+            2
+          ],
+          [
+            2092,
+            2400,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11501,
+      "track": 10105,
+      "distance": 1200,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            500,
+            200
+          ],
+          [
+            700,
+            200
+          ]
+        ],
+        "straights": [
+          [
+            100,
+            500,
+            2
+          ],
+          [
+            900,
+            1200,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            100,
+            375,
+            10000
+          ],
+          [
+            475,
+            450,
+            -15000
+          ],
+          [
+            975,
+            175,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11502,
+      "track": 10105,
+      "distance": 1600,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            900,
+            200
+          ],
+          [
+            1100,
+            200
+          ]
+        ],
+        "straights": [
+          [
+            500,
+            900,
+            2
+          ],
+          [
+            1300,
+            1600,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            500,
+            375,
+            10000
+          ],
+          [
+            875,
+            450,
+            -15000
+          ],
+          [
+            1375,
+            175,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11503,
+      "track": 10105,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            300,
+            200
+          ],
+          [
+            500,
+            200
+          ],
+          [
+            1100,
+            200
+          ],
+          [
+            1300,
+            200
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            1
+          ],
+          [
+            700,
+            1100,
+            2
+          ],
+          [
+            1500,
+            1800,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            150,
+            10000
+          ],
+          [
+            700,
+            450,
+            -15000
+          ],
+          [
+            1575,
+            175,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11504,
+      "track": 10105,
+      "distance": 2000,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": true,
+      "geo": {
+        "corners": [
+          [
+            500,
+            200
+          ],
+          [
+            700,
+            200
+          ],
+          [
+            1300,
+            200
+          ],
+          [
+            1500,
+            200
+          ]
+        ],
+        "straights": [
+          [
+            100,
+            500,
+            1
+          ],
+          [
+            900,
+            1300,
+            2
+          ],
+          [
+            1700,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            175,
+            175,
+            10000
+          ],
+          [
+            900,
+            375,
+            10000
+          ],
+          [
+            1275,
+            450,
+            -15000
+          ],
+          [
+            1775,
+            175,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11203,
+      "track": 10201,
+      "distance": 2400,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 1,
+      "turnLabel": "右",
+      "tight": 0,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            1000,
+            417
+          ],
+          [
+            1417,
+            200
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            1000,
+            2
+          ],
+          [
+            1617,
+            1867,
+            3
+          ],
+          [
+            1867,
+            2400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            400,
+            600,
+            20000
+          ],
+          [
+            1017,
+            383,
+            -20000
+          ],
+          [
+            1400,
+            217,
+            -15000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11613,
+      "track": 10202,
+      "distance": 1000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            400,
+            150
+          ],
+          [
+            550,
+            150
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            400,
+            2
+          ],
+          [
+            700,
+            1000,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11614,
+      "track": 10202,
+      "distance": 1600,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            300,
+            150
+          ],
+          [
+            450,
+            150
+          ],
+          [
+            1000,
+            150
+          ],
+          [
+            1150,
+            150
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            1
+          ],
+          [
+            600,
+            1000,
+            2
+          ],
+          [
+            1300,
+            1600,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11612,
+      "track": 10202,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            200
+          ],
+          [
+            700,
+            200
+          ],
+          [
+            1300,
+            200
+          ],
+          [
+            1500,
+            200
+          ]
+        ],
+        "straights": [
+          [
+            100,
+            500,
+            1
+          ],
+          [
+            900,
+            1300,
+            2
+          ],
+          [
+            1700,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            175,
+            175,
+            10000
+          ],
+          [
+            900,
+            375,
+            10000
+          ],
+          [
+            1275,
+            450,
+            -15000
+          ],
+          [
+            1775,
+            175,
+            10000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11615,
+      "track": 10202,
+      "distance": 2000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            100,
+            200
+          ],
+          [
+            700,
+            150
+          ],
+          [
+            850,
+            150
+          ],
+          [
+            1400,
+            150
+          ],
+          [
+            1550,
+            150
+          ]
+        ],
+        "straights": [
+          [
+            300,
+            700,
+            1
+          ],
+          [
+            1000,
+            1400,
+            2
+          ],
+          [
+            1700,
+            2000,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            0,
+            150,
+            -20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11616,
+      "track": 10202,
+      "distance": 2400,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            200,
+            500
+          ],
+          [
+            1100,
+            150
+          ],
+          [
+            1250,
+            150
+          ],
+          [
+            1800,
+            150
+          ],
+          [
+            1950,
+            150
+          ]
+        ],
+        "straights": [
+          [
+            700,
+            1100,
+            1
+          ],
+          [
+            1400,
+            1800,
+            2
+          ],
+          [
+            2100,
+            2400,
+            1
+          ]
+        ],
+        "slopes": [
+          [
+            350,
+            200,
+            -20000
+          ]
+        ]
+      }
+    },
+    {
+      "id": 11617,
+      "track": 10202,
+      "distance": 1200,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            195
+          ],
+          [
+            695,
+            195
+          ]
+        ],
+        "straights": [
+          [
+            90,
+            500,
+            2
+          ],
+          [
+            890,
+            1200,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11618,
+      "track": 10202,
+      "distance": 1400,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            700,
+            195
+          ],
+          [
+            895,
+            195
+          ]
+        ],
+        "straights": [
+          [
+            290,
+            700,
+            2
+          ],
+          [
+            1090,
+            1400,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11619,
+      "track": 10202,
+      "distance": 1600,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            150,
+            195
+          ],
+          [
+            345,
+            195
+          ],
+          [
+            950,
+            195
+          ],
+          [
+            1145,
+            195
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            150,
+            1
+          ],
+          [
+            540,
+            950,
+            2
+          ],
+          [
+            1340,
+            1650,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11620,
+      "track": 10202,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            300,
+            195
+          ],
+          [
+            495,
+            195
+          ],
+          [
+            1100,
+            195
+          ],
+          [
+            1295,
+            195
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            1
+          ],
+          [
+            690,
+            1100,
+            2
+          ],
+          [
+            1490,
+            1800,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11621,
+      "track": 10202,
+      "distance": 2000,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            195
+          ],
+          [
+            695,
+            195
+          ],
+          [
+            1300,
+            195
+          ],
+          [
+            1495,
+            195
+          ]
+        ],
+        "straights": [
+          [
+            90,
+            500,
+            1
+          ],
+          [
+            890,
+            1300,
+            2
+          ],
+          [
+            1690,
+            2000,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11701,
+      "track": 10203,
+      "distance": 1000,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            381,
+            185
+          ],
+          [
+            566,
+            185
+          ]
+        ],
+        "straights": [
+          [
+            31,
+            381,
+            2
+          ],
+          [
+            751,
+            1000,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11702,
+      "track": 10203,
+      "distance": 1600,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            261,
+            185
+          ],
+          [
+            446,
+            185
+          ],
+          [
+            981,
+            185
+          ],
+          [
+            1166,
+            185
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            261,
+            1
+          ],
+          [
+            631,
+            981,
+            2
+          ],
+          [
+            1351,
+            1600,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11703,
+      "track": 10203,
+      "distance": 2200,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            141,
+            185
+          ],
+          [
+            326,
+            185
+          ],
+          [
+            861,
+            185
+          ],
+          [
+            1046,
+            185
+          ],
+          [
+            1581,
+            185
+          ],
+          [
+            1766,
+            185
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            141,
+            2
+          ],
+          [
+            511,
+            861,
+            1
+          ],
+          [
+            1231,
+            1581,
+            2
+          ],
+          [
+            1951,
+            2200,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11704,
+      "track": 10203,
+      "distance": 2400,
+      "ground": 1,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            341,
+            185
+          ],
+          [
+            526,
+            185
+          ],
+          [
+            1061,
+            185
+          ],
+          [
+            1246,
+            185
+          ],
+          [
+            1781,
+            185
+          ],
+          [
+            1966,
+            185
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            341,
+            2
+          ],
+          [
+            711,
+            1061,
+            1
+          ],
+          [
+            1431,
+            1781,
+            2
+          ],
+          [
+            2151,
+            2400,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11705,
+      "track": 10203,
+      "distance": 1200,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            210
+          ],
+          [
+            710,
+            210
+          ]
+        ],
+        "straights": [
+          [
+            120,
+            500,
+            2
+          ],
+          [
+            920,
+            1200,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11706,
+      "track": 10203,
+      "distance": 1400,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 1,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            700,
+            210
+          ],
+          [
+            910,
+            210
+          ]
+        ],
+        "straights": [
+          [
+            320,
+            700,
+            2
+          ],
+          [
+            1120,
+            1400,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11707,
+      "track": 10203,
+      "distance": 1600,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            160,
+            210
+          ],
+          [
+            370,
+            210
+          ],
+          [
+            960,
+            210
+          ],
+          [
+            1170,
+            210
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            160,
+            1
+          ],
+          [
+            580,
+            960,
+            2
+          ],
+          [
+            1380,
+            1660,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11708,
+      "track": 10203,
+      "distance": 1800,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 2,
+      "basis": 0,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            300,
+            210
+          ],
+          [
+            510,
+            210
+          ],
+          [
+            1100,
+            210
+          ],
+          [
+            1310,
+            210
+          ]
+        ],
+        "straights": [
+          [
+            0,
+            300,
+            1
+          ],
+          [
+            720,
+            1100,
+            2
+          ],
+          [
+            1520,
+            1800,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    },
+    {
+      "id": 11709,
+      "track": 10203,
+      "distance": 2000,
+      "ground": 2,
+      "inout": 1,
+      "inoutLabel": "",
+      "turn": 2,
+      "turnLabel": "左",
+      "tight": 1,
+      "distType": 3,
+      "basis": 1,
+      "dirtgrade": false,
+      "geo": {
+        "corners": [
+          [
+            500,
+            210
+          ],
+          [
+            710,
+            210
+          ],
+          [
+            1300,
+            210
+          ],
+          [
+            1510,
+            210
+          ]
+        ],
+        "straights": [
+          [
+            120,
+            500,
+            1
+          ],
+          [
+            920,
+            1300,
+            2
+          ],
+          [
+            1720,
+            2000,
+            1
+          ]
+        ],
+        "slopes": []
+      }
+    }
+  ]
+}
