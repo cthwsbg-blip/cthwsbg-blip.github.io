@@ -190,7 +190,13 @@
         210372,
         210382,
         210392
-      ]
+      ],
+      "eventSources": {
+        "included": true,
+        "basis": "原作事件技能表，按所選進度的卡片及技能 ID 篩選；取得條件尚未逐一核對當期繁中。",
+        "cardEdges": 921,
+        "supportEdges": 844
+      }
     },
     "tw-archive": {
       "basis": "公開繁中 master.mdb 歷史快照。僅代表 2024/06/27 的技能與卡片範圍，不是目前繁中版本。事件技能仍需另行核對。",
@@ -590,7 +596,13 @@
         210382,
         210392,
         300161
-      ]
+      ],
+      "eventSources": {
+        "included": true,
+        "basis": "原作事件技能表，按所選進度的卡片及技能 ID 篩選；取得條件尚未逐一核對當期繁中。",
+        "cardEdges": 467,
+        "supportEdges": 452
+      }
     }
   }
 }
