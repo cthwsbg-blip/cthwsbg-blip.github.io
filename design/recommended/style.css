@@ -14,3 +14,11 @@
 .alternative-pool{margin-top:24px;padding-top:18px;border-top:1px solid #e2e7df}
 
 .pool-entry{min-width:0;display:flex;flex-direction:column}.pool-entry .node{flex:1}.pool-use{font-size:12px;font-weight:700;color:#247646;margin:0 0 7px}.pool-overlap{font-size:11px;line-height:1.6;color:#786f85;margin:7px 2px 14px}
+
+/* Keep source links beside race selection, outside the selection button. */
+.event-option{min-width:0;background:#faf9fc;border:1px solid var(--border);border-radius:13px;overflow:hidden}.event-option.active{border-color:var(--green);box-shadow:0 0 0 1px var(--green);background:#f0f9ec}.event-option .event-tab{display:block;width:100%;border:0;border-radius:0;background:transparent;box-shadow:none;padding-bottom:6px}.event-source{display:inline-block;margin:0 16px 12px;padding:4px 0;color:var(--green-d);font-size:12px;font-weight:700}.event-source:hover{text-decoration:underline}.event-tab:focus-visible,.event-source:focus-visible{outline:2px solid var(--green-d);outline-offset:-2px}
+
+/* Keep the race selector to one swipeable row at every viewport width. */
+.event-tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:12px;padding:2px 2px 12px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:var(--green) #eee9f7;overscroll-behavior-x:contain}
+.event-tabs .event-option{flex:0 0 320px;scroll-snap-align:start}
+@media(max-width:720px){.event-tabs .event-option{flex-basis:85%}}
