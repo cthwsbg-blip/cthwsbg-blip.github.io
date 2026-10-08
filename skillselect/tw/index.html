@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="zh-Hant"> <head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>種馬技能篩選器 · 繁中版</title><meta content="繁中服進度對照、日繁技能名稱轉換、育成配卡與種馬技能補完工具。" name="description"/><link href="/skillselect/favicon.svg" rel="icon" type="image/svg+xml"/><link href="style.css" rel="stylesheet"/><link href="tw.css" rel="stylesheet"/><script>(function(){try{if(navigator.sendBeacon){navigator.sendBeacon('https://api.614tools.top/api/hit', new Blob([location.pathname], {type:'text/plain'}));}else{fetch('https://api.614tools.top/api/hit',{method:'POST',body:location.pathname,keepalive:true,headers:{'Content-Type':'text/plain'}}).catch(function(){});}}catch(e){}})();</script>
-</head> <body> <div class="stripe"></div> <header class="topbar"> <div class="wrap topbar-inner"> <div class="brand"><span aria-hidden="true" class="brand-icon">🐎</span><span class="brand-text"><small>SKILL PLANNER · 繁中版</small><b>種馬技能篩選器</b></span></div> <span class="uma-back-slot"><a class="uma-back" href="/">← 工具目錄</a></span> <div class="head-actions"><a aria-label="有問題聯絡 61444不玩賽馬娘攻略組 的 B 站主頁" class="bili-badge bili-badge--compact" href="https://space.bilibili.com/212027" rel="noopener" target="_blank"><span class="bili-tag">原作</span><img alt="61444不玩賽馬娘攻略組" height="32" loading="lazy" src="/skillselect/author/avatar.webp" width="32"/><span class="bili-name">61444不玩賽馬娘攻略組</span><span class="bili-go">· B站主頁 ↗</span></a></div> </div> </header> <main class="wrap"> <a hidden="" href="/skillselect/" id="pl-base">base</a> <nav aria-label="遊戲版本" class="server-tabs" data-skillselect-server-switch=""><a href="/skillselect/">日服</a><a aria-current="page" href="/skillselect/tw/">繁中服</a></nav><div class="pl-toolbar"> <span class="dot-note">繁中版 · 選擇會自動儲存於本機</span> <span class="pl-toolbar-btns"><label class="tw-check tw-toolbar-events"><input checked="" id="tw-events" type="checkbox"/>計入日服事件參考</label><button class="pill-btn" id="tw-lookup-open" type="button">日繁名稱對照</button> <button class="pill-btn" data-tips="" title="規則說明" type="button">❓ Tips</button> <button class="pill-btn" data-copy-link="" title="複製包含當前全部選擇的作業連結，發給別人開啟即可還原" type="button">🔗 復製作業</button> <button class="pill-btn" data-reset="" type="button">↺ 重置輸入</button> </span> </div> <div class="pl-guide" data-guide=""> <div class="pl-guide-h"> <strong>🧭 使用步驟</strong> <span class="pl-guide-sub">先選好要育成的馬娘和你的育成卡組，再看還缺哪些有效技能、該用什麼種馬配卡來補</span> <span class="pl-guide-btns"> <button class="tips-btn" data-tips="" title="開啟規則說明（第一節是本頁用法）" type="button">瞭解更多 / Tips</button> <button aria-label="關閉使用步驟" class="pl-guide-x" data-guide-close="" title="關閉（會記住）" type="button">×</button> </span> </div> <ol class="pl-steps"> <li><b>①</b> 選育成馬娘和跑法</li> <li><b>②</b> 選賽道與環境</li> <li><b>③</b> 選你的育成卡組（6 張）</li> <li><b>④</b> 看「尚未獲得的有效技能」和「種馬使用卡推薦」</li> </ol> </div> <div class="pl-top"> <section class="panel"> <div class="panel-title"><h2><span class="num">01</span>育成馬娘</h2><small>TRAINEE</small></div> <div class="panel-body"> <div class="pl-trainee-body"> <button class="pl-slot pl-slot-card" data-pick-card="" title="選擇育成馬娘" type="button"><span class="pl-plus">＋</span></button> <div class="pl-trainee-info"> <div class="pl-card-name" data-card-name="">未選擇</div> <div class="facts" data-apt=""></div> </div> </div> <fieldset><legend>跑法<span>腳質</span></legend> <div class="segments five" data-seg="style"> <button aria-pressed="false" data-v="0" type="button">不限</button><button aria-pressed="false" data-v="1" type="button">領頭</button><button aria-pressed="false" data-v="2" type="button">前列</button><button aria-pressed="false" data-v="3" type="button">居中</button><button aria-pressed="false" data-v="4" type="button">後追</button> </div> </fieldset> </div> </section> <section class="panel"> <div class="panel-title"><h2><span class="num">02</span>賽道與環境</h2><small>COURSE</small></div> <div class="panel-body"> <div class="pl-2col"> <label>賽馬場<select data-track=""><option value="">不限</option></select></label> <label>賽道<select data-course=""><option value="">不限</option></select></label> </div> <div class="course-card" data-course-card=""></div> <fieldset><legend>場地狀態<span data-gc-note=""></span></legend> <div class="segments five" data-seg="gc"><button aria-pressed="false" data-v="0" type="button">不限</button><button aria-pressed="false" data-v="1" type="button">良</button><button aria-pressed="false" data-v="2" type="button">稍重</button><button aria-pressed="false" data-v="3" type="button">重</button><button aria-pressed="false" data-v="4" type="button">不良</button></div> </fieldset> <div class="pl-2col"> <fieldset><legend>天氣</legend> <div class="segments five" data-seg="weather"><button aria-pressed="false" data-v="0" type="button">不限</button><button aria-pressed="false" data-v="1" type="button">晴</button><button aria-pressed="false" data-v="2" type="button">陰</button><button aria-pressed="false" data-v="3" type="button">雨</button><button aria-pressed="false" data-v="4" type="button">雪</button></div> </fieldset> <fieldset><legend>季節</legend> <div class="segments five" data-seg="season"><button aria-pressed="false" data-v="0" type="button">不限</button><button aria-pressed="false" data-v="1" type="button">春</button><button aria-pressed="false" data-v="2" type="button">夏</button><button aria-pressed="false" data-v="3" type="button">秋</button><button aria-pressed="false" data-v="4" type="button">冬</button></div> </fieldset> </div> <label class="switch pl-nodb"><input data-nodb="" type="checkbox"/> 禁止妨害（勾選後遮蔽所有帶妨害效果的技能）</label> </div> </section> </div> <section class="deck-box"> <div class="deck-head"> <span class="deck-ribbon">支援卡編成 <small data-deck-count="">0 / 6</small></span> <span class="deck-note">填入你要帶的育成卡組，下方會列出這套卡組還缺的技能，並推薦能補上它們的種馬配卡</span> <span class="deck-btns"> <button class="gloss-btn" data-reset="" type="button">重置</button> <button class="gloss-btn green" data-goto-rec="" title="跳到下方 04 種馬使用卡推薦" type="button">檢視種馬使用卡推薦</button> </span> </div> <div class="deck-slots" data-slots=""></div> </section> <section class="pl-summary" data-summary=""></section> <section class="panel pl-sec"> <div class="panel-title"><h2><span class="num">03</span>尚未獲得的有效技能 <span class="muted small" data-remain-count=""></span><button class="tips-btn" data-tips="" title="檢視規則說明" type="button">❓ 規則說明</button></h2><small>SKILLS</small></div> <div class="panel-body"> <div class="pl-empty" data-empty-skill="" hidden=""></div> <div class="pl-filters"> <input aria-label="搜尋技能" data-skill-q="" placeholder="輸入繁中、日文、簡中名稱或 ID" type="search"/> <select aria-label="排序" data-skill-sort=""> <option value="prov">按可提供的支援卡數</option> <option value="pt">按所需技能點</option> <option value="id">按技能 ID</option> </select> <label class="switch"><input data-nosrc="" type="checkbox"/> 包含無支援卡來源的技能</label> </div> <div data-remain=""></div> <details class="pl-fold"> <summary>不計入的技能 <span class="muted small" data-nc-count=""></span></summary> <p class="hint">按計數規則不計入“有效技能”與支援卡排名：速度類只計白技能且速度效果 ≥ 0.15；干擾只計降低速度的。</p> <div data-nc=""></div> </details> <details class="pl-fold"> <summary>因賽道 / 環境 / 跑法條件被排除的技能 <span class="muted small" data-excl-count=""></span></summary> <div data-excl=""></div> </details> <details class="pl-fold"> <summary>已獲得的技能（馬娘自帶 / 覺醒 / 事件 + 編成 Hint / 事件）<span class="muted small" data-given-count=""></span></summary> <div data-given=""></div> </details> </div> </section> <section class="panel pl-sec pink" id="pl-rec"> <div class="panel-title"><h2><span class="num">04</span>種馬使用卡推薦 <span class="muted small">按可補上的有效技能數排序 · 僅 SSR / SR · 不含已編成</span></h2><small>RECOMMEND</small></div> <div class="panel-body"> <p class="pl-sec-sub">推薦的不是標準配卡，而是能補上你這套卡組缺失技能的卡</p> <div class="pl-empty" data-empty-rec="" hidden=""></div> <div data-rec-body=""> <div class="pl-filters"> <input aria-label="搜尋支援卡" data-sup-q="" placeholder="輸入繁中、日文、簡中名稱或 ID" type="search"/> <select aria-label="排序" data-sup-sort=""> <option value="count">按技能數</option> <option value="rar">SSR 優先</option> </select> <label class="switch pl-hideact"><input data-hideact="" type="checkbox"/> 隱藏活動卡/贈送卡</label> <span class="count" data-sup-count=""></span> </div> <div class="type-chips" data-sup-type=""></div> <div class="pl-rank" data-rank=""></div> <div class="more"><button class="pill-btn" data-rank-more="" hidden="" type="button">顯示更多</button></div> </div> </div> </section> <dialog class="pl-dialog pl-tips-dlg" data-tips-dlg=""> <form class="pl-dlg-head" method="dialog"><strong>❓ 規則說明</strong><span style="flex:1"></span><button class="pill-btn" value="close">關閉</button></form> <div class="tips-body"><section aria-labelledby="tw-settings-heading" class="tip tw-settings" id="tw-settings">
+</head> <body> <div class="stripe"></div> <header class="topbar"> <div class="wrap topbar-inner"> <div class="brand"><span aria-hidden="true" class="brand-icon">🐎</span><span class="brand-text"><small>SKILL PLANNER · 繁中版</small><b>種馬技能篩選器</b></span></div> <span class="uma-back-slot"><a class="uma-back" href="/">← 工具目錄</a></span> <div class="head-actions"><a aria-label="有問題聯絡 61444不玩賽馬娘攻略組 的 B 站主頁" class="bili-badge bili-badge--compact" href="https://space.bilibili.com/212027" rel="noopener" target="_blank"><span class="bili-tag">原作</span><img alt="61444不玩賽馬娘攻略組" height="32" loading="lazy" src="/skillselect/author/avatar.webp" width="32"/><span class="bili-name">61444不玩賽馬娘攻略組</span><span class="bili-go">· B站主頁 ↗</span></a></div> </div> </header> <main class="wrap"> <a hidden="" href="/skillselect/" id="pl-base">base</a> <nav aria-label="遊戲版本" class="server-tabs" data-skillselect-server-switch=""><a href="/skillselect/">日服</a><a aria-current="page" href="/skillselect/tw/">繁中服</a></nav><div class="pl-toolbar"> <span class="dot-note">繁中版 · 選擇會自動儲存於本機</span> <span class="pl-toolbar-btns"><label class="tw-check tw-toolbar-events"><input checked="" id="tw-events" type="checkbox"/>計入日服事件參考</label><button class="pill-btn" id="tw-lookup-open" type="button">日繁名稱對照</button> <button class="pill-btn" data-tips="" title="規則說明" type="button">❓ Tips</button> <button class="pill-btn" data-copy-link="" title="複製包含當前全部選擇的作業連結，發給別人開啟即可還原" type="button">🔗 復製作業</button> <button class="pill-btn" data-reset="" type="button">↺ 重置輸入</button> </span> </div> <div class="pl-guide" data-guide=""> <div class="pl-guide-h"> <strong>🧭 使用步驟</strong> <span class="pl-guide-sub">先選好要育成的馬娘和你的育成卡組，再看還缺哪些有效技能、該用什麼種馬配卡來補</span> <span class="pl-guide-btns"> <button class="tips-btn" data-tips="" title="開啟規則說明（第一節是本頁用法）" type="button">瞭解更多 / Tips</button> <button aria-label="關閉使用步驟" class="pl-guide-x" data-guide-close="" title="關閉（會記住）" type="button">×</button> </span> </div> <ol class="pl-steps"> <li><b>①</b> 選育成馬娘和跑法</li> <li><b>②</b> 選賽道與環境</li> <li><b>③</b> 選你的育成卡組（6 張）</li> <li><b>④</b> 看「尚未獲得的有效技能」和「種馬使用卡推薦」</li> </ol> </div> <div class="pl-top"> <section class="panel"> <div class="panel-title"><h2><span class="num">01</span>育成馬娘</h2><small>TRAINEE</small></div> <div class="panel-body"> <div class="pl-trainee-body"> <button class="pl-slot pl-slot-card" data-pick-card="" title="選擇育成馬娘" type="button"><span class="pl-plus">＋</span></button> <div class="pl-trainee-info"> <div class="pl-card-name" data-card-name="">未選擇</div> <div class="facts" data-apt=""></div> </div> </div> <fieldset><legend>跑法<span>腳質</span></legend> <div class="segments five" data-seg="style"> <button aria-pressed="false" data-v="0" type="button">不限</button><button aria-pressed="false" data-v="1" type="button">領頭</button><button aria-pressed="false" data-v="2" type="button">前列</button><button aria-pressed="false" data-v="3" type="button">居中</button><button aria-pressed="false" data-v="4" type="button">後追</button> </div> </fieldset> </div> </section> <section class="panel"> <div class="panel-title"><h2><span class="num">02</span>賽道與環境</h2><small>COURSE</small></div> <div class="panel-body"> <div class="pl-2col"> <label>賽馬場<select data-track=""><option value="">不限</option></select></label> <label>賽道<select data-course=""><option value="">不限</option></select></label> </div> <div class="course-card" data-course-card=""></div> <fieldset><legend>場地狀態<span data-gc-note=""></span></legend> <div class="segments five" data-seg="gc"><button aria-pressed="false" data-v="0" type="button">不限</button><button aria-pressed="false" data-v="1" type="button">良</button><button aria-pressed="false" data-v="2" type="button">稍重</button><button aria-pressed="false" data-v="3" type="button">重</button><button aria-pressed="false" data-v="4" type="button">不良</button></div> </fieldset> <div class="pl-2col"> <fieldset><legend>天氣</legend> <div class="segments five" data-seg="weather"><button aria-pressed="false" data-v="0" type="button">不限</button><button aria-pressed="false" data-v="1" type="button">晴</button><button aria-pressed="false" data-v="2" type="button">陰</button><button aria-pressed="false" data-v="3" type="button">雨</button><button aria-pressed="false" data-v="4" type="button">雪</button></div> </fieldset> <fieldset><legend>季節</legend> <div class="segments five" data-seg="season"><button aria-pressed="false" data-v="0" type="button">不限</button><button aria-pressed="false" data-v="1" type="button">春</button><button aria-pressed="false" data-v="2" type="button">夏</button><button aria-pressed="false" data-v="3" type="button">秋</button><button aria-pressed="false" data-v="4" type="button">冬</button></div> </fieldset> </div> <label class="switch pl-nodb"><input data-nodb="" type="checkbox"/> 禁止妨害（勾選後遮蔽所有帶妨害效果的技能）</label> </div> </section> </div> <section class="deck-box"> <div class="deck-head"> <span class="deck-ribbon">支援卡編成 <small data-deck-count="">0 / 6</small></span> <span class="deck-note">填入你要帶的育成卡組，下方會列出這套卡組還缺的技能，並推薦能補上它們的種馬配卡</span> <span class="deck-btns"> <button class="gloss-btn" data-reset="" type="button">重置</button> <button class="gloss-btn green" data-goto-rec="" title="跳到下方 04 種馬使用卡推薦" type="button">檢視種馬使用卡推薦</button> </span> </div> <div class="deck-slots" data-slots=""></div> </section> <section class="pl-summary" data-summary=""></section> <section class="panel pl-sec"> <div class="panel-title"><h2><span class="num">03</span>尚未獲得的有效技能 <span class="muted small" data-remain-count=""></span><button class="tips-btn" data-tips="" title="檢視規則說明" type="button">❓ 規則說明</button></h2><small>SKILLS</small></div> <div class="panel-body"> <div class="pl-empty" data-empty-skill="" hidden=""></div> <div class="pl-filters"> <input aria-label="搜尋技能" data-skill-q="" placeholder="輸入繁中、日文、簡中名稱或 ID" type="search"/> <select aria-label="排序" data-skill-sort=""> <option value="prov">按可提供的支援卡數</option> <option value="pt">按所需技能點</option> <option value="id">按技能 ID</option> </select> <label class="switch"><input data-nosrc="" type="checkbox"/> 包含無支援卡來源的技能</label> </div> <div data-remain=""></div> <details class="pl-fold"> <summary>不計入的技能 <span class="muted small" data-nc-count=""></span></summary> <p class="hint">按計數規則不計入“有效技能”與支援卡排名：速度類只計白技能且速度效果 ≥ 0.15；干擾只計降低速度的。</p> <div data-nc=""></div> </details> <details class="pl-fold"> <summary>因賽道 / 環境 / 跑法條件被排除的技能 <span class="muted small" data-excl-count=""></span></summary> <div data-excl=""></div> </details> <details class="pl-fold"> <summary>已獲得的技能（馬娘自帶 / 覺醒 / 事件 + 編成 Hint / 事件）<span class="muted small" data-given-count=""></span></summary> <div data-given=""></div> </details> </div> </section> <section class="panel pl-sec pink" id="pl-rec"> <div class="panel-title"><h2><span class="num">04</span>種馬使用卡推薦 <span class="muted small">按可補上的有效技能數排序 · 不含種馬卡組已覆蓋的技能 · 僅 SSR / SR · 不含已編成</span></h2><small>RECOMMEND</small></div> <div class="panel-body"> <p class="pl-sec-sub">推薦的不是標準配卡，而是能補上你這套卡組缺失技能的卡</p> <div class="pl-empty" data-empty-rec="" hidden=""></div> <div data-rec-body=""> <div class="pl-filters"> <input aria-label="搜尋支援卡" data-sup-q="" placeholder="輸入繁中、日文、簡中名稱或 ID" type="search"/> <select aria-label="排序" data-sup-sort=""> <option value="count">按技能數</option> <option value="rar">SSR 優先</option> </select> <label class="switch pl-hideact"><input data-hideact="" type="checkbox"/> 隱藏活動卡/贈送卡</label> <span class="count" data-sup-count=""></span> </div> <div class="type-chips" data-sup-type=""></div> <div class="pl-rank" data-rank=""></div> <div class="more"><button class="pill-btn" data-rank-more="" hidden="" type="button">顯示更多</button></div> </div> </div> </section> <section class="deck-box" id="pl-stud"> <div class="deck-head"> <span class="deck-ribbon">種馬卡組編成 <small data-stud-count="">0 / 6</small></span> <span class="deck-note">選入的卡所帶技能會在上方標成已覆蓋，推薦按剩下還能補的技能重排。</span> </div> <div class="deck-slots" data-stud-slots=""></div> </section> <dialog class="pl-dialog pl-tips-dlg" data-tips-dlg=""> <form class="pl-dlg-head" method="dialog"><strong>❓ 規則說明</strong><span style="flex:1"></span><button class="pill-btn" value="close">關閉</button></form> <div class="tips-body"><section aria-labelledby="tw-settings-heading" class="tip tw-settings" id="tw-settings">
 <h3 id="tw-settings-heading">繁中版設定與資料</h3>
 <div class="tw-controls">
 <label class="tw-profile-label">資料版本<select aria-describedby="tw-basis" id="tw-profile"></select></label>
@@ -10,7 +10,7 @@
 <div class="tw-basis" id="tw-basis" role="note"></div>
 <div class="tw-counts" id="tw-counts"></div>
 <details class="tw-source-details"><summary>資料來源與使用範圍</summary><p>繁中技能譯名取自 BWIKI 中日文對比表，按技能 ID 對應；有譯名不代表已實裝。沒有確認譯名時保留日文。對照進度外的技能、育成馬娘與支援卡不進入規劃器。</p><p>技能數值、條件、Hint 與育成技能取自所選版本的資料庫。進度內卡片的事件技能及金技→白技已計入來源、已提供技能與推薦；事件表沿用原作，事件取得條件尚未逐一核對當期繁中。日服馬身收益表未套用，賽道條件與原版白技能篩選規則保留。</p><p><a href="https://wiki.biligame.com/umamusume/中日文对比表" rel="noopener" target="_blank">BWIKI 名稱對照</a> · <a href="https://wiki.biligame.com/umamusume/繁中卡池" rel="noopener" target="_blank">繁中卡池進度</a> · <a href="https://614tools.top/skillselect/" rel="noopener" target="_blank">日服原作</a> · <a href="data-report.json" target="_blank">版本檢查報告</a></p></details>
-</section> <section class="tip tip-howto"><h3>🧭 這個頁面怎麼用（核心用途）</h3><ul> <li>本頁的核心用途：先選好<b>要育成的馬娘</b>和你已有的<b>育成卡組（6 張支援卡）</b>，再看這套卡組<b>還缺哪些有效技能</b>，以及<b>該用什麼種馬 / 什麼卡來補</b>。</li> <li><b>① 選育成馬娘和跑法</b>（01）→ <b>② 選賽道與環境</b>（02）→ <b>③ 選你的育成卡組（6 張）</b>（支援卡編成）→ <b>④ 看「尚未獲得的有效技能」（03）和「種馬使用卡推薦」（04）</b>。</li> <li>04 推薦的不是標準配卡，而是<b>能補上你這套卡組缺失技能的卡</b>；已編成的卡不會再出現。</li> <li>選卡彈窗裡可以勾選「隱藏活動卡/贈送卡」，並按「有效技能數」排序，方便找能補技能的卡。</li> <li><button class="tips-btn" data-guide-show="" type="button">重新顯示頁面頂部的使用步驟</button></li> </ul></section> <section class="tip"><h3>🏟️ 條件排除</h3><ul> <li>技能所有“或”分支都不可能滿足時才排除；多效果技能任一效果可滿足即保留。</li> <li><b>環境條件</b>：跑法、距離、草地/沙地、賽馬場、場況、天氣、季節、左右回、根幹、小回、海外，按所選賽道和手動選擇的場況/天氣/季節判定，選“不限”視為滿足。夜賽按賽馬場判斷（JRA 與海外賽場沒有夜賽）；交流重賞按賽道是否有交流重賞判斷；G1 等比賽等級無法從賽道得知，視為可滿足。</li> <li><b>賽道幾何</b>：階段、彎道（第 N 彎道 / 最終彎道）、直線（最終直線 / 正面·對面）、上下坡、剩餘距離、賽程進度。按所選賽道的區間計算，同一分支的區間不重疊即排除。未選賽道時不判定。</li> <li><b>剩餘距離分組</b>：條件裡要求“距終點剩餘距離 ≥600m（或 &gt;600m）”的技能算中/長距離技能，只能用在中距離、長距離賽道；要求“剩餘距離 ≤600m（或 &lt;600m）”的技能算短距離/一哩技能，只能用在短距離、一哩賽道。剛好 600m：≥600 歸中/長，≤600 歸短/英。與原有的距離條件疊加判斷，未選賽道時不判斷。</li> <li><b>個別技能的限定</b>（資料檔案，可隨時增補）：<code>style_overrides.json</code> 限定跑法，例如「一番乗り」只適用於領頭/前列，選居中/後追時排除並顯示“僅逃/先適用”；<code>distance_overrides.json</code> 限定距離，例如「アオハル點火・力」只適用於短距離/一哩，選中/長距離賽道時排除並顯示“僅短/英適用”。</li> <li>其他動態條件（名次、馬身差、體力等）視為可滿足。下面的“逃/先名次規則”例外。</li> </ul></section> <section class="tip"><h3>⚡ 速度技能</h3><ul> <li>只計<b>普通白技能</b>，且目標速度/當前速度 <b>≥ 0.15</b>。</li> <li>固有、繼承固有、進化技能不列出（金技能整體不在本頁出現，見下）。低於 0.15 的白技能列在“不計入的技能”裡。</li> <li><b>跑法為領頭/前列時</b>：只能在名次靠後時發動的速度技能判為不推薦，歸入“因條件排除”，原因顯示為“發動名次靠後(≥40%)，不推薦逃/先”。依據：該效果的每個“或”分支都含 <code>order_rate&gt;=N</code> 或 <code>order_rate&gt;N</code>（N ≥ 40），或含 <code>order_rate_out40_continue==1</code>。居中、後追照常計入。</li> </ul></section> <section class="tip"><h3>🟥 干擾技能</h3><ul> <li>只計降低其他馬娘速度的技能；降耐力、誘發掛かり、縮視野等不計入。</li> <li>加速、恢復、出閘、綠技能：全部計入。</li> <li><b>走位</b>：只保留橫向移動（變更車道速度）類技能；<b>視野</b>類技能（擴大視野範圍）完全不列出。</li> </ul></section> <section class="tip"><h3>🃏 來源與推薦</h3><ul> <li>推薦、篩選和選卡彈窗只含 <b>SSR / SR</b> 支援卡，<b>R 卡完全遮蔽</b>（不顯示、不可選；以前儲存的編成裡若有 R 卡，讀取時自動剔除）。已編成的卡不能重複加入。同角色限制（與育成馬娘同角色、與已編成卡同角色）只在上方 6 個卡槽的選卡彈窗裡檢查；“種馬使用卡推薦”裡的卡不受同角色限制，可直接加入編成。</li> <li><b>本頁只處理白技能</b>：金技能（上位技能）在任何分類、統計和推薦中都不出現。</li> <li>“已獲得” = 馬娘初始/覺醒/事件技能 + 編成卡的 Hint 與事件技能（只列白技能）。馬娘本身已有某金技能時，其同組下位白技能也算已獲得。</li> </ul></section> <section class="tip"><h3>🛡 禁止妨害</h3><ul> <li>“賽道與環境”裡的開關，預設關閉。勾選後，所有帶妨害效果的技能（遊戲內“干擾(Debuff)”標籤，或對其他馬娘降速/降耐力/縮視野/增加掛かり等負面效果）一律遮蔽：不進列表、統計、推薦，也不算已提供的 Hint。當前白技能共 15 個（如 展開窺い、逃げためらい、前列ためらい、差しためらい）。會隨其他選擇一起儲存到本機和作業連結，重置會清除。</li> </ul></section> <section class="tip"><h3>🚫 永久遮蔽</h3><ul> <li>共 222 個技能被永久遮蔽，在列表、統計、推薦和支援卡彈窗中都不出現：
+</section> <section class="tip tip-howto"><h3>🧭 這個頁面怎麼用（核心用途）</h3><ul> <li>本頁的核心用途：先選好<b>要育成的馬娘</b>和你已有的<b>育成卡組（6 張支援卡）</b>，再看這套卡組<b>還缺哪些有效技能</b>，以及<b>該用什麼種馬 / 什麼卡來補</b>。</li> <li><b>① 選育成馬娘和跑法</b>（01）→ <b>② 選賽道與環境</b>（02）→ <b>③ 選你的育成卡組（6 張）</b>（支援卡編成）→ <b>④ 看「尚未獲得的有效技能」（03）和「種馬使用卡推薦」（04）</b>。</li> <li>04 推薦的不是標準配卡，而是<b>能補上你這套卡組缺失技能的卡</b>；已編成的卡不會再出現。</li> <li>種馬卡組編成最多 6 張；選入後，這些卡能產出的技能在「尚未獲得」裡變淡，並在右下角標綠勾，推薦按還沒覆蓋的技能重排。</li> <li>選卡彈窗裡可以勾選「隱藏活動卡/贈送卡」，並按「有效技能數」排序，方便找能補技能的卡。</li> <li><button class="tips-btn" data-guide-show="" type="button">重新顯示頁面頂部的使用步驟</button></li> </ul></section> <section class="tip"><h3>🏟️ 條件排除</h3><ul> <li>技能所有“或”分支都不可能滿足時才排除；多效果技能任一效果可滿足即保留。</li> <li><b>環境條件</b>：跑法、距離、草地/沙地、賽馬場、場況、天氣、季節、左右回、根幹、小回、海外，按所選賽道和手動選擇的場況/天氣/季節判定，選“不限”視為滿足。夜賽按賽馬場判斷（JRA 與海外賽場沒有夜賽）；交流重賞按賽道是否有交流重賞判斷；G1 等比賽等級無法從賽道得知，視為可滿足。</li> <li><b>賽道幾何</b>：階段、彎道（第 N 彎道 / 最終彎道）、直線（最終直線 / 正面·對面）、上下坡、剩餘距離、賽程進度。按所選賽道的區間計算，同一分支的區間不重疊即排除。未選賽道時不判定。</li> <li><b>剩餘距離分組</b>：條件裡要求“距終點剩餘距離 ≥600m（或 &gt;600m）”的技能算中/長距離技能，只能用在中距離、長距離賽道；要求“剩餘距離 ≤600m（或 &lt;600m）”的技能算短距離/一哩技能，只能用在短距離、一哩賽道。剛好 600m：≥600 歸中/長，≤600 歸短/英。與原有的距離條件疊加判斷，未選賽道時不判斷。</li> <li><b>個別技能的限定</b>（資料檔案，可隨時增補）：<code>style_overrides.json</code> 限定跑法，例如「一番乗り」只適用於領頭/前列，選居中/後追時排除並顯示“僅逃/先適用”；<code>distance_overrides.json</code> 限定距離，例如「アオハル點火・力」只適用於短距離/一哩，選中/長距離賽道時排除並顯示“僅短/英適用”。</li> <li>其他動態條件（名次、馬身差、體力等）視為可滿足。下面的“逃/先名次規則”例外。</li> </ul></section> <section class="tip"><h3>⚡ 速度技能</h3><ul> <li>只計<b>普通白技能</b>，且目標速度/當前速度 <b>≥ 0.15</b>。</li> <li>固有、繼承固有、進化技能不列出（金技能整體不在本頁出現，見下）。低於 0.15 的白技能列在“不計入的技能”裡。</li> <li><b>跑法為領頭/前列時</b>：只能在名次靠後時發動的速度技能判為不推薦，歸入“因條件排除”，原因顯示為“發動名次靠後(≥40%)，不推薦逃/先”。依據：該效果的每個“或”分支都含 <code>order_rate&gt;=N</code> 或 <code>order_rate&gt;N</code>（N ≥ 40），或含 <code>order_rate_out40_continue==1</code>。居中、後追照常計入。</li> </ul></section> <section class="tip"><h3>🟥 干擾技能</h3><ul> <li>只計降低其他馬娘速度的技能；降耐力、誘發掛かり、縮視野等不計入。</li> <li>加速、恢復、出閘、綠技能：全部計入。</li> <li><b>走位</b>：只保留橫向移動（變更車道速度）類技能；<b>視野</b>類技能（擴大視野範圍）完全不列出。</li> </ul></section> <section class="tip"><h3>🃏 來源與推薦</h3><ul> <li>推薦、篩選和選卡彈窗只含 <b>SSR / SR</b> 支援卡，<b>R 卡完全遮蔽</b>（不顯示、不可選；以前儲存的編成裡若有 R 卡，讀取時自動剔除）。已編成的卡不能重複加入。同角色限制（與育成馬娘同角色、與已編成卡同角色）只在上方 6 個卡槽的選卡彈窗裡檢查；“種馬使用卡推薦”裡的卡不受同角色限制，可直接加入編成。</li> <li><b>本頁只處理白技能</b>：金技能（上位技能）在任何分類、統計和推薦中都不出現。</li> <li>“已獲得” = 馬娘初始/覺醒/事件技能 + 編成卡的 Hint 與事件技能（只列白技能）。馬娘本身已有某金技能時，其同組下位白技能也算已獲得。</li> </ul></section> <section class="tip"><h3>🛡 禁止妨害</h3><ul> <li>“賽道與環境”裡的開關，預設關閉。勾選後，所有帶妨害效果的技能（遊戲內“干擾(Debuff)”標籤，或對其他馬娘降速/降耐力/縮視野/增加掛かり等負面效果）一律遮蔽：不進列表、統計、推薦，也不算已提供的 Hint。當前白技能共 15 個（如 展開窺い、逃げためらい、前列ためらい、差しためらい）。會隨其他選擇一起儲存到本機和作業連結，重置會清除。</li> </ul></section> <section class="tip"><h3>🚫 永久遮蔽</h3><ul> <li>共 222 個技能被永久遮蔽，在列表、統計、推薦和支援卡彈窗中都不出現：
 <b>你手選的 73 個</b>；
 <b>劇本專用技能 90 個</b>（① 圖示帶劇本邊框（圖示 ID ≥ 1000000）；② 帶“劇本專用”標籤（801–814）的<b>金技能、固有、進化技能</b>；③ 圖示帶<b>藍白小圓標</b>的不可獲得技能，如 アスリート魂、食の極意，規則見 block_rules.json 的 unobtainableIconMark）。帶劇本標籤的<b>普通白技能</b>（如 アオハル點火・*、レースの真髄・*）可以獲得，不遮蔽，來源顯示為“劇本專用”；
 <b>名稱以 ◎ 結尾的 65 個</b>（如 小回り◎；○ 版本不受影響，全形/半形都算）。
@@ -55,8 +55,822 @@
     }
   };
 })();
-</script><script>(function(){"use strict";
-const k=JSON.parse(document.getElementById("planner-data").textContent||"{}"),p=(t,e=document)=>e.querySelector(t),B=(t,e=document)=>Array.from(e.querySelectorAll(t)),ie=document.getElementById("pl-base").getAttribute("href")||"/",K=new URL(ie,location.href).href.replace(/index\.html$/,""),h=t=>String(t??"").replace(/[&<>"']/g,e=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[e]),W=t=>t.toLowerCase().normalize("NFKC").replace(/[\u30a1-\u30f6]/g,e=>String.fromCharCode(e.charCodeAt(0)-96)),L=new Map(k.skills.map(t=>[t.id,t])),et=new Map(k.cards.map(t=>[t.id,t])),T=new Map(k.supports.map(t=>[t.id,t])),F=new Map(k.courses.map(t=>[t.id,t])),st=new Map(k.tracks.map(t=>[t.id,t])),V=new Map;for(const t of k.skills)t.g&&(V.has(t.g)||V.set(t.g,[]),V.get(t.g).push(t));const D=new Map,Q=(t,e)=>(t.ev??[]).find(s=>s[0]===e)?.[1]??0,x=t=>[...new Set([...t.h,...(t.ev??[]).map(e=>e[0])])],lt="金技→白技",Z=(t,e)=>!!t&&!(t.h??[]).includes(e)&&!!(Q(t,e)&8),bt=t=>(t&1?"·選擇":"")+(t&2?"·隨機":"")+(t&4?"·條件":""),dt=(t,e)=>t.h?.includes(e)?"Hint":(t.ev??[]).some(s=>s[0]===e)?"事件"+bt(Q(t,e)):"";for(const t of k.supports)for(const e of x(t))D.has(e)||D.set(e,[]),D.get(e).push(t);const Lt=t=>t.r==="SSR"||t.r==="SR",oe=t=>t.aq==="e"||t.aq==="g",ft=t=>!!a.hideact&&oe(t),le=k.classes.map(t=>t.key),Ct=t=>{const e=le.indexOf(t.c);return e<0?99:e},X=(t,e)=>Ct(t)-Ct(e)||e.r-t.r||t.id-e.id,Tt=["","領頭","前列","居中","後追"],U=["","短距離","一哩","中距離","長距離"],gt=["","草地","沙地"],Dt=["","良","稍重","重","不良"],Pt=["","晴","陰","雨","雪"],Gt=["","春","夏","秋","冬","春"],Kt=["序盤","中盤","終盤","最後階段"],de=[["speed","速度"],["stamina","耐力"],["power","力量"],["guts","根性"],["wisdom","智力"],["friend","友人"],["group","團隊"]],ue=new Set([10101,10103,10104,10105]);function O(t){return t.c==="speed"&&(t.spd||0)<1500?`速度效果 ${((t.spd||0)/1e4).toFixed(2)} < 0.15`:t.c==="debuff_other"?"非降速干擾":""}const nt="skillselect.tw.planner.v1."+window.TW.profile.id+"",Wt=()=>({card:0,style:0,track:0,course:0,gc:0,weather:0,season:0,nodb:0,deck:[],nosrc:!0,nosrcSet:!1,rar:0,skillq:"",supq:"",sort:"prov",suprar:"",supsort:"count",suptype:"",pkst:"",pkq:"",psty:"",psr:"",psq:"",hideact:!1}),a=Wt(),Ft=["card","style","track","course","gc","weather","season","nodb"];function ot(){const t=new URLSearchParams;for(const e of Ft)a[e]&&t.set(e,String(a[e]));a.deck.length&&t.set("deck",a.deck.join(".")),window.TW.saveHash(t);try{localStorage.setItem(nt,JSON.stringify(a))}catch{}}function Zt(){et.has(a.card)||(a.card=0),F.has(a.course)||(a.course=0),a.course&&(a.track=F.get(a.course).track),st.has(a.track)||(a.track=0),a.deck=(Array.isArray(a.deck)?a.deck:[]).map(Number).filter(t=>T.has(t)).slice(0,6);for(const t of["style","gc","weather","season"])a[t]=Number(a[t])||0;a.nodb=a.nodb?1:0,delete a.preset,delete a.rar,typeof a.skillq!="string"&&(a.skillq=""),typeof a.supq!="string"&&(a.supq=""),delete a.suptypes,a.nosrcSet||(a.nosrc=!0),a.nosrc=!!a.nosrc,a.hideact=!!a.hideact,a.psr==="R"&&(a.psr="");for(const t of["suprar","suptype","pkst","pkq","psty","psr","psq"])typeof a[t]!="string"&&(a[t]="")}function pe(){const t=location.hash.slice(1);if(t&&/(^|&)(card|deck|course|track|style)=/.test(t)){const e=new URLSearchParams(t);try{Object.assign(a,JSON.parse(localStorage.getItem(nt)||"{}"),{card:0,style:0,track:0,course:0,gc:0,weather:0,season:0,nodb:0,deck:[]})}catch{}for(const s of Ft)e.get(s)&&(a[s]=Number(e.get(s))||0);a.deck=(e.get("deck")||"").split(".").map(Number)}else try{Object.assign(a,JSON.parse(localStorage.getItem(nt)||"{}"))}catch{}Zt()}function fe(){Object.assign(a,Wt());try{localStorage.removeItem(nt)}catch{}He.clear(),z=30,S();try{localStorage.removeItem(nt)}catch{}H("已重置，並清除本機儲存的選擇")}function ge(){const t={};a.style&&(t.running_style=a.style);const e=F.get(a.course),s=e?e.track:a.track;return s&&(t.track_id=s,t.is_abroad=s>=10201?1:0),e&&(Object.assign(t,{distance_type:e.distType,ground_type:e.ground,rotation:e.turn,course_distance:e.distance,is_basis_distance:e.basis,is_tight_track:e.tight}),e.geo||(t.corner_count=e.turn===4?0:99),e.dirtgrade||(t.is_dirtgrade=0)),s&&!ue.has(s)&&(t.time=2),a.gc&&(t.ground_condition=a.gc),a.weather&&(t.weather=a.weather),a.season&&(t.season=a.season),t.__course=e&&e.geo?e:null,t}const ht=/^([a-z_0-9]+)(==|!=|>=|<=|>|<)(-?\d+)$/,Ut=(t,e,s)=>e==="=="?t===s:e==="!="?t!==s:e===">="?t>=s:e==="<="?t<=s:e===">"?t>s:t<s,G=(t,e)=>{const s=[];for(const r of t)for(const n of e){const o=Math.max(r[0],n[0]),c=Math.min(r[1],n[1]);o<=c&&s.push([o,c])}return s},it=(t,e)=>{const s=[...t].sort((o,c)=>o[0]-c[0]),r=[];let n=0;for(const[o,c]of s)o>n&&r.push([n,o]),n=Math.max(n,c);return n<e&&r.push([n,e]),r};function he(t,e,s,r){const n=r.distance,o=r.geo,c=m=>[[0,n/6],[n/6,n*2/3],[n*2/3,n*5/6],[n*5/6,n]][Math.max(0,Math.min(3,m))],i=(m,R,A)=>{const[P,Y]=c(m);return[[P+(Y-P)*R,P+(Y-P)*A]]},u=o.corners.map(m=>[m[0],m[0]+m[1]]),d=o.straights.map(m=>[m[0],m[1]]),g=o.slopes.filter(m=>m[2]>0).map(m=>[m[0],m[0]+m[1]]),y=o.slopes.filter(m=>m[2]<0).map(m=>[m[0],m[0]+m[1]]),$=[[0,n]],f=m=>{const R=[];for(let A=u.length+m-5;A>=0;A-=4)R.push(u[A]);return R},v=u[u.length-1],M=d.length?d[d.length-1]:null,E=m=>n*m/100;switch(t){case"phase":return e==="=="?[c(s)]:e===">="?[[c(s)[0],n]]:e==="<="?[[0,c(s)[1]]]:e===">"?s>=3?[]:[[c(s+1)[0],n]]:e==="<"?s<=0?[]:[[0,c(s)[0]]]:it([c(s)],n);case"phase_random":return[c(s)];case"phase_firsthalf":case"phase_firsthalf_random":return i(s,0,.5);case"phase_laterhalf":case"phase_laterhalf_random":return i(s,.5,1);case"phase_firstquarter":case"phase_firstquarter_random":return i(s,0,.25);case"phase_corner_random":return G(u,[c(s)]);case"phase_straight_random":return G(d,[c(s)]);case"phase_first_half_straight_random":return G(d,i(s,0,.5));case"phase_latter_half_straight_random":return G(d,i(s,.5,1));case"distance_rate":return e.startsWith("<")?[[0,E(s)]]:e.startsWith(">")?[[E(s),n]]:[[E(s),E(s)]];case"distance_rate_after_random":return[[E(s),n]];case"remain_distance":return e==="=="?[[n-s,n-s+1]]:e.startsWith("<")?[[n-s,n]]:[[0,n-s]];case"corner":return e==="=="&&s===0?it(u,n):e==="!="&&s===0?u:e==="=="?f(s):e==="!="?it(f(s),n):null;case"corner_random":{const m=u.length+s-5;return m>=0?[u[m]]:[]}case"all_corner_random":return u;case"corner_count":return Ut(u.length,e,s)?$:[];case"is_finalcorner":return v?s?[[v[0],n]]:[[0,v[0]]]:s?[]:$;case"is_finalcorner_random":return v?[v]:[];case"is_finalcorner_laterhalf":return v?[[(v[0]+v[1])/2,v[1]]]:[];case"is_last_straight":case"last_straight_random":return M?[M]:[];case"is_last_straight_onetime":return M?[[M[0],M[0]+10]]:[];case"straight_random":return d;case"straight_front_type":return o.straights.filter(m=>m[2]===s).map(m=>[m[0],m[1]]);case"slope":return s===1?g:s===2?y:it([...g,...y],n);case"up_slope_random":return g;case"down_slope_random":return y;case"up_slope_random_later_half":return G(g,[[n/2,n]]);case"is_lastspurt":case"lastspurt":return[[n*2/3,n]];case"run_at_full_speed_random":return[[n*5/6,n]]}return null}function $e(t){let e=-1,s=1/0;for(const r of t){const n=ht.exec(r.trim());if(!n||n[1]!=="remain_distance")continue;const o=Number(n[3]);n[2]===">="||n[2]===">"?e=Math.max(e,o):n[2]==="<="||n[2]==="<"?s=Math.min(s,o):n[2]==="=="&&(e=Math.max(e,o),s=Math.min(s,o))}return e>=600?"long":s<=600?"short":""}function me(t,e){const s=e.__course;if(s){const c=$e(t);if(c==="long"&&s.distType<3)return["剩餘距離 ≥600m 的技能（中/長距離技能），當前是"+U[s.distType]+"賽道"];if(c==="short"&&s.distType>2)return["剩餘距離 ≤600m 的技能（短/一哩技能），當前是"+U[s.distType]+"賽道"]}let r=s?[[0,s.distance]]:null;const n=[],o=[];for(const c of t){const i=ht.exec(c);if(!i)continue;const[,u,d]=i;let g=Number(i[3]);if(s){const $=he(u,d,g,s);if($){if(o.push(c),r=G(r,$),!r.length)return n.push(o.length>1?o.join(" 且 ")+"（區間不重疊）":c),n.map(At);continue}}const y=e[u];y!==void 0&&(u==="season"&&g===5&&(g=1),Ut(y,d,g)||n.push(c))}return n.map(At)}function Et(t,e,s){if(!t.length)return!0;for(const r of t){const n=me(r,e);if(!n.length)return!0;s.push(n.join(" 且 "))}return!1}const ve=/is_activate_other_skill_detail==1/;function ke(t,e){if(!t.sc)return{ok:!0};const s=[];let r=null;for(let o=0;o<t.sc.length;o++){const[c,i]=t.sc[o],u=[],d=Et(c,e,u)&&Et(i,e,u);o===0&&(r=d);const g=o>0&&t.e?.[o]&&ve.test((t.e[o][0]??"")+" "+(t.e[o][1]??""));if(d&&g&&r===!1){s.push("連鎖效果，需先觸發第 1 效果");continue}if(d)return{ok:!0};s.push(...u)}const n=[...new Set(s)];return n.length&&n.every(o=>o.startsWith("跑法"))?{ok:!1,why:"跑法不適用（"+n.map(o=>o.replace(/^跑法/,"僅")).join(" ／ ")+"）",back:!0}:{ok:!1,why:n.slice(0,3).join(" ／ ")}}const ye="發動名次靠後(≥40%)，不推薦逃/先";function be(t){const e=ht.exec(t.trim());if(!e)return!1;const[,s,r]=e,n=Number(e[3]);return s==="order_rate"?(r===">="||r===">")&&n>=40:s==="order_rate_out40_continue"?r==="=="&&n===1:s==="order_rate_in40_continue"?r==="=="&&n===0:!1}const Rt=t=>!!t&&t.split("@").every(e=>e.split("&").some(be)),_e=t=>t.e.length>0&&t.e.every(e=>Rt(e[0])||Rt(e[1]));function at(t,e){const s=ke(t,e),r=k.styleOv?.[t.id];if(s.ok&&r&&a.style&&!r.st.includes(a.style))return{ok:!1,why:r.why,back:!0};const n=k.distOv?.[t.id],o=F.get(a.course);if(s.ok&&n&&o&&!n.dt.includes(o.distType))return{ok:!1,why:n.why,back:!0};const c=k.slopeRules?.sk?.[t.id];if(s.ok&&c&&a.course&&k.slopeRules.c[a.course]){const[u,d]=c,g=u==="up"?0:1,y=k.slopeRules.c[a.course],f=(a.style?d.includes(a.style)?[a.style]:[]:d).map(v=>y[v]?.[g]).filter(v=>v&&v!=="-");if(f.length&&!f.includes("可加"))return{ok:!1,why:k.slopeRules.why[u][f[0]]??k.slopeRules.why[u].否,back:!0}}const i=k.gainBlock;if(s.ok&&i&&a.course&&i.c[a.course]?.[t.id]){const[u,d]=i.c[a.course][t.id];if(a.style?u.includes(a.style):u.length>0&&d.length===0)return{ok:!1,why:i.why,back:!0}}return s.ok&&t.c==="speed"&&(a.style===1||a.style===2)&&_e(t)?{ok:!1,why:ye,back:!0}:s}const N={"==":"","!=":"≠",">=":"≥","<=":"≤",">":">","<":"<"};function At(t){return t.includes("（")||t.includes(" 且 ")?t.split(" 且 ").map(e=>e.replace("（區間不重疊）","")).map(_t).join(" 且 ")+(t.includes("（區間不重疊）")?"（在此賽道上不重疊）":""):_t(t)}function _t(t){const e=ht.exec(t);if(!e)return t;const[,s,r]=e,n=Number(e[3]),o=(u,d)=>r==="=="?`${d}${u[n]??n}`:r==="!="?`${d}非${u[n]??n}`:`${d}${N[r]}${u[n]??n}`,c=u=>Kt[u]??`階段${u}`;switch(s){case"running_style":return o(Tt,"跑法");case"distance_type":return r==="=="?U[n]:`非${U[n]}`;case"ground_type":return o(gt,"");case"ground_condition":return o(Dt,"場況");case"weather":return o(Pt,"天氣");case"season":return o(Gt,"季節");case"rotation":return n===1?"右回賽道":n===2?"左回賽道":`方向${n}`;case"track_id":return r==="=="?`${st.get(n)?.zh??n}賽馬場`:r==="!="?`非${st.get(n)?.zh??n}賽馬場`:"JRA 賽馬場";case"course_distance":return`距離${N[r]}${n}m`;case"is_basis_distance":return n?"根幹距離":"非根幹距離";case"is_tight_track":return"小回賽道";case"corner_count":return n===0&&r==="=="?"直線賽道":`彎道數${N[r]}${n}`;case"time":return n===4?"夜賽":`時間段${n}`;case"is_dirtgrade":return r==="=="&&n===1?"交流重賞":"非交流重賞";case"is_abroad":return n?"海外賽道":"日本國內賽道";case"grade":return n===100?"G1 比賽":`等級${n}`;case"phase":return r==="=="?c(n):r===">="?`${c(n)}以後`:r==="<="?`${c(n)}以前`:r===">"?`${c(n+1)}以後`:r==="<"?`${c(n-1)}以前`:`非${c(n)}`;case"phase_random":return`${c(n)}隨機`;case"phase_firsthalf":case"phase_firsthalf_random":return`${c(n)}前半`;case"phase_laterhalf":case"phase_laterhalf_random":return`${c(n)}後半`;case"phase_firstquarter":case"phase_firstquarter_random":return`${c(n)}開頭 1/4`;case"phase_corner_random":return`${c(n)}的彎道`;case"phase_straight_random":return`${c(n)}的直線`;case"phase_first_half_straight_random":return`${c(n)}前半的直線`;case"phase_latter_half_straight_random":return`${c(n)}後半的直線`;case"distance_rate":return`賽程進度${N[r]}${n}%`;case"distance_rate_after_random":return`賽程進度 ${n}% 以後隨機`;case"remain_distance":return`剩餘距離${N[r]||"="}${n}m`;case"corner":return n===0?r==="=="?"不在彎道":"彎道中":`${r==="!="?"非":""}第${n}彎道`;case"corner_random":return`第${n}彎道隨機`;case"all_corner_random":return"任意彎道";case"is_finalcorner":return n?"最終彎道以後":"最終彎道之前";case"is_finalcorner_random":return"最終彎道";case"is_finalcorner_laterhalf":return"最終彎道後半";case"is_last_straight":case"last_straight_random":return"最終直線";case"is_last_straight_onetime":return"進入最終直線時";case"straight_random":return"任意直線";case"straight_front_type":return n===1?"正面直線":n===2?"對面直線":`直線型別${n}`;case"slope":return["平地","上坡","下坡"][n]??`坡道${n}`;case"up_slope_random":return"上坡";case"down_slope_random":return"下坡";case"up_slope_random_later_half":return"後半的上坡";case"is_lastspurt":return"最終衝刺中";case"order":return`名次${N[r]||"第"}${n}`;case"order_rate":return`名次位於前${n}%`.replace("前",r.startsWith("<")?"前":"後")}const i=k.condLabels?.[s];return i?`${i.replace(/\(.*\)$/,"")}${N[r]||"="}${n}`:t}function $t(t,e,s,r,n=""){return t?`<img class="pic ${n}" src="${h(K+t)}" alt="${h(s)}" loading="lazy" decoding="async" width="${e}" height="${e}" style="width:${e}px;height:${e}px">`:`<span class="pic ph ${n}" role="img" aria-label="${h(s)}" style="width:${e}px;height:${e}px;${r?`--ph:${r}`:""}">${h((s||"").replace(/^\[.*?\]/,"").slice(0,2))}</span>`}const Yt=(t,e)=>k.badges?.[t.r]?`<img class="${e}" src="${h(K+k.badges[t.r])}" alt="${h(t.r)}" decoding="async">`:`<span class="${e} badge b-${t.r}">${h(t.r)}</span>`;function ct(t,e){const s=k.ui["type_"+t.ty],r=Math.max(12,Math.round(Math.min(e,90)*.3)),n=s?`<img class="stype" src="${h(K+s)}" alt="${h(t.tl)}" width="${r}" height="${r}" style="width:${r}px;height:${r}px">`:`<span class="stype stype-txt badge b-${t.ty}">${h(t.tl.slice(0,1))}</span>`;return`<span class="sthumb" style="width:${e}px">${$t(t.i,e,t.n,t.col)}${Yt(t,"srar")}${n}</span>`}const j=t=>t.zn||t.n,jt=t=>`${h(j(t))}${t.zn&&t.zn!==t.n?`<span class="zn-ja">${h(t.n)}</span>`:""}`,Jt=t=>W(`${t.t} ${t.n} ${t.zn||""} ${t.aliases||""}`),Vt=(t,e=24)=>$t(t.i,e,t.n);function I(t,e={}){return`<button type="button" class="cap ${t.r===2?"gold":""} ${e.cls??""}" data-skill="${t.id}" title="${h(e.title??t.d)}">${Vt(t,28)}<span class="cap-n">${h(t.n)}${t.tw&&t.ja!==t.tw?`<small class="tw-ja" lang="ja">${h(t.ja)}</small>`:!t.tw?`<small class="tw-missing">待補繁中譯名</small>`:""}</span>${e.tag?`<span class="cap-t ${e.tagOk?"ok":""}">${h(e.tag)}</span>`:""}${e.gw?`<span class="cap-gw" title="事件給的是金技能，按同組白技能計入">${lt}</span>`:""}${e.badge?`<span class="cap-b" title="可提供的 SSR/SR 支援卡數">${e.badge}</span>`:""}</button>`}let Nt;function H(t){let e=p(".pl-toast");e||(e=document.createElement("div"),e.className="pl-toast",document.body.appendChild(e)),e.textContent=t,e.hidden=!1,clearTimeout(Nt),Nt=setTimeout(()=>e.hidden=!0,2200)}function Qt(t,e=-1){const s=et.get(a.card);return s&&s.cid===t.cid?`${j(t)} 是育成馬娘本人，不能同時編成其支援卡`:a.deck.find((n,o)=>o!==e&&T.get(n)?.cid===t.cid)?`編成中已有 ${j(t)} 的支援卡`:""}function Ot(t,e=-1,s=!1){const r=T.get(t);if(!r)return!1;if(a.deck.includes(t))return H("這張卡已在編成中"),!1;const n=s?"":Qt(r,e);if(n)return H(n),!1;if(e>=0&&e<a.deck.length)a.deck[e]=t;else{if(a.deck.length>=6)return H("編成已滿 6 張，請先移除一張"),!1;a.deck.push(t)}return S(),!0}const qt=(t,e,s)=>`<button type="button" class="tchip" data-tg="${t}" data-v="${h(e)}" aria-pressed="${a[t]===e}">${s}</button>`,Xt=(t,e)=>de.map(([s,r])=>qt(t,s,(e&&k.ui["type_"+s]?`<img class="uico" src="${h(K+k.ui["type_"+s])}" width="16" height="16" alt="">`:"")+r)).join(""),te=(t,e)=>e.map(s=>qt(t,s,s)).join(""),ee=()=>B("[data-tg]").forEach(t=>t.setAttribute("aria-pressed",String(a[t.dataset.tg]===t.dataset.v)));function se(t){return`${gt[t.ground]}${t.distance}m${t.inoutLabel?"（"+t.inoutLabel+"）":""}`}function Se(){const t=p("[data-track]");for(const e of k.tracks)t.appendChild(new Option(e.zh,String(e.id)));p("[data-sup-type]").innerHTML=Xt("suptype",!0)+'<span class="sep"></span>'+te("suprar",["SSR","SR"])}function we(){const t=p("[data-course]"),e=k.courses.filter(s=>s.track===a.track);t.innerHTML='<option value="">不限</option>'+e.map(s=>`<option value="${s.id}">${se(s)}</option>`).join(""),t.disabled=!a.track,e.some(s=>s.id===a.course)||(a.course=0),t.value=a.course?String(a.course):""}function ne(){p("[data-track]").value=a.track?String(a.track):"",we();const t={style:a.style,gc:a.gc,weather:a.weather,season:a.season};for(const r of B("[data-seg]")){const n=String(t[r.dataset.seg]??"");for(const o of B("button",r))o.setAttribute("aria-pressed",String(o.dataset.v===n))}p("[data-nosrc]").checked=a.nosrc,p("[data-nodb]").checked=!!a.nodb,B("[data-hideact]").forEach(r=>r.checked=!!a.hideact);const e=p("[data-skill-q]");e.value!==a.skillq&&(e.value=a.skillq);const s=p("[data-sup-q]");s.value!==a.supq&&(s.value=a.supq),p("[data-skill-sort]").value=a.sort,p("[data-sup-sort]").value=a.supsort,ee()}let z=30,ut=new Set,pt={};function S(){Zt(),ot(),ne();const t=ge();pt=t;const e=et.get(a.card),s=new Set(e?(e.ev??[]).map(l=>l[0]).filter(l=>L.has(l)):[]),r=new Set(e?[...e.sk.filter(l=>L.has(l)),...s]:[]),n=new Set;for(const l of a.deck)for(const b of x(T.get(l)??{h:[]}))n.add(b);const o=new Set([...r,...n]),c=new Map;for(const l of o){const b=L.get(l);if(b?.r===2&&b.g)for(const _ of V.get(b.g)??[])_.r===1&&!_.neg&&!o.has(_.id)&&c.set(_.id,b)}const i=new Set(a.deck),u=l=>!!a.nodb&&!!l.db,d=l=>l.r===1&&l.c!=="vision"&&!l.neg&&!u(l)&&(D.has(l.id)||r.has(l.id)||a.nosrc),g=new Map,y=k.skills.filter(d);for(const l of y)g.set(l.id,at(l,t));const $=y.filter(l=>g.get(l.id).ok),f=$.filter(l=>!O(l)),v=$.filter(l=>!o.has(l.id)&&!c.has(l.id)),M=v.filter(l=>!O(l)),E=v.filter(l=>O(l));ut=new Set(M.map(l=>l.id));const m=new Set(M.map(l=>l.id)),R=y.filter(l=>!g.get(l.id).ok&&!O(l));Le(e),Te(t),qe();const A=f.filter(l=>r.has(l.id)).length,P=f.filter(l=>n.has(l.id)&&!r.has(l.id)).length;p("[data-summary]").innerHTML=[["有效技能（計入）",f.length,""],["育成馬娘提供",A,""],["編成支援卡提供",P,""],["尚未獲得",M.length,"main"],["因條件排除",R.length,""]].map(([l,b,_])=>`<div class="pl-stat ${_}"><div class="n">${b}</div><div class="k">${l}</div></div>`).join("");const Y=(l,b,_,ce)=>{const kt=l.map(w=>L.get(w)).filter(w=>w&&w.r===1&&w.c!=="vision"&&!u(w)).sort(X);return kt.length?`<div class="pl-sub">${b}（${kt.length}）</div><div class="caps">${kt.map(w=>{const xt=g.get(w.id)??at(w,t),yt=_?.(w.id)??"";return I(w,{cls:"small "+(xt.ok?"":"off"),tag:xt.ok?yt:"條件不符"+(yt?"·"+yt:""),gw:!!ce?.(w.id)})}).join("")}</div>`:""},ae=l=>{const b=a.deck.map(_=>T.get(_)).filter(_=>_&&x(_).includes(l));return b.some(_=>_.h.includes(l))?"":re(b,l)},re=(l,b)=>"事件"+bt(Math.min(...l.map(_=>Q(_,b)))),Ht=[...c.entries()].map(([l,b])=>I(L.get(l),{cls:"small",tag:"已有上位",tagOk:!0})).join("");p("[data-given]").innerHTML=Y([...r],"育成馬娘 初始/覺醒/事件技能",l=>e&&e.sk.includes(l)?"":"事件"+bt(Q(e,l)),l=>!!e&&!e.sk.includes(l)&&(Q(e,l)&8)>0)+Y([...n].filter(l=>!r.has(l)),"編成支援卡 Hint / 事件技能",ae,l=>{const b=a.deck.map(_=>T.get(_)).filter(_=>_&&x(_).includes(l));return b.length>0&&b.every(_=>Z(_,l))})+(Ht?`<div class="pl-sub">同組已有上位技能的白技能（視為已獲得）</div><div class="caps">${Ht}</div>`:"")||'<p class="muted small">尚未選擇育成馬娘或支援卡。</p>',p("[data-given-count]").textContent=`（${[...o].filter(l=>{const b=L.get(l);return b&&b.r===1&&b.c!=="vision"&&!u(b)}).length}）`,Me(e),xe(M,o,i),p("[data-remain-count]").textContent=`共 ${M.length} 個`;const mt=E.slice().sort(X);p("[data-nc-count]").textContent=`（${mt.length}）`,p("[data-nc]").innerHTML=mt.length?`<div class="caps">${mt.map(l=>I(l,{cls:"small",tag:O(l)})).join("")}</div>`:'<p class="muted small">無</p>';const vt=R.slice().sort(X);p("[data-excl-count]").textContent=`（${vt.length}）`,p("[data-excl]").innerHTML=vt.length?`<div class="caps">${vt.map(l=>I(l,{cls:"small "+(o.has(l.id)?"off":""),tag:(g.get(l.id).back?"":"需：")+g.get(l.id).why,title:(g.get(l.id).back?"":"需：")+g.get(l.id).why})).join("")}</div>`:'<p class="muted small">沒有被排除的技能。</p>',Ee(m,i)}function Me(t){const e=!t,s=a.deck.length===0,r=e&&s?"<b>提示：</b>還沒選育成馬娘，也還沒編成育成卡組。請先做兩步：① 在 01 選好要育成的馬娘（和跑法）；② 在「支援卡編成」填入你的育成卡組（6 張）。":e?"<b>提示：</b>還沒選育成馬娘。請先在 01 選好要育成的馬娘（和跑法），才能算出這隻馬娘還缺哪些技能。":"<b>提示：</b>已選好育成馬娘，還沒編成育成卡組。請在「支援卡編成」填入你的育成卡組（最多 6 張），才能知道這套卡組還缺哪些技能。",n=`<div class="pl-empty-btns">${e?'<button type="button" class="pill-btn" data-pick-card>選擇育成馬娘</button>':""}${s?'<button type="button" class="pill-btn" data-slot="-1">編成支援卡</button>':""}</div>`,o=e||s,c=p("[data-empty-skill]"),i=p("[data-empty-rec]");c.hidden=i.hidden=!o,c.innerHTML=o?`${r} 在此之前，下方列出的是當前條件下的全部有效技能，還沒有針對你的卡組。${n}`:"",i.innerHTML=o?`${r} 在此之前，下方「種馬使用卡推薦」只是按全部有效技能排出的參考，選完後才會變成“補上你這套卡組缺失技能”的推薦。${n}`:""}function Le(t){const e=p("[data-pick-card]");e.classList.toggle("filled",!!t),e.innerHTML=t?$t(t.i,104,t.n,t.col)+'<span class="pl-x" data-clear-card title="移除">×</span>':'<span class="pl-plus">＋</span>',p("[data-card-name]").innerHTML=t?`<span class="t">${h(t.t)}</span><span class="nm">${jt(t)}</span>`:'<span class="muted">未選擇 · 點選左側格子選擇</span>';const s=p("[data-apt]");if(!t){s.innerHTML="";return}const r=F.get(a.course),n=t.ap,o=i=>`<b class="g g-${i}">${i}</b>`,c=[];if(r){const i=r.ground===1?"turf":"dirt";c.push(`${gt[r.ground]} ${o(n[i])}`);const u=["","short","mile","middle","long"][r.distType];c.push(`${U[r.distType]} ${o(n[u])}`)}if(a.style){const i=["","nige","senko","sashi","oikomi"][a.style];c.push(`${Tt[a.style]} ${o(n[i])}`)}s.innerHTML=c.length?c.map(i=>`<span>${i}</span>`).join(""):'<span class="muted">選擇賽道與跑法後顯示適性</span>'}function Te(t){const e=F.get(a.course),s=p("[data-course-card]"),r=[a.gc?"場況"+Dt[a.gc]:"",a.weather?Pt[a.weather]+"天":"",a.season?Gt[a.season]+"季":""].filter(Boolean);if(p("[data-gc-note]").textContent=e?`${gt[e.ground]}（隨賽道選擇）`:"",!e){s.innerHTML=`<div class="course-heading"><strong>${a.track?h(st.get(a.track).zh)+" · 未選賽道":"未選擇賽道"}</strong></div><p class="hint" style="margin-bottom:0">未選賽道時，距離 / 場地 / 方向 / 彎道 / 坡道等條件不做排除。${r.length?"當前環境："+r.join(" · "):""}</p>`;return}const n=st.get(e.track),o=e.distance,c=e.geo,i=g=>(g/o*100).toFixed(2)+"%";let u="",d=[`${o.toLocaleString()} m`,e.turn===4?"直線賽道":`${e.turnLabel}回`,U[e.distType],e.basis?"根幹距離":"非根幹距離"];if(e.tight&&d.push("小回"),e.track>=10201&&d.push("海外"),t.time===4&&d.push("夜賽"),t.is_dirtgrade===1&&d.push("交流重賞"),t.grade===100&&d.push("G1"),c){const g=c.slopes.filter(f=>f[2]>0).reduce((f,v)=>f+v[1],0),y=c.slopes.filter(f=>f[2]<0).reduce((f,v)=>f+v[1],0);d.push(`彎道 ${c.corners.length}`,g?`上坡 ${g} m`:"無上坡",y?`下坡 ${y} m`:"無下坡");const $=c.corners.map((f,v)=>4-(c.corners.length-1-v)%4);u=`<div class="geo-lab"><span>彎道</span><div class="geo-row">${c.corners.map((f,v)=>`<span class="cn" style="left:${i(f[0])};width:${i(f[1])}" title="第${$[v]}彎道 ${f[0]}–${f[0]+f[1]}m"></span>`).join("")}</div></div>
+</script><script>(function() {
+    "use strict";
+    const k = JSON.parse(document.getElementById("planner-data").textContent || "{}"),
+        p = (t, e = document) => e.querySelector(t),
+        B = (t, e = document) => Array.from(e.querySelectorAll(t)),
+        ie = document.getElementById("pl-base").getAttribute("href") || "/",
+        K = new URL(ie, location.href).href.replace(/index\.html$/, ""),
+        h = t => String(t ?? "").replace(/[&<>"']/g, e => ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;"
+        })[e]),
+        W = t => t.toLowerCase().normalize("NFKC").replace(/[\u30a1-\u30f6]/g, e => String.fromCharCode(e.charCodeAt(0) - 96)),
+        L = new Map(k.skills.map(t => [t.id, t])),
+        et = new Map(k.cards.map(t => [t.id, t])),
+        T = new Map(k.supports.map(t => [t.id, t])),
+        F = new Map(k.courses.map(t => [t.id, t])),
+        st = new Map(k.tracks.map(t => [t.id, t])),
+        V = new Map;
+    for (const t of k.skills) t.g && (V.has(t.g) || V.set(t.g, []), V.get(t.g).push(t));
+    const D = new Map,
+        Q = (t, e) => (t.ev ?? []).find(s => s[0] === e)?.[1] ?? 0,
+        x = t => [...new Set([...t.h, ...(t.ev ?? []).map(e => e[0])])],
+        lt = "金技→白技",
+        Z = (t, e) => !!t && !(t.h ?? []).includes(e) && !!(Q(t, e) & 8),
+        bt = t => (t & 1 ? "·選擇" : "") + (t & 2 ? "·隨機" : "") + (t & 4 ? "·條件" : ""),
+        dt = (t, e) => t.h?.includes(e) ? "Hint" : (t.ev ?? []).some(s => s[0] === e) ? "事件" + bt(Q(t, e)) : "";
+    for (const t of k.supports)
+        for (const e of x(t)) D.has(e) || D.set(e, []), D.get(e).push(t);
+    const Lt = t => t.r === "SSR" || t.r === "SR",
+        oe = t => t.aq === "e" || t.aq === "g",
+        ft = t => !!a.hideact && oe(t),
+        le = k.classes.map(t => t.key),
+        Ct = t => {
+            const e = le.indexOf(t.c);
+            return e < 0 ? 99 : e
+        },
+        X = (t, e) => Ct(t) - Ct(e) || e.r - t.r || t.id - e.id,
+        Tt = ["", "領頭", "前列", "居中", "後追"],
+        U = ["", "短距離", "一哩", "中距離", "長距離"],
+        gt = ["", "草地", "沙地"],
+        Dt = ["", "良", "稍重", "重", "不良"],
+        Pt = ["", "晴", "陰", "雨", "雪"],
+        Gt = ["", "春", "夏", "秋", "冬", "春"],
+        Kt = ["序盤", "中盤", "終盤", "最後階段"],
+        de = [
+            ["speed", "速度"],
+            ["stamina", "耐力"],
+            ["power", "力量"],
+            ["guts", "根性"],
+            ["wisdom", "智力"],
+            ["friend", "友人"],
+            ["group", "團隊"]
+        ],
+        ue = new Set([10101, 10103, 10104, 10105]);
+
+    function O(t) {
+        return t.c === "speed" && (t.spd || 0) < 1500 ? `速度效果 ${((t.spd||0)/1e4).toFixed(2)} < 0.15` : t.c === "debuff_other" ? "非降速干擾" : ""
+    }
+    const nt = "skillselect.tw.planner.v1." + window.TW.profile.id + "",
+        Wt = () => ({
+            card: 0,
+            style: 0,
+            track: 0,
+            course: 0,
+            gc: 0,
+            weather: 0,
+            season: 0,
+            nodb: 0,
+            deck: [],
+            stud: [],
+            nosrc: !0,
+            nosrcSet: !1,
+            rar: 0,
+            skillq: "",
+            supq: "",
+            sort: "prov",
+            suprar: "",
+            supsort: "count",
+            suptype: "",
+            pkst: "",
+            pkq: "",
+            psty: "",
+            psr: "",
+            psq: "",
+            hideact: !1
+        }),
+        a = Wt(),
+        Ft = ["card", "style", "track", "course", "gc", "weather", "season", "nodb"];
+
+    function ot() {
+        const t = new URLSearchParams;
+        for (const e of Ft) a[e] && t.set(e, String(a[e]));
+        a.deck.length && t.set("deck", a.deck.join(".")), window.TW.saveHash(t);
+        try {
+            localStorage.setItem(nt, JSON.stringify(a))
+        } catch {}
+    }
+
+    function Zt() {
+        et.has(a.card) || (a.card = 0), F.has(a.course) || (a.course = 0), a.course && (a.track = F.get(a.course).track), st.has(a.track) || (a.track = 0), a.deck = (Array.isArray(a.deck) ? a.deck : []).map(Number).filter(t => T.has(t)).slice(0, 6);
+        {
+            const seen = new Set;
+            a.stud = (Array.isArray(a.stud) ? a.stud : []).map(Number).filter(t => {
+                const sp = T.get(t);
+                if (!sp || !Lt(sp) || seen.has(t)) return !1;
+                return seen.add(t), !0
+            }).slice(0, 6)
+        }
+        for (const t of ["style", "gc", "weather", "season"]) a[t] = Number(a[t]) || 0;
+        a.nodb = a.nodb ? 1 : 0, delete a.preset, delete a.rar, typeof a.skillq != "string" && (a.skillq = ""), typeof a.supq != "string" && (a.supq = ""), delete a.suptypes, a.nosrcSet || (a.nosrc = !0), a.nosrc = !!a.nosrc, a.hideact = !!a.hideact, a.psr === "R" && (a.psr = "");
+        for (const t of ["suprar", "suptype", "pkst", "pkq", "psty", "psr", "psq"]) typeof a[t] != "string" && (a[t] = "")
+    }
+
+    function pe() {
+        const t = location.hash.slice(1);
+        if (t && /(^|&)(card|deck|course|track|style)=/.test(t)) {
+            const e = new URLSearchParams(t);
+            try {
+                Object.assign(a, JSON.parse(localStorage.getItem(nt) || "{}"), {
+                    card: 0,
+                    style: 0,
+                    track: 0,
+                    course: 0,
+                    gc: 0,
+                    weather: 0,
+                    season: 0,
+                    nodb: 0,
+                    deck: []
+                })
+            } catch {}
+            for (const s of Ft) e.get(s) && (a[s] = Number(e.get(s)) || 0);
+            a.deck = (e.get("deck") || "").split(".").map(Number)
+        } else try {
+            Object.assign(a, JSON.parse(localStorage.getItem(nt) || "{}"))
+        } catch {}
+        Zt()
+    }
+
+    function fe() {
+        Object.assign(a, Wt());
+        try {
+            localStorage.removeItem(nt)
+        } catch {}
+        He.clear(), z = 30, S();
+        try {
+            localStorage.removeItem(nt)
+        } catch {}
+        H("已重置，並清除本機儲存的選擇")
+    }
+
+    function ge() {
+        const t = {};
+        a.style && (t.running_style = a.style);
+        const e = F.get(a.course),
+            s = e ? e.track : a.track;
+        return s && (t.track_id = s, t.is_abroad = s >= 10201 ? 1 : 0), e && (Object.assign(t, {
+            distance_type: e.distType,
+            ground_type: e.ground,
+            rotation: e.turn,
+            course_distance: e.distance,
+            is_basis_distance: e.basis,
+            is_tight_track: e.tight
+        }), e.geo || (t.corner_count = e.turn === 4 ? 0 : 99), e.dirtgrade || (t.is_dirtgrade = 0)), s && !ue.has(s) && (t.time = 2), a.gc && (t.ground_condition = a.gc), a.weather && (t.weather = a.weather), a.season && (t.season = a.season), t.__course = e && e.geo ? e : null, t
+    }
+    const ht = /^([a-z_0-9]+)(==|!=|>=|<=|>|<)(-?\d+)$/,
+        Ut = (t, e, s) => e === "==" ? t === s : e === "!=" ? t !== s : e === ">=" ? t >= s : e === "<=" ? t <= s : e === ">" ? t > s : t < s,
+        G = (t, e) => {
+            const s = [];
+            for (const r of t)
+                for (const n of e) {
+                    const o = Math.max(r[0], n[0]),
+                        c = Math.min(r[1], n[1]);
+                    o <= c && s.push([o, c])
+                }
+            return s
+        },
+        it = (t, e) => {
+            const s = [...t].sort((o, c) => o[0] - c[0]),
+                r = [];
+            let n = 0;
+            for (const [o, c] of s) o > n && r.push([n, o]), n = Math.max(n, c);
+            return n < e && r.push([n, e]), r
+        };
+
+    function he(t, e, s, r) {
+        const n = r.distance,
+            o = r.geo,
+            c = m => [
+                [0, n / 6],
+                [n / 6, n * 2 / 3],
+                [n * 2 / 3, n * 5 / 6],
+                [n * 5 / 6, n]
+            ][Math.max(0, Math.min(3, m))],
+            i = (m, R, A) => {
+                const [P, Y] = c(m);
+                return [
+                    [P + (Y - P) * R, P + (Y - P) * A]
+                ]
+            },
+            u = o.corners.map(m => [m[0], m[0] + m[1]]),
+            d = o.straights.map(m => [m[0], m[1]]),
+            g = o.slopes.filter(m => m[2] > 0).map(m => [m[0], m[0] + m[1]]),
+            y = o.slopes.filter(m => m[2] < 0).map(m => [m[0], m[0] + m[1]]),
+            $ = [
+                [0, n]
+            ],
+            f = m => {
+                const R = [];
+                for (let A = u.length + m - 5; A >= 0; A -= 4) R.push(u[A]);
+                return R
+            },
+            v = u[u.length - 1],
+            M = d.length ? d[d.length - 1] : null,
+            E = m => n * m / 100;
+        switch (t) {
+            case "phase":
+                return e === "==" ? [c(s)] : e === ">=" ? [
+                    [c(s)[0], n]
+                ] : e === "<=" ? [
+                    [0, c(s)[1]]
+                ] : e === ">" ? s >= 3 ? [] : [
+                    [c(s + 1)[0], n]
+                ] : e === "<" ? s <= 0 ? [] : [
+                    [0, c(s)[0]]
+                ] : it([c(s)], n);
+            case "phase_random":
+                return [c(s)];
+            case "phase_firsthalf":
+            case "phase_firsthalf_random":
+                return i(s, 0, .5);
+            case "phase_laterhalf":
+            case "phase_laterhalf_random":
+                return i(s, .5, 1);
+            case "phase_firstquarter":
+            case "phase_firstquarter_random":
+                return i(s, 0, .25);
+            case "phase_corner_random":
+                return G(u, [c(s)]);
+            case "phase_straight_random":
+                return G(d, [c(s)]);
+            case "phase_first_half_straight_random":
+                return G(d, i(s, 0, .5));
+            case "phase_latter_half_straight_random":
+                return G(d, i(s, .5, 1));
+            case "distance_rate":
+                return e.startsWith("<") ? [
+                    [0, E(s)]
+                ] : e.startsWith(">") ? [
+                    [E(s), n]
+                ] : [
+                    [E(s), E(s)]
+                ];
+            case "distance_rate_after_random":
+                return [
+                    [E(s), n]
+                ];
+            case "remain_distance":
+                return e === "==" ? [
+                    [n - s, n - s + 1]
+                ] : e.startsWith("<") ? [
+                    [n - s, n]
+                ] : [
+                    [0, n - s]
+                ];
+            case "corner":
+                return e === "==" && s === 0 ? it(u, n) : e === "!=" && s === 0 ? u : e === "==" ? f(s) : e === "!=" ? it(f(s), n) : null;
+            case "corner_random": {
+                const m = u.length + s - 5;
+                return m >= 0 ? [u[m]] : []
+            }
+            case "all_corner_random":
+                return u;
+            case "corner_count":
+                return Ut(u.length, e, s) ? $ : [];
+            case "is_finalcorner":
+                return v ? s ? [
+                    [v[0], n]
+                ] : [
+                    [0, v[0]]
+                ] : s ? [] : $;
+            case "is_finalcorner_random":
+                return v ? [v] : [];
+            case "is_finalcorner_laterhalf":
+                return v ? [
+                    [(v[0] + v[1]) / 2, v[1]]
+                ] : [];
+            case "is_last_straight":
+            case "last_straight_random":
+                return M ? [M] : [];
+            case "is_last_straight_onetime":
+                return M ? [
+                    [M[0], M[0] + 10]
+                ] : [];
+            case "straight_random":
+                return d;
+            case "straight_front_type":
+                return o.straights.filter(m => m[2] === s).map(m => [m[0], m[1]]);
+            case "slope":
+                return s === 1 ? g : s === 2 ? y : it([...g, ...y], n);
+            case "up_slope_random":
+                return g;
+            case "down_slope_random":
+                return y;
+            case "up_slope_random_later_half":
+                return G(g, [
+                    [n / 2, n]
+                ]);
+            case "is_lastspurt":
+            case "lastspurt":
+                return [
+                    [n * 2 / 3, n]
+                ];
+            case "run_at_full_speed_random":
+                return [
+                    [n * 5 / 6, n]
+                ]
+        }
+        return null
+    }
+
+    function $e(t) {
+        let e = -1,
+            s = 1 / 0;
+        for (const r of t) {
+            const n = ht.exec(r.trim());
+            if (!n || n[1] !== "remain_distance") continue;
+            const o = Number(n[3]);
+            n[2] === ">=" || n[2] === ">" ? e = Math.max(e, o) : n[2] === "<=" || n[2] === "<" ? s = Math.min(s, o) : n[2] === "==" && (e = Math.max(e, o), s = Math.min(s, o))
+        }
+        return e >= 600 ? "long" : s <= 600 ? "short" : ""
+    }
+
+    function me(t, e) {
+        const s = e.__course;
+        if (s) {
+            const c = $e(t);
+            if (c === "long" && s.distType < 3) return ["剩餘距離 ≥600m 的技能（中/長距離技能），當前是" + U[s.distType] + "賽道"];
+            if (c === "short" && s.distType > 2) return ["剩餘距離 ≤600m 的技能（短/一哩技能），當前是" + U[s.distType] + "賽道"]
+        }
+        let r = s ? [
+            [0, s.distance]
+        ] : null;
+        const n = [],
+            o = [];
+        for (const c of t) {
+            const i = ht.exec(c);
+            if (!i) continue;
+            const [, u, d] = i;
+            let g = Number(i[3]);
+            if (s) {
+                const $ = he(u, d, g, s);
+                if ($) {
+                    if (o.push(c), r = G(r, $), !r.length) return n.push(o.length > 1 ? o.join(" 且 ") + "（區間不重疊）" : c), n.map(At);
+                    continue
+                }
+            }
+            const y = e[u];
+            y !== void 0 && (u === "season" && g === 5 && (g = 1), Ut(y, d, g) || n.push(c))
+        }
+        return n.map(At)
+    }
+
+    function Et(t, e, s) {
+        if (!t.length) return !0;
+        for (const r of t) {
+            const n = me(r, e);
+            if (!n.length) return !0;
+            s.push(n.join(" 且 "))
+        }
+        return !1
+    }
+    const ve = /is_activate_other_skill_detail==1/;
+
+    function ke(t, e) {
+        if (!t.sc) return {
+            ok: !0
+        };
+        const s = [];
+        let r = null;
+        for (let o = 0; o < t.sc.length; o++) {
+            const [c, i] = t.sc[o], u = [], d = Et(c, e, u) && Et(i, e, u);
+            o === 0 && (r = d);
+            const g = o > 0 && t.e?.[o] && ve.test((t.e[o][0] ?? "") + " " + (t.e[o][1] ?? ""));
+            if (d && g && r === !1) {
+                s.push("連鎖效果，需先觸發第 1 效果");
+                continue
+            }
+            if (d) return {
+                ok: !0
+            };
+            s.push(...u)
+        }
+        const n = [...new Set(s)];
+        return n.length && n.every(o => o.startsWith("跑法")) ? {
+            ok: !1,
+            why: "跑法不適用（" + n.map(o => o.replace(/^跑法/, "僅")).join(" ／ ") + "）",
+            back: !0
+        } : {
+            ok: !1,
+            why: n.slice(0, 3).join(" ／ ")
+        }
+    }
+    const ye = "發動名次靠後(≥40%)，不推薦逃/先";
+
+    function be(t) {
+        const e = ht.exec(t.trim());
+        if (!e) return !1;
+        const [, s, r] = e, n = Number(e[3]);
+        return s === "order_rate" ? (r === ">=" || r === ">") && n >= 40 : s === "order_rate_out40_continue" ? r === "==" && n === 1 : s === "order_rate_in40_continue" ? r === "==" && n === 0 : !1
+    }
+    const Rt = t => !!t && t.split("@").every(e => e.split("&").some(be)),
+        _e = t => t.e.length > 0 && t.e.every(e => Rt(e[0]) || Rt(e[1]));
+
+    function at(t, e) {
+        const s = ke(t, e),
+            r = k.styleOv?.[t.id];
+        if (s.ok && r && a.style && !r.st.includes(a.style)) return {
+            ok: !1,
+            why: r.why,
+            back: !0
+        };
+        const n = k.distOv?.[t.id],
+            o = F.get(a.course);
+        if (s.ok && n && o && !n.dt.includes(o.distType)) return {
+            ok: !1,
+            why: n.why,
+            back: !0
+        };
+        const c = k.slopeRules?.sk?.[t.id];
+        if (s.ok && c && a.course && k.slopeRules.c[a.course]) {
+            const [u, d] = c, g = u === "up" ? 0 : 1, y = k.slopeRules.c[a.course], f = (a.style ? d.includes(a.style) ? [a.style] : [] : d).map(v => y[v]?.[g]).filter(v => v && v !== "-");
+            if (f.length && !f.includes("可加")) return {
+                ok: !1,
+                why: k.slopeRules.why[u][f[0]] ?? k.slopeRules.why[u].否,
+                back: !0
+            }
+        }
+        const i = k.gainBlock;
+        if (s.ok && i && a.course && i.c[a.course]?.[t.id]) {
+            const [u, d] = i.c[a.course][t.id];
+            if (a.style ? u.includes(a.style) : u.length > 0 && d.length === 0) return {
+                ok: !1,
+                why: i.why,
+                back: !0
+            }
+        }
+        return s.ok && t.c === "speed" && (a.style === 1 || a.style === 2) && _e(t) ? {
+            ok: !1,
+            why: ye,
+            back: !0
+        } : s
+    }
+    const N = {
+        "==": "",
+        "!=": "≠",
+        ">=": "≥",
+        "<=": "≤",
+        ">": ">",
+        "<": "<"
+    };
+
+    function At(t) {
+        return t.includes("（") || t.includes(" 且 ") ? t.split(" 且 ").map(e => e.replace("（區間不重疊）", "")).map(_t).join(" 且 ") + (t.includes("（區間不重疊）") ? "（在此賽道上不重疊）" : "") : _t(t)
+    }
+
+    function _t(t) {
+        const e = ht.exec(t);
+        if (!e) return t;
+        const [, s, r] = e, n = Number(e[3]), o = (u, d) => r === "==" ? `${d}${u[n]??n}` : r === "!=" ? `${d}非${u[n]??n}` : `${d}${N[r]}${u[n]??n}`, c = u => Kt[u] ?? `階段${u}`;
+        switch (s) {
+            case "running_style":
+                return o(Tt, "跑法");
+            case "distance_type":
+                return r === "==" ? U[n] : `非${U[n]}`;
+            case "ground_type":
+                return o(gt, "");
+            case "ground_condition":
+                return o(Dt, "場況");
+            case "weather":
+                return o(Pt, "天氣");
+            case "season":
+                return o(Gt, "季節");
+            case "rotation":
+                return n === 1 ? "右回賽道" : n === 2 ? "左回賽道" : `方向${n}`;
+            case "track_id":
+                return r === "==" ? `${st.get(n)?.zh??n}賽馬場` : r === "!=" ? `非${st.get(n)?.zh??n}賽馬場` : "JRA 賽馬場";
+            case "course_distance":
+                return `距離${N[r]}${n}m`;
+            case "is_basis_distance":
+                return n ? "根幹距離" : "非根幹距離";
+            case "is_tight_track":
+                return "小回賽道";
+            case "corner_count":
+                return n === 0 && r === "==" ? "直線賽道" : `彎道數${N[r]}${n}`;
+            case "time":
+                return n === 4 ? "夜賽" : `時間段${n}`;
+            case "is_dirtgrade":
+                return r === "==" && n === 1 ? "交流重賞" : "非交流重賞";
+            case "is_abroad":
+                return n ? "海外賽道" : "日本國內賽道";
+            case "grade":
+                return n === 100 ? "G1 比賽" : `等級${n}`;
+            case "phase":
+                return r === "==" ? c(n) : r === ">=" ? `${c(n)}以後` : r === "<=" ? `${c(n)}以前` : r === ">" ? `${c(n+1)}以後` : r === "<" ? `${c(n-1)}以前` : `非${c(n)}`;
+            case "phase_random":
+                return `${c(n)}隨機`;
+            case "phase_firsthalf":
+            case "phase_firsthalf_random":
+                return `${c(n)}前半`;
+            case "phase_laterhalf":
+            case "phase_laterhalf_random":
+                return `${c(n)}後半`;
+            case "phase_firstquarter":
+            case "phase_firstquarter_random":
+                return `${c(n)}開頭 1/4`;
+            case "phase_corner_random":
+                return `${c(n)}的彎道`;
+            case "phase_straight_random":
+                return `${c(n)}的直線`;
+            case "phase_first_half_straight_random":
+                return `${c(n)}前半的直線`;
+            case "phase_latter_half_straight_random":
+                return `${c(n)}後半的直線`;
+            case "distance_rate":
+                return `賽程進度${N[r]}${n}%`;
+            case "distance_rate_after_random":
+                return `賽程進度 ${n}% 以後隨機`;
+            case "remain_distance":
+                return `剩餘距離${N[r]||"="}${n}m`;
+            case "corner":
+                return n === 0 ? r === "==" ? "不在彎道" : "彎道中" : `${r==="!="?"非":""}第${n}彎道`;
+            case "corner_random":
+                return `第${n}彎道隨機`;
+            case "all_corner_random":
+                return "任意彎道";
+            case "is_finalcorner":
+                return n ? "最終彎道以後" : "最終彎道之前";
+            case "is_finalcorner_random":
+                return "最終彎道";
+            case "is_finalcorner_laterhalf":
+                return "最終彎道後半";
+            case "is_last_straight":
+            case "last_straight_random":
+                return "最終直線";
+            case "is_last_straight_onetime":
+                return "進入最終直線時";
+            case "straight_random":
+                return "任意直線";
+            case "straight_front_type":
+                return n === 1 ? "正面直線" : n === 2 ? "對面直線" : `直線型別${n}`;
+            case "slope":
+                return ["平地", "上坡", "下坡"][n] ?? `坡道${n}`;
+            case "up_slope_random":
+                return "上坡";
+            case "down_slope_random":
+                return "下坡";
+            case "up_slope_random_later_half":
+                return "後半的上坡";
+            case "is_lastspurt":
+                return "最終衝刺中";
+            case "order":
+                return `名次${N[r]||"第"}${n}`;
+            case "order_rate":
+                return `名次位於前${n}%`.replace("前", r.startsWith("<") ? "前" : "後")
+        }
+        const i = k.condLabels?.[s];
+        return i ? `${i.replace(/\(.*\)$/,"")}${N[r]||"="}${n}` : t
+    }
+
+    function $t(t, e, s, r, n = "") {
+        return t ? `<img class="pic ${n}" src="${h(K+t)}" alt="${h(s)}" loading="lazy" decoding="async" width="${e}" height="${e}" style="width:${e}px;height:${e}px">` : `<span class="pic ph ${n}" role="img" aria-label="${h(s)}" style="width:${e}px;height:${e}px;${r?`--ph:${r}`:""}">${h((s||"").replace(/^\[.*?\]/,"").slice(0,2))}</span>`
+    }
+    const Yt = (t, e) => k.badges?.[t.r] ? `<img class="${e}" src="${h(K+k.badges[t.r])}" alt="${h(t.r)}" decoding="async">` : `<span class="${e} badge b-${t.r}">${h(t.r)}</span>`;
+
+    function ct(t, e) {
+        const s = k.ui["type_" + t.ty],
+            r = Math.max(12, Math.round(Math.min(e, 90) * .3)),
+            n = s ? `<img class="stype" src="${h(K+s)}" alt="${h(t.tl)}" width="${r}" height="${r}" style="width:${r}px;height:${r}px">` : `<span class="stype stype-txt badge b-${t.ty}">${h(t.tl.slice(0,1))}</span>`;
+        return `<span class="sthumb" style="width:${e}px">${$t(t.i,e,t.n,t.col)}${Yt(t,"srar")}${n}</span>`
+    }
+    const j = t => t.zn || t.n,
+        jt = t => `${h(j(t))}${t.zn&&t.zn!==t.n?`<span class="zn-ja">${h(t.n)}</span>`:""}`,
+        Jt = t => W(`${t.t} ${t.n} ${t.zn||""} ${t.aliases||""}`),
+        Vt = (t, e = 24) => $t(t.i, e, t.n);
+
+    function I(t, e = {}) {
+        return `<button type="button" class="cap ${t.r===2?"gold":""} ${e.cls??""}" data-skill="${t.id}" title="${h(e.title??t.d)}">${Vt(t,28)}<span class="cap-n">${h(t.n)}${t.tw&&t.ja!==t.tw?`<small class="tw-ja" lang="ja">${h(t.ja)}</small>`:!t.tw?`<small class="tw-missing">待補繁中譯名</small>`:""}</span>${e.tag?`<span class="cap-t ${e.tagOk?"ok":""}">${h(e.tag)}</span>`:""}${e.gw?`<span class="cap-gw" title="事件給的是金技能，按同組白技能計入">${lt}</span>`:""}${e.badge?`<span class="cap-b" title="可提供的 SSR/SR 支援卡數">${e.badge}</span>`:""}${e.mask?`<span class="stud-mask">${h(e.mask)}</span>`:""}</button>`
+    }
+    let Nt;
+
+    function H(t) {
+        let e = p(".pl-toast");
+        e || (e = document.createElement("div"), e.className = "pl-toast", document.body.appendChild(e)), e.textContent = t, e.hidden = !1, clearTimeout(Nt), Nt = setTimeout(() => e.hidden = !0, 2200)
+    }
+
+    function Qt(t, e = -1) {
+        const s = et.get(a.card);
+        return s && s.cid === t.cid ? `${j(t)} 是育成馬娘本人，不能同時編成其支援卡` : a.deck.find((n, o) => o !== e && T.get(n)?.cid === t.cid) ? `編成中已有 ${j(t)} 的支援卡` : ""
+    }
+
+    function Ot(t, e = -1, s = !1) {
+        const r = T.get(t);
+        if (!r) return !1;
+        if (a.deck.includes(t)) return H("這張卡已在編成中"), !1;
+        const n = s ? "" : Qt(r, e);
+        if (n) return H(n), !1;
+        if (e >= 0 && e < a.deck.length) a.deck[e] = t;
+        else {
+            if (a.deck.length >= 6) return H("編成已滿 6 張，請先移除一張"), !1;
+            a.deck.push(t)
+        }
+        return S(), !0
+    }
+
+    function addStudCard(t, e = -1) {
+        const sp = T.get(t);
+        if (!sp || !Lt(sp)) return !1;
+        if (a.stud.includes(t)) return H("這張卡已在種馬卡組中"), !1;
+        if (e >= 0 && e < a.stud.length) a.stud[e] = t;
+        else {
+            if (a.stud.length >= 6) return H("種馬卡組已滿 6 張，請先移除一張"), !1;
+            a.stud.push(t)
+        }
+        return S(), !0
+    }
+
+    function producedBy(card) {
+        const ids = new Set(x(card ?? { h: [] }));
+        for (const id of ids) {
+            const sk = L.get(id);
+            if (sk?.r === 2 && sk.g)
+                for (const w of V.get(sk.g) ?? []) w.r === 1 && !w.neg && ids.add(w.id)
+        }
+        return ids
+    }
+
+    function studCovered(skip = []) {
+        const skipSet = new Set(skip.filter(Boolean)),
+            out = new Set;
+        for (const id of a.stud) {
+            if (skipSet.has(id)) continue;
+            const sp = T.get(id);
+            if (!sp) continue;
+            for (const sid of producedBy(sp)) out.add(sid)
+        }
+        return out
+    }
+    const qt = (t, e, s) => `<button type="button" class="tchip" data-tg="${t}" data-v="${h(e)}" aria-pressed="${a[t]===e}">${s}</button>`,
+        Xt = (t, e) => de.map(([s, r]) => qt(t, s, (e && k.ui["type_" + s] ? `<img class="uico" src="${h(K+k.ui["type_"+s])}" width="16" height="16" alt="">` : "") + r)).join(""),
+        te = (t, e) => e.map(s => qt(t, s, s)).join(""),
+        ee = () => B("[data-tg]").forEach(t => t.setAttribute("aria-pressed", String(a[t.dataset.tg] === t.dataset.v)));
+
+    function se(t) {
+        return `${gt[t.ground]}${t.distance}m${t.inoutLabel?"（"+t.inoutLabel+"）":""}`
+    }
+
+    function Se() {
+        const t = p("[data-track]");
+        for (const e of k.tracks) t.appendChild(new Option(e.zh, String(e.id)));
+        p("[data-sup-type]").innerHTML = Xt("suptype", !0) + '<span class="sep"></span>' + te("suprar", ["SSR", "SR"])
+    }
+
+    function we() {
+        const t = p("[data-course]"),
+            e = k.courses.filter(s => s.track === a.track);
+        t.innerHTML = '<option value="">不限</option>' + e.map(s => `<option value="${s.id}">${se(s)}</option>`).join(""), t.disabled = !a.track, e.some(s => s.id === a.course) || (a.course = 0), t.value = a.course ? String(a.course) : ""
+    }
+
+    function ne() {
+        p("[data-track]").value = a.track ? String(a.track) : "", we();
+        const t = {
+            style: a.style,
+            gc: a.gc,
+            weather: a.weather,
+            season: a.season
+        };
+        for (const r of B("[data-seg]")) {
+            const n = String(t[r.dataset.seg] ?? "");
+            for (const o of B("button", r)) o.setAttribute("aria-pressed", String(o.dataset.v === n))
+        }
+        p("[data-nosrc]").checked = a.nosrc, p("[data-nodb]").checked = !!a.nodb, B("[data-hideact]").forEach(r => r.checked = !!a.hideact);
+        const e = p("[data-skill-q]");
+        e.value !== a.skillq && (e.value = a.skillq);
+        const s = p("[data-sup-q]");
+        s.value !== a.supq && (s.value = a.supq), p("[data-skill-sort]").value = a.sort, p("[data-sup-sort]").value = a.supsort, ee()
+    }
+    let z = 30,
+        ut = new Set,
+        pt = {};
+
+    function S() {
+        Zt(), ot(), ne();
+        const t = ge();
+        pt = t;
+        const e = et.get(a.card),
+            s = new Set(e ? (e.ev ?? []).map(l => l[0]).filter(l => L.has(l)) : []),
+            r = new Set(e ? [...e.sk.filter(l => L.has(l)), ...s] : []),
+            n = new Set;
+        for (const l of a.deck)
+            for (const b of x(T.get(l) ?? {
+                    h: []
+                })) n.add(b);
+        const o = new Set([...r, ...n]),
+            c = new Map;
+        for (const l of o) {
+            const b = L.get(l);
+            if (b?.r === 2 && b.g)
+                for (const _ of V.get(b.g) ?? []) _.r === 1 && !_.neg && !o.has(_.id) && c.set(_.id, b)
+        }
+        const i = new Set(a.deck),
+            u = l => !!a.nodb && !!l.db,
+            d = l => l.r === 1 && l.c !== "vision" && !l.neg && !u(l) && (D.has(l.id) || r.has(l.id) || a.nosrc),
+            g = new Map,
+            y = k.skills.filter(d);
+        for (const l of y) g.set(l.id, at(l, t));
+        const $ = y.filter(l => g.get(l.id).ok),
+            f = $.filter(l => !O(l)),
+            v = $.filter(l => !o.has(l.id) && !c.has(l.id)),
+            M = v.filter(l => !O(l)),
+            E = v.filter(l => O(l));
+        ut = new Set(M.map(l => l.id));
+        const m = new Set(M.map(l => l.id)),
+            R = y.filter(l => !g.get(l.id).ok && !O(l));
+        Le(e), Te(t), qe(), Ke();
+        const A = f.filter(l => r.has(l.id)).length,
+            P = f.filter(l => n.has(l.id) && !r.has(l.id)).length;
+        p("[data-summary]").innerHTML = [
+            ["有效技能（計入）", f.length, ""],
+            ["育成馬娘提供", A, ""],
+            ["編成支援卡提供", P, ""],
+            ["尚未獲得", M.length, "main"],
+            ["因條件排除", R.length, ""]
+        ].map(([l, b, _]) => `<div class="pl-stat ${_}"><div class="n">${b}</div><div class="k">${l}</div></div>`).join("");
+        const Y = (l, b, _, ce) => {
+                const kt = l.map(w => L.get(w)).filter(w => w && w.r === 1 && w.c !== "vision" && !u(w)).sort(X);
+                return kt.length ? `<div class="pl-sub">${b}（${kt.length}）</div><div class="caps">${kt.map(w=>{const xt=g.get(w.id)??at(w,t),yt=_?.(w.id)??"";return I(w,{cls:"small "+(xt.ok?"":"off"),tag:xt.ok?yt:"條件不符"+(yt?"·"+yt:""),gw:!!ce?.(w.id)})}).join("")}</div>` : ""
+            },
+            ae = l => {
+                const b = a.deck.map(_ => T.get(_)).filter(_ => _ && x(_).includes(l));
+                return b.some(_ => _.h.includes(l)) ? "" : re(b, l)
+            },
+            re = (l, b) => "事件" + bt(Math.min(...l.map(_ => Q(_, b)))),
+            Ht = [...c.entries()].map(([l, b]) => I(L.get(l), {
+                cls: "small",
+                tag: "已有上位",
+                tagOk: !0
+            })).join("");
+        p("[data-given]").innerHTML = Y([...r], "育成馬娘 初始/覺醒/事件技能", l => e && e.sk.includes(l) ? "" : "事件" + bt(Q(e, l)), l => !!e && !e.sk.includes(l) && (Q(e, l) & 8) > 0) + Y([...n].filter(l => !r.has(l)), "編成支援卡 Hint / 事件技能", ae, l => {
+            const b = a.deck.map(_ => T.get(_)).filter(_ => _ && x(_).includes(l));
+            return b.length > 0 && b.every(_ => Z(_, l))
+        }) + (Ht ? `<div class="pl-sub">同組已有上位技能的白技能（視為已獲得）</div><div class="caps">${Ht}</div>` : "") || '<p class="muted small">尚未選擇育成馬娘或支援卡。</p>', p("[data-given-count]").textContent = `（${[...o].filter(l=>{const b=L.get(l);return b&&b.r===1&&b.c!=="vision"&&!u(b)}).length}）`, Me(e), xe(M, o, i), p("[data-remain-count]").textContent = `共 ${M.length} 個`;
+        const mt = E.slice().sort(X);
+        p("[data-nc-count]").textContent = `（${mt.length}）`, p("[data-nc]").innerHTML = mt.length ? `<div class="caps">${mt.map(l=>I(l,{cls:"small",tag:O(l)})).join("")}</div>` : '<p class="muted small">無</p>';
+        const vt = R.slice().sort(X);
+        p("[data-excl-count]").textContent = `（${vt.length}）`, p("[data-excl]").innerHTML = vt.length ? `<div class="caps">${vt.map(l=>I(l,{cls:"small "+(o.has(l.id)?"off":""),tag:(g.get(l.id).back?"":"需：")+g.get(l.id).why,title:(g.get(l.id).back?"":"需：")+g.get(l.id).why})).join("")}</div>` : '<p class="muted small">沒有被排除的技能。</p>', Ee(m, i)
+    }
+
+    function Me(t) {
+        const e = !t,
+            s = a.deck.length === 0,
+            r = e && s ? "<b>提示：</b>還沒選育成馬娘，也還沒編成育成卡組。請先做兩步：① 在 01 選好要育成的馬娘（和跑法）；② 在「支援卡編成」填入你的育成卡組（6 張）。" : e ? "<b>提示：</b>還沒選育成馬娘。請先在 01 選好要育成的馬娘（和跑法），才能算出這隻馬娘還缺哪些技能。" : "<b>提示：</b>已選好育成馬娘，還沒編成育成卡組。請在「支援卡編成」填入你的育成卡組（最多 6 張），才能知道這套卡組還缺哪些技能。",
+            n = `<div class="pl-empty-btns">${e?'<button type="button" class="pill-btn" data-pick-card>選擇育成馬娘</button>':""}${s?'<button type="button" class="pill-btn" data-slot="-1">編成支援卡</button>':""}</div>`,
+            o = e || s,
+            c = p("[data-empty-skill]"),
+            i = p("[data-empty-rec]");
+        c.hidden = i.hidden = !o, c.innerHTML = o ? `${r} 在此之前，下方列出的是當前條件下的全部有效技能，還沒有針對你的卡組。${n}` : "", i.innerHTML = o ? `${r} 在此之前，下方「種馬使用卡推薦」只是按全部有效技能排出的參考，選完後才會變成“補上你這套卡組缺失技能”的推薦。${n}` : ""
+    }
+
+    function Le(t) {
+        const e = p("[data-pick-card]");
+        e.classList.toggle("filled", !!t), e.innerHTML = t ? $t(t.i, 104, t.n, t.col) + '<span class="pl-x" data-clear-card title="移除">×</span>' : '<span class="pl-plus">＋</span>', p("[data-card-name]").innerHTML = t ? `<span class="t">${h(t.t)}</span><span class="nm">${jt(t)}</span>` : '<span class="muted">未選擇 · 點選左側格子選擇</span>';
+        const s = p("[data-apt]");
+        if (!t) {
+            s.innerHTML = "";
+            return
+        }
+        const r = F.get(a.course),
+            n = t.ap,
+            o = i => `<b class="g g-${i}">${i}</b>`,
+            c = [];
+        if (r) {
+            const i = r.ground === 1 ? "turf" : "dirt";
+            c.push(`${gt[r.ground]} ${o(n[i])}`);
+            const u = ["", "short", "mile", "middle", "long"][r.distType];
+            c.push(`${U[r.distType]} ${o(n[u])}`)
+        }
+        if (a.style) {
+            const i = ["", "nige", "senko", "sashi", "oikomi"][a.style];
+            c.push(`${Tt[a.style]} ${o(n[i])}`)
+        }
+        s.innerHTML = c.length ? c.map(i => `<span>${i}</span>`).join("") : '<span class="muted">選擇賽道與跑法後顯示適性</span>'
+    }
+
+    function Te(t) {
+        const e = F.get(a.course),
+            s = p("[data-course-card]"),
+            r = [a.gc ? "場況" + Dt[a.gc] : "", a.weather ? Pt[a.weather] + "天" : "", a.season ? Gt[a.season] + "季" : ""].filter(Boolean);
+        if (p("[data-gc-note]").textContent = e ? `${gt[e.ground]}（隨賽道選擇）` : "", !e) {
+            s.innerHTML = `<div class="course-heading"><strong>${a.track?h(st.get(a.track).zh)+" · 未選賽道":"未選擇賽道"}</strong></div><p class="hint" style="margin-bottom:0">未選賽道時，距離 / 場地 / 方向 / 彎道 / 坡道等條件不做排除。${r.length?"當前環境："+r.join(" · "):""}</p>`;
+            return
+        }
+        const n = st.get(e.track),
+            o = e.distance,
+            c = e.geo,
+            i = g => (g / o * 100).toFixed(2) + "%";
+        let u = "",
+            d = [`${o.toLocaleString()} m`, e.turn === 4 ? "直線賽道" : `${e.turnLabel}回`, U[e.distType], e.basis ? "根幹距離" : "非根幹距離"];
+        if (e.tight && d.push("小回"), e.track >= 10201 && d.push("海外"), t.time === 4 && d.push("夜賽"), t.is_dirtgrade === 1 && d.push("交流重賞"), t.grade === 100 && d.push("G1"), c) {
+            const g = c.slopes.filter(f => f[2] > 0).reduce((f, v) => f + v[1], 0),
+                y = c.slopes.filter(f => f[2] < 0).reduce((f, v) => f + v[1], 0);
+            d.push(`彎道 ${c.corners.length}`, g ? `上坡 ${g} m` : "無上坡", y ? `下坡 ${y} m` : "無下坡");
+            const $ = c.corners.map((f, v) => 4 - (c.corners.length - 1 - v) % 4);
+            u = `<div class="geo-lab"><span>彎道</span><div class="geo-row">${c.corners.map((f,v)=>`<span class="cn" style="left:${i(f[0])};width:${i(f[1])}" title="第${$[v]}彎道 ${f[0]}–${f[0]+f[1]}m"></span>`).join("")}</div></div>
       <div class="geo-lab"><span>直線</span><div class="geo-row">${c.straights.map((f,v)=>`<span class="st ${v===c.straights.length-1?"last":""}" style="left:${i(f[0])};width:${i(f[1]-f[0])}" title="${v===c.straights.length-1?"最終直線":"直線"} ${f[0]}–${f[1]}m"></span>`).join("")}</div></div>
       <div class="geo-lab"><span>坡道</span><div class="geo-row">${c.slopes.map(f=>`<span class="${f[2]>0?"up":"dn"}" style="left:${i(f[0])};width:${i(f[1])};${f[2]>0?"":"top:2px"}" title="${f[2]>0?"上坡":"下坡"} ${f[0]}–${f[0]+f[1]}m / ${(f[2]/1e4).toFixed(1)}%"></span>`).join("")}</div></div>
       <div class="slope-legend">紫：彎道 · 綠：最終直線 · 橙：上坡 · 藍：下坡 · 終盤起點 ${Math.round(o*2/3).toLocaleString()} m</div>
@@ -64,16 +878,129 @@ const k=JSON.parse(document.getElementById("planner-data").textContent||"{}"),p=
         <div class="detail-line">彎道：${c.corners.map((f,v)=>`第${$[v]}彎道 ${f[0]}–${f[0]+f[1]}m`).join("，")||"無"}</div>
         <div class="detail-line">直線：${c.straights.map(f=>`${f[0]}–${f[1]}m`).join("，")}</div>
         <div class="detail-line">坡道：${c.slopes.map(f=>`${f[2]>0?"上":"下"} ${f[0]}–${f[0]+f[1]}m`).join("，")||"無"}</div>
-      </details>`}s.innerHTML=`<div class="course-heading"><strong>${h(n.zh)} ${se(e)}</strong><span>#${e.id}</span></div>
+      </details>`
+        }
+        s.innerHTML = `<div class="course-heading"><strong>${h(n.zh)} ${se(e)}</strong><span>#${e.id}</span></div>
     <div class="course-chart"><div class="phase-labels">${Kt.map((g,y)=>`<span style="width:${["16.667%","50%","16.666%","16.667%"][y]}">${g}</span>`).join("")}</div>
     <div class="phase-track"><div style="width:16.667%"></div><div style="width:50%"></div><div style="width:16.666%"></div><div style="width:16.667%"></div></div>${u}</div>
-    <div class="facts">${d.map(g=>`<span>${h(g)}</span>`).join("")}${r.map(g=>`<span class="env">${h(g)}</span>`).join("")}</div>`}function je(t){const e=k.ui["type_"+t.ty],s=e?`<img class="pl-ct" src="${h(K+e)}" alt="${h(t.tl)}">`:`<span class="pl-ct badge b-${t.ty}">${h(t.tl.slice(0,1))}</span>`;return`<span class="pl-cardwrap"><img class="pl-card-art" src="${h(K+t.cd)}" alt="${h(j(t))}" decoding="async">${Yt(t,"pl-cr")}${s}</span>`}function qe(){const t=p("[data-slots]");let e="";for(let s=0;s<6;s++){const r=T.get(a.deck[s]);e+=r?`<div><button type="button" class="pl-slot filled" data-slot="${s}" title="${h(r.r+" "+r.t+j(r)+(r.zn?"（"+r.n+"）":""))}（點選更換）">${r.cd?je(r):ct(r,120)}<span class="pl-x" data-remove="${s}" title="移除">×</span></button></div>`:`<div><button type="button" class="pl-slot" data-slot="${s}" title="新增支援卡"><span class="pl-plus">＋</span></button></div>`}t.innerHTML=e,B(".pl-slot.filled .sthumb",t).forEach(s=>{s.style.width="100%",s.querySelector(".pic").setAttribute("style","width:100%;height:100%")}),p("[data-deck-count]").textContent=`${a.deck.length} / 6`}const He=new Set;function xe(t,e,s){const r=W(String(a.skillq||"").trim()),n=d=>(D.get(d.id)??[]).filter(g=>!s.has(g.id)&&Lt(g)&&!ft(g)),o=t.filter(d=>!r||W(d.n+" "+d.d+" "+d.aliases).includes(r));new Set(t.map(d=>d.id));const c=(d,g)=>a.sort==="pt"?(d.pt??999)-(g.pt??999)||d.id-g.id:a.sort==="id"?d.id-g.id:n(g).length-n(d).length||(d.pt??999)-(g.pt??999)||d.id-g.id,i=d=>{const g=[];for(const $ of d.g?V.get(d.g)??[]:[])if($.id!==d.id&&e.has($.id)&&!$.neg){g.push(["同組已有",!0]);break}D.has(d.id)||g.push([d.sp?"劇本專用":"無來源",!1]);const y=n(d).length;return I(d,{tag:g[0]?.[0],tagOk:g[0]?.[1],badge:y||void 0})};let u="";for(const d of k.classes){if(d.key==="debuff_other")continue;const g=o.filter($=>$.c===d.key);if(!g.length)continue;const y=g.slice().sort(c);u+=`<section class="pl-cls pl-cls-${d.key}"><h3 class="pl-cls-h">${h(d.label)} <span class="cnt">${g.length} 個</span><span class="desc">${h(d.desc)}</span></h3>`,y.length&&(u+=`<div class="caps">${y.map(i).join("")}</div>`),u+="</section>"}p("[data-remain]").innerHTML=u?`<p class="hint">只列白技能（金技能與視野類技能不在本頁出現）。點選技能檢視詳情；右上角數字 = 可 Hint 該技能的未編成 SSR/SR 支援卡數。</p>${u}`:'<p class="muted">沒有符合條件的技能。</p>'}const Ce=(t,e)=>t.h.includes(e)?"":dt(t,e);function Ee(t,e){const s=W(String(a.supq||"").trim()),r=[];for(const c of k.supports){if(!Lt(c)||e.has(c.id)||ft(c)||a.suptype&&c.ty!==a.suptype||a.suprar&&c.r!==a.suprar||s&&!Jt(c).includes(s))continue;const i=x(c).filter(u=>t.has(u)).map(u=>L.get(u)).sort(X);i.length&&r.push({sp:c,got:i})}const n={SSR:3,SR:2};r.sort((c,i)=>a.supsort==="rar"?n[i.sp.r]-n[c.sp.r]||i.got.length-c.got.length:i.got.length-c.got.length||n[i.sp.r]-n[c.sp.r]),p("[data-sup-count]").textContent=`${r.length} 張可補充技能`;const o=a.deck.length>=6;p("[data-rank]").innerHTML=r.slice(0,z).map((c,i)=>`<div class="pl-rrow ${o?"nobtn":""}"><div class="left">${ct(c.sp,76)}<div class="meta">
+    <div class="facts">${d.map(g=>`<span>${h(g)}</span>`).join("")}${r.map(g=>`<span class="env">${h(g)}</span>`).join("")}</div>`
+    }
+
+    function je(t) {
+        const e = k.ui["type_" + t.ty],
+            s = e ? `<img class="pl-ct" src="${h(K+e)}" alt="${h(t.tl)}">` : `<span class="pl-ct badge b-${t.ty}">${h(t.tl.slice(0,1))}</span>`;
+        return `<span class="pl-cardwrap"><img class="pl-card-art" src="${h(K+t.cd)}" alt="${h(j(t))}" decoding="async">${Yt(t,"pl-cr")}${s}</span>`
+    }
+
+    function qe() {
+        const t = p("[data-slots]");
+        let e = "";
+        for (let s = 0; s < 6; s++) {
+            const r = T.get(a.deck[s]);
+            e += r ? `<div><button type="button" class="pl-slot filled" data-slot="${s}" title="${h(r.r+" "+r.t+j(r)+(r.zn?"（"+r.n+"）":""))}（點選更換）">${r.cd?je(r):ct(r,120)}<span class="pl-x" data-remove="${s}" title="移除">×</span></button></div>` : `<div><button type="button" class="pl-slot" data-slot="${s}" title="新增支援卡"><span class="pl-plus">＋</span></button></div>`
+        }
+        t.innerHTML = e, B(".pl-slot.filled .sthumb", t).forEach(s => {
+            s.style.width = "100%", s.querySelector(".pic").setAttribute("style", "width:100%;height:100%")
+        }), p("[data-deck-count]").textContent = `${a.deck.length} / 6`
+    }
+
+    function Ke() {
+        const t = p("[data-stud-slots]");
+        let e = "";
+        for (let s = 0; s < 6; s++) {
+            const r = T.get(a.stud[s]);
+            e += r ? `<div><button type="button" class="pl-slot filled" data-stud-slot="${s}" title="${h(r.r+" "+r.t+j(r)+(r.zn?"（"+r.n+"）":""))}（點選更換）">${r.cd?je(r):ct(r,120)}<span class="pl-x" data-stud-remove="${s}" title="移除">×</span></button></div>` : `<div><button type="button" class="pl-slot" data-stud-slot="${s}" title="新增種馬卡"><span class="pl-plus">＋</span></button></div>`
+        }
+        t.innerHTML = e, B(".pl-slot.filled .sthumb", t).forEach(s => {
+            s.style.width = "100%", s.querySelector(".pic").setAttribute("style", "width:100%;height:100%")
+        }), p("[data-stud-count]").textContent = `${a.stud.length} / 6`
+    }
+    const He = new Set;
+
+    function xe(t, e, s) {
+        const r = W(String(a.skillq || "").trim()),
+            n = d => (D.get(d.id) ?? []).filter(g => !s.has(g.id) && Lt(g) && !ft(g)),
+            o = t.filter(d => !r || W(d.n + " " + d.d + " " + d.aliases).includes(r));
+        new Set(t.map(d => d.id));
+        const studGot = studCovered(),
+            c = (d, g) => a.sort === "pt" ? (d.pt ?? 999) - (g.pt ?? 999) || d.id - g.id : a.sort === "id" ? d.id - g.id : n(g).length - n(d).length || (d.pt ?? 999) - (g.pt ?? 999) || d.id - g.id,
+            i = d => {
+                const g = [];
+                for (const $ of d.g ? V.get(d.g) ?? [] : [])
+                    if ($.id !== d.id && e.has($.id) && !$.neg) {
+                        g.push(["同組已有", !0]);
+                        break
+                    } D.has(d.id) || g.push([d.sp ? "劇本專用" : "無來源", !1]);
+                const y = n(d).length,
+                    masked = studGot.has(d.id);
+                return I(d, {
+                    cls: masked ? "stud-got" : "",
+                    mask: masked ? "已覆蓋" : "",
+                    tag: g[0]?.[0],
+                    tagOk: g[0]?.[1],
+                    badge: y || void 0
+                })
+            };
+        let u = "";
+        for (const d of k.classes) {
+            if (d.key === "debuff_other") continue;
+            const g = o.filter($ => $.c === d.key);
+            if (!g.length) continue;
+            const y = g.slice().sort(c);
+            u += `<section class="pl-cls pl-cls-${d.key}"><h3 class="pl-cls-h">${h(d.label)} <span class="cnt">${g.length} 個</span><span class="desc">${h(d.desc)}</span></h3>`, y.length && (u += `<div class="caps">${y.map(i).join("")}</div>`), u += "</section>"
+        }
+        p("[data-remain]").innerHTML = u ? `<p class="hint">只列白技能（金技能與視野類技能不在本頁出現）。點選技能檢視詳情；右上角數字 = 可 Hint 該技能的未編成 SSR/SR 支援卡數。</p>${u}` : '<p class="muted">沒有符合條件的技能。</p>'
+    }
+    const Ce = (t, e) => t.h.includes(e) ? "" : dt(t, e);
+
+    function Ee(t, e) {
+        const s = W(String(a.supq || "").trim()),
+            covered = studCovered(),
+            studSet = new Set(a.stud),
+            r = [];
+        for (const c of k.supports) {
+            if (!Lt(c) || e.has(c.id) || studSet.has(c.id) || ft(c) || a.suptype && c.ty !== a.suptype || a.suprar && c.r !== a.suprar || s && !Jt(c).includes(s)) continue;
+            const i = x(c).filter(u => t.has(u) && !covered.has(u)).map(u => L.get(u)).sort(X);
+            i.length && r.push({
+                sp: c,
+                got: i
+            })
+        }
+        const n = {
+            SSR: 3,
+            SR: 2
+        };
+        r.sort((c, i) => a.supsort === "rar" ? n[i.sp.r] - n[c.sp.r] || i.got.length - c.got.length : i.got.length - c.got.length || n[i.sp.r] - n[c.sp.r]), p("[data-sup-count]").textContent = `${r.length} 張可補充技能`;
+        const deckFull = a.deck.length >= 6,
+            studFull = a.stud.length >= 6;
+        p("[data-rank]").innerHTML = r.slice(0, z).map((c, i) => {
+            const addBtn = deckFull ? "" : `<button type="button" class="go-btn" data-add="${c.sp.id}" title="加入編成">＋ 加入編成</button>`,
+                studBtn = studFull || studSet.has(c.sp.id) ? "" : `<button type="button" class="go-btn stud" data-stud-add="${c.sp.id}" title="加入種馬卡組">加入種馬卡組</button>`,
+                btns = addBtn + studBtn;
+            return `<div class="pl-rrow ${btns?"":"nobtn"}"><div class="left">${ct(c.sp,76)}<div class="meta">
         <div class="t"><span class="badge b-${c.sp.r}">${c.sp.r}</span> ${h(c.sp.t)}</div>
         <div class="nm"><button type="button" class="linkish" data-supinfo="${c.sp.id}" title="檢視這張支援卡的 Hint 技能">${jt(c.sp)}</button></div>
         <div class="score"><span class="rank ${i<3?"top":""}">#${i+1}</span><b>${c.got.length}</b><span class="small muted">個技能</span></div></div></div>
       <div class="caps">${c.got.map(u=>I(u,{cls:"small",tag:Ce(c.sp,u.id),gw:Z(c.sp,u.id)})).join("")}</div>
-      ${o?"":`<button type="button" class="go-btn" data-add="${c.sp.id}" title="加入編成">＋ 加入編成</button>`}
-    </div>`).join("")||`<p class="muted">沒有能補充剩餘技能的 SSR / SR 支援卡${a.hideact?"（已隱藏活動卡/贈送卡）":""}。</p>`,p("[data-rank-more]").hidden=r.length<=z}const C=p("[data-skill-dlg]");function It(t){return t?t.split("@").map((e,s)=>`${s?'<div class="or">或</div>':""}<ul>${e.split("&").map(r=>`<li>${h(_t(r.trim()))} <code class="muted small">${h(r.trim())}</code></li>`).join("")}</ul>`).join(""):""}function Re(t){const e=L.get(t);if(!e)return;const s=at(e,pt),r=new Set(a.deck),n=(D.get(e.id)??[]).filter(i=>Lt(i)&&!r.has(i.id)&&!ft(i)),o=k.classes.find(i=>i.key===e.c),c=O(e);p("[data-sd-title]").textContent=e.n,p("[data-sd-body]").innerHTML=`
+      ${btns?`<div class="pl-rbtns">${btns}</div>`:""}
+    </div>`
+        }).join("") || `<p class="muted">沒有能補充剩餘技能的 SSR / SR 支援卡${a.hideact?"（已隱藏活動卡/贈送卡）":""}。</p>`, p("[data-rank-more]").hidden = r.length <= z
+    }
+    const C = p("[data-skill-dlg]");
+
+    function It(t) {
+        return t ? t.split("@").map((e, s) => `${s?'<div class="or">或</div>':""}<ul>${e.split("&").map(r=>`<li>${h(_t(r.trim()))} <code class="muted small">${h(r.trim())}</code></li>`).join("")}</ul>`).join("") : ""
+    }
+
+    function Re(t) {
+        const e = L.get(t);
+        if (!e) return;
+        const s = at(e, pt),
+            r = new Set(a.deck),
+            n = (D.get(e.id) ?? []).filter(i => Lt(i) && !r.has(i.id) && !ft(i)),
+            o = k.classes.find(i => i.key === e.c),
+            c = O(e);
+        p("[data-sd-title]").textContent = e.n, p("[data-sd-body]").innerHTML = `
     <div class="sd-head">${Vt(e,48)}<div><div style="font-family:var(--round);font-weight:900;font-size:20px">${h(e.n)}</div>
       <div class="facts" style="margin-top:4px"><span>${e.r===2?"金技能":"白技能"}</span><span>${h(o?.label??e.c)}</span>${e.pt!=null?`<span>${e.pt} pt</span>`:""}
       <span class="${s.ok?"":"bad"}">${s.ok?"當前條件可發動":s.back?"本設定下不推薦":"當前條件不可發動"}</span>${c?`<span class="bad">不計入：${h(c)}</span>`:""}</div></div></div>
@@ -85,13 +1012,254 @@ const k=JSON.parse(document.getElementById("planner-data").textContent||"{}"),p=
       <div class="small muted" style="margin-top:4px">發動條件</div>${It(i[1])}</div>`).join("")}
     <div class="pl-sub">可提供該技能（Hint 或事件）的未編成 SSR / SR 支援卡（${n.length}）${n.length?" · 點選加入編成":""}</div>
     <div class="sd-prov">${n.map(i=>`<button type="button" data-add="${i.id}" data-close title="${h(i.r+" "+i.t+j(i)+(i.h.includes(e.id)?"":" · "+dt(i,e.id)+(Z(i,e.id)?" · "+lt:"")))}">${ct(i,56)}${i.h.includes(e.id)?"":`<span class="small muted" style="display:block;font-size:10px">${h(dt(i,e.id))}${Z(i,e.id)?" · "+lt:""}</span>`}</button>`).join("")||'<span class="muted small">無</span>'}</div>
-`,typeof C.showModal=="function"?C.showModal():C.setAttribute("open","")}function Ae(t){const e=T.get(t);if(!e)return;const s=new Set(a.deck),r=s.has(t)?"已在編成中":"",n=!s.has(t)&&a.deck.length>=6,o=x(e).map(i=>L.get(i)).filter(i=>i&&i.r===1&&i.c!=="vision"&&!(a.nodb&&i.db)).sort(X),c=i=>{const u=at(i,pt),d=O(i);return I(i,{cls:"small "+(u.ok&&!d?"":"off"),tag:(u.ok?d?"不計入":ut.has(i.id)?"可補上":"已獲得":u.back?"不推薦":"條件不符")+(e.h.includes(i.id)?"":" · "+dt(e,i.id)),tagOk:u.ok&&!d&&ut.has(i.id),gw:Z(e,i.id),title:u.ok?void 0:(u.back?"不推薦原因：":"不可發動原因：需 ")+(u.why??"")})};p("[data-sd-title]").textContent=j(e),p("[data-sd-body]").innerHTML=`<div class="sd-head">${ct(e,72)}<div><div class="small muted">${h(e.t)}</div><div style="font-family:var(--round);font-weight:900;font-size:20px">${jt(e)}</div>
+`, typeof C.showModal == "function" ? C.showModal() : C.setAttribute("open", "")
+    }
+
+    function Ae(t) {
+        const e = T.get(t);
+        if (!e) return;
+        const s = new Set(a.deck),
+            r = s.has(t) ? "已在編成中" : "",
+            n = !s.has(t) && a.deck.length >= 6,
+            o = x(e).map(i => L.get(i)).filter(i => i && i.r === 1 && i.c !== "vision" && !(a.nodb && i.db)).sort(X),
+            c = i => {
+                const u = at(i, pt),
+                    d = O(i);
+                return I(i, {
+                    cls: "small " + (u.ok && !d ? "" : "off"),
+                    tag: (u.ok ? d ? "不計入" : ut.has(i.id) ? "可補上" : "已獲得" : u.back ? "不推薦" : "條件不符") + (e.h.includes(i.id) ? "" : " · " + dt(e, i.id)),
+                    tagOk: u.ok && !d && ut.has(i.id),
+                    gw: Z(e, i.id),
+                    title: u.ok ? void 0 : (u.back ? "不推薦原因：" : "不可發動原因：需 ") + (u.why ?? "")
+                })
+            };
+        p("[data-sd-title]").textContent = j(e), p("[data-sd-body]").innerHTML = `<div class="sd-head">${ct(e,72)}<div><div class="small muted">${h(e.t)}</div><div style="font-family:var(--round);font-weight:900;font-size:20px">${jt(e)}</div>
       <div class="facts" style="margin-top:4px"><span>${h(e.r)}</span><span>${h(e.tl)}</span><span>Hint 白技能 ${o.filter(i=>e.h.includes(i.id)).length}</span><span>事件白技能 ${o.filter(i=>!e.h.includes(i.id)).length}</span></div></div></div>
     <div class="pl-sub">Hint 與事件技能（點選檢視技能詳情；帶“事件”標記的來自事件，“選擇/隨機/條件”表示不一定能拿到）</div><div class="caps">${o.map(c).join("")||'<span class="muted small">無</span>'}</div>
     ${(()=>{const i=o.map(u=>[u,at(u,pt)]).filter(([,u])=>!u.ok);return i.length?`<div class="pl-sub" style="margin-top:12px">當前設定下不可用的技能及原因</div><ul class="small muted" style="margin:4px 0 0;padding-left:18px;line-height:1.7">${i.map(([u,d])=>`<li><b>${h(u.n)}</b>${Z(e,u.id)?`（${lt}）`:""}：${d.back?"":"需 "}${h(d.why??"")}</li>`).join("")}</ul>`:""})()}
-    ${n&&!r?"":`<p style="margin:16px 0 0"><button type="button" class="go-btn" data-add="${e.id}" data-close ${r?"disabled":""}>${r||"＋ 加入編成"}</button></p>`}`,typeof C.showModal=="function"?C.showModal():C.setAttribute("open","")}const q=p("[data-dialog]");let tt="",St=-1,rt="default";const Ne=t=>x(t).filter(e=>ut.has(e)).length,wt={};function zt(t,e=-1){tt=t,St=e,p("[data-dlg-title]").textContent=t==="card"?"選擇育成馬娘":"選擇支援卡",p("[data-dlg-q]").value=t==="card"?a.pkq:a.psq,p("[data-dlg-filters]").innerHTML=t==="card"?[1,2,3,4].map(n=>qt("pkst",String(n),Tt[n])).join(""):Xt("psty",!1)+'<span class="sep"></span>'+te("psr",["SSR","SR"]);const s=t==="support";p("[data-dlg-opts]").hidden=!s,rt=a.card||a.style||a.course||a.track?"valid":"default",p("[data-dlg-sort]").value=rt,B("[data-hideact]").forEach(n=>n.checked=!!a.hideact),J(),typeof q.showModal=="function"?q.showModal():q.setAttribute("open","");const r=p("[data-dlg-grid]");r.scrollTop=wt[t]||0,setTimeout(()=>{p("[data-dlg-q]").focus({preventScroll:!0}),r.scrollTop=wt[t]||0},30)}function J(){const t=W(p("[data-dlg-q]").value.trim()),e=p("[data-dlg-grid]");if(tt==="card"){const s=k.cards.filter(r=>(!t||Jt(r).includes(t))&&(!a.pkst||String(r.st)===a.pkst));e.innerHTML=s.map(r=>`<button type="button" class="pl-pick ${r.id===a.card?"sel":""}" data-pick="${r.id}">${$t(r.i,84,r.n,r.col)}<div class="pn">${h(j(r))}</div><div class="pt">${r.zn?h(r.n):""}</div><div class="pt">${h(r.t)}</div></button>`).join("")||'<p class="muted">無結果</p>'}else{const s=new Map;let r=k.supports.filter(n=>(!a.psty||n.ty===a.psty)&&(!a.psr||n.r===a.psr)&&!ft(n)&&(!t||W(n.t+" "+n.n+" "+(n.zn||"")+" "+n.aliases+" "+x(n).map(o=>L.get(o)?.aliases??"").join(" ")).includes(t)));for(const n of r)s.set(n.id,Ne(n));rt==="valid"&&(r=r.map((n,o)=>[n,o]).sort((n,o)=>s.get(o[0].id)-s.get(n[0].id)||n[1]-o[1]).map(n=>n[0])),e.innerHTML=r.map(n=>`<button type="button" class="pl-pick ${a.deck.includes(n.id)?"sel":""}" data-pick="${n.id}">${ct(n,84)}<div class="pn">${h(j(n))}</div><div class="pt"><span class="badge b-${n.r}">${n.r}</span> ${h(n.t)}</div>${rt==="valid"?`<div class="pv" title="能補上的尚未獲得的有效技能數">補 ${s.get(n.id)} 個</div>`:""}</button>`).join("")||'<p class="muted">無結果</p>'}}function Oe(){document.addEventListener("click",s=>{const r=s.target,n=r.closest("[data-remove]");if(n){s.stopPropagation(),a.deck.splice(Number(n.dataset.remove),1),S();return}if(r.closest("[data-clear-card]")){s.stopPropagation(),a.card=0,S();return}const o=r.closest("[data-add]");if(o){!o.disabled&&Ot(Number(o.dataset.add),-1,!0)&&o.hasAttribute("data-close")&&C.close();return}const c=r.closest("[data-tg]");if(c){const $=c.dataset.tg,f=c.dataset.v;a[$]=a[$]===f?"":f,$==="suptype"||$==="suprar"?(z=30,S()):(ot(),ee(),J(),p("[data-dlg-grid]").scrollTop=0);return}const i=r.closest("[data-supinfo]");if(i){Ae(Number(i.dataset.supinfo));return}const u=r.closest("[data-skill]");if(u){Re(Number(u.dataset.skill));return}const d=r.closest("[data-seg] button");if(d){const $=d.closest("[data-seg]").dataset.seg,f=d.dataset.v;a[$]=Number(f),S();return}const g=r.closest("[data-slot]");if(g){zt("support",Number(g.dataset.slot));return}if(r.closest("[data-pick-card]")){zt("card");return}const y=r.closest("[data-pick]");if(y){const $=Number(y.dataset.pick);if(tt==="card"){const f=et.get(a.card);a.card=$;const v=et.get($);(!a.style||f&&f.st===a.style)&&(a.style=v.st||0),q.close(),S()}else{const f=T.get($);if(a.deck.includes($)){H("這張卡已在編成中");return}const v=Qt(f,St);if(v){H(v);return}q.close(),Ot($,St)}return}if(r.closest("[data-guide-close]")){Bt(!1);return}if(r.closest("[data-guide-show]")){Bt(!0),H("已重新顯示頁面頂部的使用步驟");return}if(r.closest("[data-tips]")){const $=p("[data-tips-dlg]");typeof $.showModal=="function"?$.showModal():$.setAttribute("open","");return}if(r.closest("[data-reset]")){fe();return}if(r.closest("[data-goto-rec]")){const $=document.getElementById("pl-rec");$.scrollIntoView({behavior:"smooth",block:"start"}),$.classList.remove("flash"),$.offsetWidth,$.classList.add("flash");return}if(r.closest("[data-copy-link]")){const $=location.href;(navigator.clipboard?.writeText($)??Promise.reject()).then(()=>H("已復製作業連結"),()=>{prompt("複製以下作業連結：",$)});return}r.closest("[data-rank-more]")&&(z+=30,S())});for(const s of[q,C,p("[data-tips-dlg]")])s.addEventListener("click",r=>{r.target===s&&s.close()});p("[data-dlg-q]").addEventListener("input",s=>{a[tt==="card"?"pkq":"psq"]=s.target.value,ot(),J()}),q.addEventListener("close",()=>{wt[tt]=p("[data-dlg-grid]").scrollTop}),B("[data-hideact]").forEach(s=>s.addEventListener("change",()=>{a.hideact=s.checked,z=30,q.open&&(ot(),ne(),J()),S()})),p("[data-dlg-sort]").addEventListener("change",s=>{rt=s.target.value,J(),p("[data-dlg-grid]").scrollTop=0}),p("[data-track]").addEventListener("change",s=>{a.track=Number(s.target.value)||0,a.course=0,S()}),p("[data-course]").addEventListener("change",s=>{a.course=Number(s.target.value)||0,S()}),p("[data-nodb]").addEventListener("change",s=>{a.nodb=s.target.checked?1:0,S()}),p("[data-nosrc]").addEventListener("change",s=>{a.nosrc=s.target.checked,a.nosrcSet=!0,S()}),p("[data-skill-sort]").addEventListener("change",s=>{a.sort=s.target.value,S()}),p("[data-sup-sort]").addEventListener("change",s=>{a.supsort=s.target.value,S()});let t;const e=()=>{clearTimeout(t),t=setTimeout(S,150)};p("[data-skill-q]").addEventListener("input",s=>{a.skillq=s.target.value,e()}),p("[data-sup-q]").addEventListener("input",s=>{a.supq=s.target.value,z=30,e()})}const Mt="skillselect.tw.guide-hidden";function Bt(t){p("[data-guide]").hidden=!t;try{t?localStorage.removeItem(Mt):localStorage.setItem(Mt,"1")}catch{}}try{p("[data-guide]").hidden=localStorage.getItem(Mt)==="1"}catch{}Se();pe();Oe();S();
+    ${n&&!r?"":`<p style="margin:16px 0 0"><button type="button" class="go-btn" data-add="${e.id}" data-close ${r?"disabled":""}>${r||"＋ 加入編成"}</button></p>`}`, typeof C.showModal == "function" ? C.showModal() : C.setAttribute("open", "")
+    }
+    const q = p("[data-dialog]");
+    let tt = "",
+        St = -1,
+        rt = "default",
+        dlgMode = "";
+    const Ne = t => {
+        const covered = dlgMode === "stud" ? studCovered([t.id, ...(St >= 0 && St < a.stud.length ? [a.stud[St]] : [])]) : null;
+        return x(t).filter(e => ut.has(e) && !(covered && covered.has(e))).length
+    },
+        wt = {};
 
-window.TW.engine={state:a, refresh:S, evaluate:at, environment:ge, skillMap:L, supports:T, cards:et, openSkill:Re};
+    function zt(t, e = -1, mode = "deck") {
+        tt = t, St = e, dlgMode = t === "support" ? mode : "", p("[data-dlg-title]").textContent = t === "card" ? "選擇育成馬娘" : mode === "stud" ? "選擇種馬卡" : "選擇支援卡", p("[data-dlg-q]").value = t === "card" ? a.pkq : a.psq, p("[data-dlg-filters]").innerHTML = t === "card" ? [1, 2, 3, 4].map(n => qt("pkst", String(n), Tt[n])).join("") : Xt("psty", !1) + '<span class="sep"></span>' + te("psr", ["SSR", "SR"]);
+        const s = t === "support";
+        p("[data-dlg-opts]").hidden = !s, rt = a.card || a.style || a.course || a.track ? "valid" : "default", p("[data-dlg-sort]").value = rt, B("[data-hideact]").forEach(n => n.checked = !!a.hideact), J(), typeof q.showModal == "function" ? q.showModal() : q.setAttribute("open", "");
+        const r = p("[data-dlg-grid]");
+        r.scrollTop = wt[t] || 0, setTimeout(() => {
+            p("[data-dlg-q]").focus({
+                preventScroll: !0
+            }), r.scrollTop = wt[t] || 0
+        }, 30)
+    }
+
+    function J() {
+        const t = W(p("[data-dlg-q]").value.trim()),
+            e = p("[data-dlg-grid]");
+        if (tt === "card") {
+            const s = k.cards.filter(r => (!t || Jt(r).includes(t)) && (!a.pkst || String(r.st) === a.pkst));
+            e.innerHTML = s.map(r => `<button type="button" class="pl-pick ${r.id===a.card?"sel":""}" data-pick="${r.id}">${$t(r.i,84,r.n,r.col)}<div class="pn">${h(j(r))}</div><div class="pt">${r.zn?h(r.n):""}</div><div class="pt">${h(r.t)}</div></button>`).join("") || '<p class="muted">無結果</p>'
+        } else {
+            const s = new Map;
+            let r = k.supports.filter(n => (!a.psty || n.ty === a.psty) && (!a.psr || n.r === a.psr) && !ft(n) && (!t || W(n.t + " " + n.n + " " + (n.zn || "") + " " + n.aliases + " " + x(n).map(o => L.get(o)?.aliases ?? "").join(" ")).includes(t)));
+            for (const n of r) s.set(n.id, Ne(n));
+            rt === "valid" && (r = r.map((n, o) => [n, o]).sort((n, o) => s.get(o[0].id) - s.get(n[0].id) || n[1] - o[1]).map(n => n[0])), e.innerHTML = r.map(n => `<button type="button" class="pl-pick ${(dlgMode==="stud"?a.stud:a.deck).includes(n.id)?"sel":""}" data-pick="${n.id}">${ct(n,84)}<div class="pn">${h(j(n))}</div><div class="pt"><span class="badge b-${n.r}">${n.r}</span> ${h(n.t)}</div>${rt==="valid"?`<div class="pv" title="能補上的尚未獲得的有效技能數">補 ${s.get(n.id)} 個</div>`:""}</button>`).join("") || '<p class="muted">無結果</p>'
+        }
+    }
+
+    function Oe() {
+        document.addEventListener("click", s => {
+            const r = s.target,
+                n = r.closest("[data-remove]");
+            if (n) {
+                s.stopPropagation(), a.deck.splice(Number(n.dataset.remove), 1), S();
+                return
+            }
+            const srm = r.closest("[data-stud-remove]");
+            if (srm) {
+                s.stopPropagation(), a.stud.splice(Number(srm.dataset.studRemove), 1), S();
+                return
+            }
+            if (r.closest("[data-clear-card]")) {
+                s.stopPropagation(), a.card = 0, S();
+                return
+            }
+            const o = r.closest("[data-add]");
+            if (o) {
+                !o.disabled && Ot(Number(o.dataset.add), -1, !0) && o.hasAttribute("data-close") && C.close();
+                return
+            }
+            const sadd = r.closest("[data-stud-add]");
+            if (sadd) {
+                !sadd.disabled && addStudCard(Number(sadd.dataset.studAdd), -1);
+                return
+            }
+            const c = r.closest("[data-tg]");
+            if (c) {
+                const $ = c.dataset.tg,
+                    f = c.dataset.v;
+                a[$] = a[$] === f ? "" : f, $ === "suptype" || $ === "suprar" ? (z = 30, S()) : (ot(), ee(), J(), p("[data-dlg-grid]").scrollTop = 0);
+                return
+            }
+            const i = r.closest("[data-supinfo]");
+            if (i) {
+                Ae(Number(i.dataset.supinfo));
+                return
+            }
+            const u = r.closest("[data-skill]");
+            if (u) {
+                Re(Number(u.dataset.skill));
+                return
+            }
+            const d = r.closest("[data-seg] button");
+            if (d) {
+                const $ = d.closest("[data-seg]").dataset.seg,
+                    f = d.dataset.v;
+                a[$] = Number(f), S();
+                return
+            }
+            const g = r.closest("[data-slot]");
+            if (g) {
+                zt("support", Number(g.dataset.slot));
+                return
+            }
+            const studSlot = r.closest("[data-stud-slot]");
+            if (studSlot) {
+                zt("support", Number(studSlot.dataset.studSlot), "stud");
+                return
+            }
+            if (r.closest("[data-pick-card]")) {
+                zt("card");
+                return
+            }
+            const y = r.closest("[data-pick]");
+            if (y) {
+                const $ = Number(y.dataset.pick);
+                if (tt === "card") {
+                    const f = et.get(a.card);
+                    a.card = $;
+                    const v = et.get($);
+                    (!a.style || f && f.st === a.style) && (a.style = v.st || 0), q.close(), S()
+                } else if (dlgMode === "stud") {
+                    addStudCard($, St) && q.close()
+                } else {
+                    const f = T.get($);
+                    if (a.deck.includes($)) {
+                        H("這張卡已在編成中");
+                        return
+                    }
+                    const v = Qt(f, St);
+                    if (v) {
+                        H(v);
+                        return
+                    }
+                    q.close(), Ot($, St)
+                }
+                return
+            }
+            if (r.closest("[data-guide-close]")) {
+                Bt(!1);
+                return
+            }
+            if (r.closest("[data-guide-show]")) {
+                Bt(!0), H("已重新顯示頁面頂部的使用步驟");
+                return
+            }
+            if (r.closest("[data-tips]")) {
+                const $ = p("[data-tips-dlg]");
+                typeof $.showModal == "function" ? $.showModal() : $.setAttribute("open", "");
+                return
+            }
+            if (r.closest("[data-reset]")) {
+                fe();
+                return
+            }
+            if (r.closest("[data-goto-rec]")) {
+                const $ = document.getElementById("pl-rec");
+                $.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                }), $.classList.remove("flash"), $.offsetWidth, $.classList.add("flash");
+                return
+            }
+            if (r.closest("[data-copy-link]")) {
+                const $ = location.href;
+                (navigator.clipboard?.writeText($) ?? Promise.reject()).then(() => H("已復製作業連結"), () => {
+                    prompt("複製以下作業連結：", $)
+                });
+                return
+            }
+            r.closest("[data-rank-more]") && (z += 30, S())
+        });
+        for (const s of [q, C, p("[data-tips-dlg]")]) s.addEventListener("click", r => {
+            r.target === s && s.close()
+        });
+        p("[data-dlg-q]").addEventListener("input", s => {
+            a[tt === "card" ? "pkq" : "psq"] = s.target.value, ot(), J()
+        }), q.addEventListener("close", () => {
+            wt[tt] = p("[data-dlg-grid]").scrollTop
+        }), B("[data-hideact]").forEach(s => s.addEventListener("change", () => {
+            a.hideact = s.checked, z = 30, q.open && (ot(), ne(), J()), S()
+        })), p("[data-dlg-sort]").addEventListener("change", s => {
+            rt = s.target.value, J(), p("[data-dlg-grid]").scrollTop = 0
+        }), p("[data-track]").addEventListener("change", s => {
+            a.track = Number(s.target.value) || 0, a.course = 0, S()
+        }), p("[data-course]").addEventListener("change", s => {
+            a.course = Number(s.target.value) || 0, S()
+        }), p("[data-nodb]").addEventListener("change", s => {
+            a.nodb = s.target.checked ? 1 : 0, S()
+        }), p("[data-nosrc]").addEventListener("change", s => {
+            a.nosrc = s.target.checked, a.nosrcSet = !0, S()
+        }), p("[data-skill-sort]").addEventListener("change", s => {
+            a.sort = s.target.value, S()
+        }), p("[data-sup-sort]").addEventListener("change", s => {
+            a.supsort = s.target.value, S()
+        });
+        let t;
+        const e = () => {
+            clearTimeout(t), t = setTimeout(S, 150)
+        };
+        p("[data-skill-q]").addEventListener("input", s => {
+            a.skillq = s.target.value, e()
+        }), p("[data-sup-q]").addEventListener("input", s => {
+            a.supq = s.target.value, z = 30, e()
+        })
+    }
+    const Mt = "skillselect.tw.guide-hidden";
+
+    function Bt(t) {
+        p("[data-guide]").hidden = !t;
+        try {
+            t ? localStorage.removeItem(Mt) : localStorage.setItem(Mt, "1")
+        } catch {}
+    }
+    try {
+        p("[data-guide]").hidden = localStorage.getItem(Mt) === "1"
+    } catch {}
+    Se();
+    pe();
+    Oe();
+    S();
+
+    window.TW.engine = {
+        state: a,
+        refresh: S,
+        evaluate: at,
+        environment: ge,
+        skillMap: L,
+        supports: T,
+        cards: et,
+        openSkill: Re
+    };
 
 })();</script><script>(function () {
   'use strict';
