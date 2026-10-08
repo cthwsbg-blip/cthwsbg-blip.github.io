@@ -10,7 +10,7 @@
   const cleanQuery = s => s.normalize('NFKC').toLocaleLowerCase().replace(/\s+/g,'');
   function matches() {
     const q=cleanQuery(state.query);
-    return catalog.jobs.filter(j => j.event===state.event && (state.style==='全部'||j.racer.style===state.style) && (!q||cleanQuery([j.racer.name,j.racer.ja,j.racer.costume_ja,j.racer.card_id,catalog.nameAliases[String(j.racer.character_id)]].join(' ')).includes(q)));
+    return catalog.jobs.filter(j => j.event===state.event && (state.style==='全部'||j.racer.style===state.style) && (!q||cleanQuery([j.racer.name,j.racer.ja,j.racer.costume_ja,...(j.racer.search_names||[]),j.racer.card_id,catalog.nameAliases[String(j.racer.character_id)]].join(' ')).includes(q)));
   }
   function node(card, job, allowConflict=true) {
     const conflict=allowConflict && card.card_id===job.racer.card_id;
@@ -19,7 +19,7 @@
     const factors=card.factors;
 
     const badges=factors?`<div class="factor-stack"><span class="factor red">${escape(factors.red.name)} <b>★★★</b></span></div>`:'';
-    return `<div class="node${conflict?' conflict':''}" data-card="${card.card_id}">${['bwiki-loh','note-loh'].includes(job.data_source) && card.statistics?`<span class="role-label">使用率 ${(100*card.statistics.costume_count/card.statistics.costume_sample).toFixed(1)}%</span>`:card.role?`<span class="role-label ${card.is_acceleration?'accel':''}">${escape(card.role)}</span>`:''}<img src="${image(card)}" alt="${escape(card.name)}"><b>${escape(card.name)}</b><div class="costume">${escape(card.costume_ja)}</div>${skill?`<span class="skill">繼承固有 · ${escape(skill)}</span>`:''}${badges}${alternate?'<span class="alternate-note">同角色異衣裝 · 僅放祖輩</span>':''}${conflict?'<span class="conflict-note">同衣裝已略過，不編入此作業</span>':''}</div>`;
+    return `<div class="node${conflict?' conflict':''}" data-card="${card.card_id}">${['bwiki-loh','note-loh'].includes(job.data_source) && card.statistics?`<span class="role-label">使用率 ${(100*card.statistics.costume_count/card.statistics.costume_sample).toFixed(1)}%</span>`:card.role?`<span class="role-label ${card.is_acceleration?'accel':''}">${escape(card.role)}</span>`:''}<img src="${image(card)}" alt="${escape(card.name)}"><b>${escape(card.name)}</b><div class="costume">${escape(card.costume_name || card.costume_ja)}</div>${skill?`<span class="skill">繼承固有 · ${escape(skill)}</span>`:''}${badges}${alternate?'<span class="alternate-note">同角色異衣裝 · 僅放祖輩</span>':''}${conflict?'<span class="conflict-note">同衣裝已略過，不編入此作業</span>':''}</div>`;
   }
   function goal(job){
     const f=job.factor_plan;
