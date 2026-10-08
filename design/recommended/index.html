@@ -1,5 +1,31 @@
 <!doctype html>
-<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>繁中推荐作业区 · 種馬設計圖</title><meta name="description" content="按賽事與跑法選擇站長整理的推薦戰馬與種馬作業。"><link rel="stylesheet" href="../_astro/index.Cx1QAUdY.css"><link rel="stylesheet" href="style.css?v=26"></head>
+<html lang="zh-Hant"><head><meta name="recommended-build" content="20261008-cache-1"><script>
+(() => {
+  const build=document.querySelector('meta[name="recommended-build"]').content;
+  let checking=false;
+  async function checkVersion(){
+    if(checking||!/^https?:$/.test(location.protocol))return;
+    checking=true;
+    try{
+      const url=new URL('./',location.href);
+      url.searchParams.set('_check',Date.now());
+      const response=await fetch(url,{cache:'no-store'});
+      if(!response.ok)return;
+      const doc=new DOMParser().parseFromString(await response.text(),'text/html');
+      const latest=doc.querySelector('meta[name="recommended-build"]')?.content;
+      if(latest&&latest!==build){
+        const target=new URL(location.href);
+        // Keep the selected race/job while bypassing the cached entry document.
+        target.searchParams.set('_version',latest);
+        location.replace(target.href);
+      }
+    }catch(_){/* Keep the existing page usable when offline. */}
+    finally{checking=false;}
+  }
+  checkVersion();
+  window.addEventListener('pageshow',event=>{if(event.persisted)checkVersion();});
+})();
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>繁中推荐作业区 · 種馬設計圖</title><meta name="description" content="按賽事與跑法選擇站長整理的推薦戰馬與種馬作業。"><link rel="stylesheet" href="../_astro/index.Cx1QAUdY.css"><link rel="stylesheet" href="style.css?v=26"></head>
 <body><div class="stripe"></div><header class="topbar"><div class="wrap topbar-inner"><div class="brand"><span class="brand-icon" aria-hidden="true">📋</span><span class="brand-text"><small>BREEDING DESIGN · RECOMMENDED</small><b>繁中推荐作业区</b></span></div><a class="back-link" href="../">← 返回種馬設計圖</a></div></header>
 <main class="wrap collection"><section class="intro"><div><span class="eyebrow">站長精選 · 繁中服參考</span><h1>選好戰馬，找到你的種馬作業。</h1><p>依賽事和跑法查閱推薦，對照親輩、祖輩與繼承固有。</p></div><div class="intro-count"><strong>9<span>期賽事</span></strong><strong>90<span>份推薦記錄</span></strong></div></section>
 <section class="panel filters" aria-label="作業篩選"><div class="panel-title"><h2><span class="num">01</span>選擇賽事</h2><small>RACE COLLECTION</small></div><div id="events" class="event-tabs" role="group" aria-label="賽事"></div><div class="filter-bottom"><div id="styles" class="style-tabs" role="group" aria-label="跑法"></div><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋戰馬或衣裝…" aria-label="搜尋戰馬或衣裝"></label></div></section>
