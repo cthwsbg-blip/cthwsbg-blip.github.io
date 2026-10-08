@@ -3,7 +3,7 @@
   const catalog = window.RECOMMENDED_CATALOG;
   const $ = s => document.querySelector(s);
   const escape = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const styleName = {'逃':'逃・領頭','大逃':'大逃','先':'先・前列','差':'差・居中','追':'追・後追'};
+  const styleName = {'逃':'領頭','大逃':'大逃','先':'前列','差':'居中','追':'後追'};
   const initial = catalog.jobs.find(j => j.id === new URL(location.href).searchParams.get('job'));
   const state = {event:initial?.event || 'june',style:'全部',query:'',selected:initial?.id || 'june-01'};
   const image = card => window.__AV[String(card.card_id)] || '';
@@ -59,14 +59,21 @@
     const url=new URL(location.href);url.search='';url.hash='';if(job)url.searchParams.set('job',job.id);
     history.replaceState(null,'',url);
   }
+  function renderTeams() {
+    const teams=window.RECOMMENDED_TEAMS[state.event] || [];
+    $('#team-count').textContent=`${teams.length} 套陣容`;
+    $('#teams').innerHTML=teams.map(team=>`<article class="team-card" aria-label="方案 ${team.label}"><h3>${team.label}</h3><div class="team-members">${team.members.map(card=>`<div class="team-member" tabindex="0" title="${escape(card.name)}（${escape(card.costume)}） · ${styleName[card.style]}${card.role?' · '+escape(card.role):''}"><img src="${image(card)}" alt="${escape(card.name)}（${escape(card.costume)}） · ${styleName[card.style]}${card.role?' · '+escape(card.role):''}"></div>`).join('')}</div></article>`).join('');
+  }
   function render() {
-    $('#events').innerHTML=catalog.events.map(ev=>`<div class="event-option ${state.event===ev.key?'active':''}"><button class="event-tab" data-event="${ev.key}" aria-pressed="${state.event===ev.key}"><b>${escape(ev.title)}</b><small>${escape(ev.track)}</small></button><a class="event-source" href="${escape(ev.source)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(ev.title)} 攻略原帖">${['bwiki-loh','note-loh'].includes(ev.data_source)?'統計原頁':'攻略原帖'} ↗</a>${ev.guide_source?`<a class="event-source" href="${escape(ev.guide_source)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(ev.title)} 攻略原帖">攻略原帖 ↗</a>`:''}</div>`).join('');
+    renderTeams();
+    $('#events').innerHTML=catalog.events.map(ev=>`<div class="event-option ${state.event===ev.key?'active':''}"><button class="event-tab" data-event="${ev.key}" aria-pressed="${state.event===ev.key}"><span class="event-date">${escape(ev.title.split(/\s*[|｜]\s*/)[0])}</span><b>${escape(ev.title.split(/\s*[|｜]\s*/).slice(1).join(' | ') || ev.title)}</b><small>${escape(ev.track)}</small></button><a class="event-source" href="${escape(ev.source)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(ev.title)} 攻略原帖">${['bwiki-loh','note-loh'].includes(ev.data_source)?'統計原頁':'攻略原帖'} ↗</a>${ev.guide_source?`<a class="event-source" href="${escape(ev.guide_source)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(ev.title)} 攻略原帖">攻略原帖 ↗</a>`:''}</div>`).join('');
     const eventStrip=$('#events');
     if(eventStrip.dataset.selected!==state.event){
       const active=eventStrip.querySelector('.event-option.active');
       if(active)eventStrip.scrollLeft=active.offsetLeft-eventStrip.firstElementChild.offsetLeft;
       eventStrip.dataset.selected=state.event;
     }
+    requestAnimationFrame(updateRaceNavigation);
     const activeEvent=catalog.events.find(e=>e.key===state.event);
     $('.list-caption').textContent=['bwiki-loh','note-loh'].includes(activeEvent.data_source)?'按統計採用數排列 · 同衣裝不同跑法分列':'按原圖順序排列 · 同衣裝不同跑法分列';
     const available=new Set(catalog.jobs.filter(j=>j.event===state.event).map(j=>j.racer.style));
@@ -88,9 +95,17 @@
     }
     $('#detail').innerHTML=`<div class="detail-top"><img class="main-portrait" src="${image(r)}" alt="${escape(r.name)}"><div><div class="detail-badges">${job.statistics?'':`<span class="tier">${escape(r.tier)}</span>`}<span class="tag">${styleName[r.style]}</span></div><h2>${escape(r.name)}</h2><p>${escape(r.ja)} ${escape(r.costume_ja)}</p><p>${job.statistics?`統計第 ${r.order} 位`:`原圖第 ${r.order} 條`} · ${escape(ev.author || catalog.author)}</p></div></div><div class="race-line">${escape(ev.title)}<br><span class="muted">${escape(ev.track)}</span></div>${content}`;
   }
+  function updateRaceNavigation(){
+    const el=$('#events');
+    document.querySelector('[data-race-scroll="-1"]').disabled=el.scrollLeft<=2;
+    document.querySelector('[data-race-scroll="1"]').disabled=el.scrollLeft+el.clientWidth>=el.scrollWidth-2;
+  }
+  $('#events').addEventListener('scroll',updateRaceNavigation,{passive:true});
+  window.addEventListener('resize',updateRaceNavigation);
   document.addEventListener('click',event=>{
     const b=event.target.closest('button');if(!b)return;
-    if(b.dataset.event){state.event=b.dataset.event;state.style='全部';render();}
+    if(b.dataset.raceScroll){const strip=$('#events');strip.scrollBy({left:Number(b.dataset.raceScroll)*(strip.firstElementChild.offsetWidth+10),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});}
+    else if(b.dataset.event){state.event=b.dataset.event;state.style='全部';render();}
     else if(b.dataset.style){state.style=b.dataset.style;render();}
     else if(b.dataset.job){state.selected=b.dataset.job;render();if(matchMedia('(max-width:720px)').matches)$('#detail').scrollIntoView({behavior:'smooth',block:'start'});}
     else if(b.hasAttribute('data-reset')){state.style='全部';state.query='';$('#search').value='';render();}

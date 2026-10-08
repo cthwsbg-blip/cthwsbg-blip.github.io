@@ -1,0 +1,130 @@
+/* Local visual refinement. Keep the original racing palette and reading order. */
+:root{--ink:#23332b;--muted:#62716c;--border:#dfe7e2;--green:#36a640;--green-d:#237c36}
+body{background-color:#f5f7f4;background-image:linear-gradient(#66836806 1px,transparent 1px),linear-gradient(90deg,#66836806 1px,transparent 1px);background-size:28px 28px;color:var(--ink);-webkit-font-smoothing:antialiased}
+button,input,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+button,a,input,.team-member{touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible,.team-member:focus-visible{outline:3px solid #237c36;outline-offset:3px}
+.topbar{box-shadow:0 4px 20px #214e2512}
+.topbar-inner{min-height:76px}
+.brand-icon{width:42px;height:42px;font-size:23px;box-shadow:none}
+.brand-text small{font-size:10px;letter-spacing:2px}
+.brand-text b{font-size:22px;letter-spacing:1px}
+.back-link{font-size:12px;padding:8px 14px;background:#ffffff12;transition:background .18s}
+.collection{padding-top:0}
+.intro{padding:28px 4px 24px;gap:28px}
+.eyebrow{font-size:10px;letter-spacing:2px}
+.intro h1{font-size:clamp(23px,2.2vw,30px);line-height:1.4;letter-spacing:-.6px;margin:8px 0}
+.intro p{font-size:13px;line-height:1.7}
+.intro-count{gap:26px;padding-left:28px;border-left:1px solid #d9e4da}
+.intro-count strong{font-size:30px;font-variant-numeric:tabular-nums;line-height:1}
+.intro-count span{font-size:11px;margin-top:8px}
+.collection .panel{border:1px solid var(--border);box-shadow:0 3px 12px #253d2c04;border-radius:18px}
+.filters{padding:18px!important;margin-bottom:16px}
+.filters .panel-title{margin:-18px -18px 16px;padding:11px 18px;border-radius:17px 17px 0 0;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(115deg,#32a64b,#79c929);border:0}
+.filters .panel-title h2{font-size:16px;letter-spacing:1px;text-shadow:none;margin:0;display:flex;align-items:center;gap:10px}
+.filters .panel-title h2 .num{width:25px;height:25px;font-size:11px;box-shadow:none;margin:0}
+.race-navigation{display:flex;gap:6px}
+.race-navigation button{width:32px;height:32px;border:1px solid #ffffff65;border-radius:8px;color:#20552b;background:#ffffffcc;font-size:21px;line-height:1;cursor:pointer;transition:background .16s}
+.race-navigation button:hover{background:white}
+.race-navigation button:disabled{opacity:.35;cursor:default}
+.race-navigation button:focus-visible{outline-color:white}
+.event-tabs{gap:10px;padding:1px 1px 9px;scrollbar-color:#b7ccbb transparent;scrollbar-width:thin}
+.event-tabs .event-option{flex-basis:286px;border-radius:12px;background:#fafbf9;transition:background .18s,border-color .18s}
+.event-option:hover{border-color:#9abb9a;background:#f5faf2}
+.event-option.active{border-color:#2e933d;box-shadow:inset 0 0 0 1px #2e933d;background:#f0f8e9}
+.event-option .event-tab{padding:12px 14px 5px;text-align:left;cursor:pointer}
+.event-date{display:block;font-size:11px;color:#596d60;letter-spacing:.7px;margin-bottom:3px;font-weight:500}
+.event-tab b{font-size:15px;line-height:1.4;font-weight:750;letter-spacing:.1px}
+.event-tab small{font-size:12px;line-height:1.6;margin-top:5px}
+.event-source{font-size:11px;margin:0 14px 8px;line-height:1.4;padding:4px 0}
+.filter-bottom{margin-top:12px;padding-top:12px;border-top:1px solid #edf1ed;gap:12px}
+.style-tabs{gap:4px}
+.style-tabs button{font-size:12px;padding:7px 12px;border-color:transparent;background:transparent;transition:background .15s,color .15s}
+.style-tabs button:hover{background:#edf5e9}
+.style-tabs button.active{background:var(--green-d);border-color:var(--green-d);color:white}
+.search-wrap{border:1px solid #e3e9e2;background:#f6f8f5;padding:8px 12px;border-radius:10px;transition:border-color .15s,box-shadow .15s}
+.search-wrap:focus-within{border-color:#61a166;box-shadow:0 0 0 3px #3a8f3310}
+.search-wrap input{font-size:12px;width:196px;line-height:1.6}
+.search-wrap input:focus-visible{outline:none}
+.team-panel{padding:15px 18px!important;margin-bottom:18px}
+.team-heading{margin-bottom:10px}
+.team-heading h2,.list-heading h2{font-size:16px;letter-spacing:.3px}
+.team-heading>span,.list-heading>span{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.team-grid{gap:12px;scrollbar-width:thin;scrollbar-color:#b7ccbb transparent;scroll-snap-type:x proximity}
+.team-card{flex-basis:calc((100% - 24px)/3);padding:9px 13px;background:#f8faf6;border-color:#e4eadf;border-radius:11px;scroll-snap-align:start}
+.team-card h3{font-size:11px;font-weight:800;color:#59835b}
+.team-members{justify-content:center;gap:clamp(12px,3vw,32px)}
+.team-member img{width:58px;height:58px;transition:transform .18s,filter .18s;filter:drop-shadow(0 2px 2px #3040260c)}
+.team-member:hover img,.team-member:focus-visible img{transform:translateY(-3px);filter:drop-shadow(0 4px 3px #30402620)}
+.workspace{grid-template-columns:280px minmax(0,1fr);gap:18px}
+.job-list-panel{padding:17px!important;top:16px}
+.list-caption{font-size:10px;line-height:1.6;margin:7px 0 13px}
+.job-list{gap:6px;scrollbar-width:thin;scrollbar-color:#bdcbbd transparent;max-height:min(720px,75vh)}
+.job-button{border-color:transparent;background:#f9faf8;border-radius:10px;gap:10px;padding:13px 9px 9px;transition:background .16s,border-color .16s}
+.job-button:hover{background:#edf5e8;border-color:#c9ddbf}
+.job-button.active{background:#eef7e7;border-color:#539a46;box-shadow:inset 3px 0 0 #539a46}
+.job-button img{width:48px;height:48px}
+.job-button b{font-size:12px;line-height:1.55;font-weight:700;overflow-wrap:anywhere}
+.job-button small{font-size:10px;line-height:1.5;display:block;margin-top:3px}
+.order{font-size:9px;left:8px;top:1px;background:transparent;color:#83927e;font-variant-numeric:tabular-nums}
+.detail{padding:24px!important}
+.detail-top{gap:16px}
+.main-portrait{width:76px;height:76px;border-radius:13px;background:#f5f7f1}
+.detail-top h2{font-size:21px;line-height:1.5;margin:5px 0;letter-spacing:-.3px}
+.detail-top p{font-size:12px;line-height:1.6}
+.tag{font-size:10px;background:#edf2e7;color:#527447}
+.race-line{background:#f5f8f2;border:1px solid #eaf0e5;border-radius:10px;padding:11px 14px;font-size:12px;line-height:1.8;margin:18px 0 24px}
+.section-head{margin:22px 0 12px}
+.section-head h3{font-size:17px;letter-spacing:.2px}
+.composition{gap:6px;margin-bottom:12px}
+.composition span{font-size:10px;padding:3px 9px;background:#f1f0f6;color:#716584}
+.pedigree{background:linear-gradient(160deg,#fafcf7,#f8f9fc);border-color:#e2e9dd;border-radius:14px;padding:24px 18px}
+.self-node{border:1px solid #67a34d;box-shadow:0 3px 10px #244d2010;padding:12px 20px;border-radius:12px}
+.self-node img{width:56px;height:56px}
+.self-node b{line-height:1.6;font-size:13px}
+.goal-summary{border-color:#dce8d4;border-radius:11px;padding:13px;margin-bottom:34px}
+.aptitudes span{border-radius:5px;background:#f4f7f0}
+.family-grid{gap:18px}
+.family{background:#f1f8fc;border-color:#c6e0ec;border-radius:12px;padding:12px}
+.family.pink{background:#fff5f9;border-color:#edcfdf}
+.family-label{font-size:10px;letter-spacing:.3px;margin-bottom:10px}
+.node{border-color:#e2e6e8;border-radius:10px;padding:12px 9px}
+.node b{line-height:1.65;font-size:12px;overflow-wrap:anywhere}
+.node .costume{color:#738080;line-height:1.6}
+.skill{font-size:10px;line-height:1.65;background:#f5f0f8;color:#795e87;border-radius:5px}
+.grand-grid .node b{font-size:11px;line-height:1.65}
+.grand-label{font-size:10px;margin:13px 0 10px;color:#78818b}
+.factor-summary{border-color:#e3e8df;background:#fafbf8;padding:16px;border-radius:12px}
+.factor-summary p{font-size:11px;line-height:1.8;margin:8px 0}
+.alternative-pool{margin-top:22px;padding-top:0;border-color:#e9eee6}
+.pool-group h4{font-size:12px;border-width:2px}
+.card-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.card-grid .node{background:#fcfcfb}
+.collection-foot{font-size:10px;line-height:1.9;padding:28px 12px;color:#7e8980}
+@media(min-width:1060px){.grand-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:1050px) and (min-width:721px){.workspace{grid-template-columns:230px minmax(0,1fr)}.detail{padding:18px!important}.team-members{gap:12px}.team-member img{width:50px;height:50px}.team-card{min-width:205px}.intro-count{padding-left:20px}}
+@media(max-width:720px){
+ .topbar-inner{min-height:70px;gap:8px;flex-wrap:nowrap;padding-top:12px;padding-bottom:12px}
+ .brand{gap:8px;min-width:0}.brand-icon{width:32px;height:32px;font-size:18px;flex:none}
+ .brand-text b{font-size:16px;letter-spacing:0}.brand-text small{font-size:7px;letter-spacing:.7px}
+ .back-link{font-size:10px;padding:7px 9px;white-space:nowrap}
+ .intro{padding:23px 2px 18px}.intro h1{font-size:23px;line-height:1.45;margin:7px 0}.intro p{font-size:11px;max-width:300px}
+ .collection .panel{border-radius:14px}.filters{padding:14px!important;margin-bottom:12px}
+ .filters .panel-title{margin:-14px -14px 12px;border-radius:13px 13px 0 0;padding:9px 14px;min-height:44px}
+ .filters .panel-title h2{font-size:14px}.event-tabs .event-option{flex-basis:83%}
+ .event-tab b{font-size:14px}.event-option .event-tab{padding:11px 12px 4px}.event-source{margin-left:12px;font-size:10px}
+ .style-tabs{width:100%;flex-wrap:nowrap;overflow-x:auto;padding:2px 0 5px;scrollbar-width:none}.style-tabs button{white-space:nowrap;flex:none;font-size:11px;padding:8px 11px}
+ .filter-bottom{gap:7px;margin-top:8px;padding-top:8px}.search-wrap{width:100%;padding:8px 10px}.search-wrap input{width:100%;font-size:12px}
+ .team-panel{padding:12px 14px!important;margin-bottom:14px}.team-heading{margin-bottom:8px}.team-heading h2{font-size:15px}
+ .team-grid{gap:10px}.team-card{flex:0 0 210px;min-width:210px;padding:8px 10px;gap:8px}.team-members{gap:10px}.team-member img{width:48px;height:48px}
+ .workspace{grid-template-columns:1fr;gap:14px}.job-list-panel{padding:14px!important;position:static}.job-list{max-height:246px;gap:6px}.job-button{padding:13px 6px 8px;gap:6px;min-height:80px}.job-button img{width:40px;height:40px}.job-button b{font-size:11px}.job-button small{font-size:9px}.list-caption{margin-bottom:10px}
+ .detail{padding:17px!important}.detail-top{gap:12px}.main-portrait{width:60px;height:60px}.detail-top h2{font-size:17px;line-height:1.55}.detail-top p{font-size:10px}
+ .race-line{font-size:11px;padding:10px 12px;margin:15px 0 20px}.section-head h3{font-size:16px}
+ .pedigree{padding:18px 8px}.family-grid{gap:8px}.family{padding:8px 6px}.family-label{font-size:9px;letter-spacing:0}.node{padding:9px 5px}.node b{font-size:11px}.node img{width:54px;height:54px}.node .costume{font-size:9px}.grand-grid{grid-template-columns:1fr}
+ .self-node{padding:10px 12px;gap:9px}.self-node img{width:47px;height:47px}.self-node b{font-size:12px}.goal-summary{padding:11px 5px}.goal-summary b{font-size:12px}.goal-summary small{font-size:9px}.aptitudes{gap:4px}.aptitudes span{padding:5px;font-size:10px}
+ .card-grid{grid-template-columns:1fr 1fr}.card-grid .node b{font-size:11px}.factor-summary{padding:13px}.factor-summary p{font-size:10px}
+}
+@media(max-width:370px){.brand-icon{display:none}.brand-text b{font-size:15px}.intro h1{font-size:21px}.back-link{font-size:9px}.job-button img{width:32px;height:32px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media print{.team-panel{display:none!important}.workspace{display:block}.collection .panel{box-shadow:none}.detail{border:0!important}}
