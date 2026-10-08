@@ -592,23 +592,23 @@ window.RECOMMENDED_TEAMS = {
       "label": "A",
       "members": [
         {
-          "card_id": 103102,
-          "name": "艾尼風神",
-          "costume": "MELTY GIFT",
-          "style": "逃",
-          "role": ""
-        },
-        {
-          "card_id": 102403,
-          "name": "重砲",
-          "costume": "搖滾☆MewMeow",
-          "style": "逃",
-          "role": ""
-        },
-        {
           "card_id": 101003,
-          "name": "タイキシャトル",
+          "name": "大樹快車",
           "costume": "Baa Baa Patisserie",
+          "style": "先",
+          "role": ""
+        },
+        {
+          "card_id": 100603,
+          "name": "小慄帽",
+          "costume": "シンデレラグレイ",
+          "style": "先",
+          "role": ""
+        },
+        {
+          "card_id": 110901,
+          "name": "萊茵實力",
+          "costume": "Dream Successor",
           "style": "先",
           "role": ""
         }
@@ -618,13 +618,6 @@ window.RECOMMENDED_TEAMS = {
       "label": "B",
       "members": [
         {
-          "card_id": 103102,
-          "name": "艾尼風神",
-          "costume": "MELTY GIFT",
-          "style": "逃",
-          "role": ""
-        },
-        {
           "card_id": 109001,
           "name": "極峰",
           "costume": "Le beau sommet",
@@ -633,8 +626,15 @@ window.RECOMMENDED_TEAMS = {
         },
         {
           "card_id": 101003,
-          "name": "タイキシャトル",
+          "name": "大樹快車",
           "costume": "Baa Baa Patisserie",
+          "style": "先",
+          "role": ""
+        },
+        {
+          "card_id": 112402,
+          "name": "吹波糖",
+          "costume": "暁光",
           "style": "先",
           "role": ""
         }
@@ -651,15 +651,15 @@ window.RECOMMENDED_TEAMS = {
           "role": ""
         },
         {
-          "card_id": 104202,
-          "name": "採珠",
-          "costume": "Be♪Witched",
+          "card_id": 102403,
+          "name": "重砲",
+          "costume": "搖滾☆MewMeow",
           "style": "逃",
           "role": ""
         },
         {
           "card_id": 101003,
-          "name": "タイキシャトル",
+          "name": "大樹快車",
           "costume": "Baa Baa Patisserie",
           "style": "先",
           "role": ""
