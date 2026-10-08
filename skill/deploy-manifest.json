@@ -2,14 +2,6 @@
   "keep": 3,
   "deployments": [
     {
-      "source": "e03f3a5",
-      "files": [
-        "index-CrrAfj5E.js",
-        "index-DQIU2Lqu.css",
-        "worker-CdfeGQ9F.js"
-      ]
-    },
-    {
       "source": "e03f3a5+persist",
       "files": [
         "index-BqW4X1Xn.js",
@@ -23,6 +15,14 @@
         "index-BzHNs7aC.js",
         "index-DQIU2Lqu.css",
         "worker-s7PIQAHB.js"
+      ]
+    },
+    {
+      "source": "c132399",
+      "files": [
+        "index-DmFjxjOE.js",
+        "index-4mBCEW36.css",
+        "worker-Dwwk5JR8.js"
       ]
     }
   ]
