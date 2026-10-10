@@ -93,7 +93,8 @@
     } else {
       content='<div class="explain">這期原圖列的是各跑法的種馬候選池，尚未指定固定六枠與親祖連線。以下保留原分類，供選取這份推薦方案查閱。</div><div class="section-head"><h3>推薦種馬候選</h3><small>按作者用途分類</small></div>'+job.groups.map(g=>`<div class="pool-group"><h4>${escape(g.category)}</h4><div class="card-grid">${g.cards.map(c=>node(c,job)).join('')}</div></div>`).join('');
     }
-    $('#detail').innerHTML=`<div class="detail-top"><img class="main-portrait" src="${image(r)}" alt="${escape(r.name)}"><div><div class="detail-badges">${job.statistics?'':`<span class="tier">${escape(r.tier)}</span>`}<span class="tag">${styleName[r.style]}</span></div><h2>${escape(r.name)}</h2><p>${escape(r.ja)} ${escape(r.costume_ja)}</p><p>${job.statistics?`統計第 ${r.order} 位`:`原圖第 ${r.order} 條`} · ${escape(ev.author || catalog.author)}</p></div></div><div class="race-line">${escape(ev.title)}<br><span class="muted">${escape(ev.track)}</span></div>${content}`;
+    const designLink=job.families?`<a class="design-link" data-open-design href="${escape(window.RECOMMENDED_DESIGN_LINK(job,ev))}">前往種馬設計圖 <span aria-hidden="true">→</span></a>`:'';
+    $('#detail').innerHTML=`<div class="detail-top"><img class="main-portrait" src="${image(r)}" alt="${escape(r.name)}"><div><div class="detail-badges">${job.statistics?'':`<span class="tier">${escape(r.tier)}</span>`}<span class="tag">${styleName[r.style]}</span></div><h2>${escape(r.name)}</h2><p>${escape(r.ja)} ${escape(r.costume_ja)}</p><p>${job.statistics?`統計第 ${r.order} 位`:`原圖第 ${r.order} 條`} · ${escape(ev.author || catalog.author)}</p></div></div><div class="race-line"><div>${escape(ev.title)}<br><span class="muted">${escape(ev.track)}</span></div>${designLink}</div>${content}`;
   }
   function updateRaceNavigation(){
     const el=$('#events');
@@ -103,6 +104,11 @@
   $('#events').addEventListener('scroll',updateRaceNavigation,{passive:true});
   window.addEventListener('resize',updateRaceNavigation);
   document.addEventListener('click',event=>{
+    if(event.target.closest('[data-open-design]')){
+      // The original editor keeps its server selection separately from share data.
+      try{localStorage.setItem('uma-design:v1:jobsServer','繁中服');}catch(_){}
+      return;
+    }
     const b=event.target.closest('button');if(!b)return;
     if(b.dataset.raceScroll){const strip=$('#events');strip.scrollBy({left:Number(b.dataset.raceScroll)*(strip.firstElementChild.offsetWidth+10),behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});}
     else if(b.dataset.event){state.event=b.dataset.event;state.style='全部';render();}

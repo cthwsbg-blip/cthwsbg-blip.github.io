@@ -75,6 +75,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,.team-member:focus-visi
 .detail-top p{font-size:12px;line-height:1.6}
 .tag{font-size:10px;background:#edf2e7;color:#527447}
 .race-line{background:#f5f8f2;border:1px solid #eaf0e5;border-radius:10px;padding:11px 14px;font-size:12px;line-height:1.8;margin:18px 0 24px}
+.race-line{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.race-line>div{flex:1 1 220px;min-width:0}
+.design-link{display:inline-flex;align-items:center;gap:10px;flex:none;white-space:nowrap;padding:8px 12px;border:1px solid #b7cfa9;border-radius:8px;background:#fff;color:#397535;font-size:12px;font-weight:700;text-decoration:none;transition:background .16s,border-color .16s}
+.design-link:hover{background:#eaf4e3;border-color:#539a46}
+.design-link:focus-visible{outline:2px solid #397535;outline-offset:3px}
 .section-head{margin:22px 0 12px}
 .section-head h3{font-size:17px;letter-spacing:.2px}
 .composition{gap:6px;margin-bottom:12px}
