@@ -1,24 +1,32 @@
-# 614tools · 赛道有效马娘（Effects）
+# 614tools · 赛道有效马娘（Effects）Demo
 
 按赛道计算每名马娘 **自身携带技能** 的马身收益，展示 **Top 50**。
 
-## 成功标准
+## 自身携带技能（对齐 U-tools 卡页）
 
-- 选赛道 → 看该赛道 Top 50（高→低）
-- 评分用固有 + 初期所持（`si`），数据来自 skillselect 抽出物 + UST 固有表
-- **马身计算在后端**；前端只展示 API 结果
-- 跑法筛选可 refinement
-- 公式与 U-tools 差异见 `docs/FORMULA.md`
-- 部署见 `docs/DEPLOY.md`
+固有（`skill_set`）+ 进化（`skill_upgrade_description`）+ 觉醒（`available_skill_set`，含 Pt）。
 
-## 快速开始
+数据从 Steam 日服 `master.mdb` 重建：`python3 scripts/rebuild_from_master.py`
+
+权威路径见 `data/client/SOURCE_PATHS.txt`：
+`C:\Users\1\AppData\LocalLow\Cygames\UmamusumePrettyDerby_Jpn\master\master.mdb`
+
+## 马身
+
+后端 **uma-skill-tools RaceSolver**（与 `/skill/` 同源）：`(pos_with - pos_without) / 2.5` 多样本均值。  
+`?engine=approx` 可回退旧近似（仅调试）。
+
+## 赛道图
+
+复用 `/skillselect` 的序盘/中盘/终盘/最后阶段 + 弯道/直线/坡道层。
+
+## 本地
 
 ```bash
 cd server && node index.js
-# 打开 http://127.0.0.1:8787/effects/
+# http://127.0.0.1:8787/effects/
 ```
 
-## API
+## 分支
 
-- `GET /api/effects/courses`
-- `GET /api/effects/rank?course=11101&style=0&limit=50&mode=inherent`
+改动只推 `effects-demo`，**不要合并 main / 不要上线 614tools.top**，等核实后再发。
