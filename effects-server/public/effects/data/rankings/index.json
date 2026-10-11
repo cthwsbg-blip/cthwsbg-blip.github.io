@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-10-11T03:04:39.478Z",
+  "meta": {
+    "source": "skillselect planner-data + uma-skill-tools unique (rarity 5)",
+    "syncedAt": "2026-10-11T10:55+08:00",
+    "cardCount": 270,
+    "courseCount": 124,
+    "skillCount": 1001,
+    "uniqueMapped": 225
+  },
+  "files": 620,
+  "pattern": "{courseId}_s{style}_{mode}.json",
+  "styles": {
+    "0": "all",
+    "1": "nige",
+    "2": "senko",
+    "3": "sashi",
+    "4": "oikomi"
+  }
+}

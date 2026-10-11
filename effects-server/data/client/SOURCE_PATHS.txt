@@ -1,0 +1,10 @@
+Steam JP install: F:\SteamLibrary\steamapps\common\UmamusumePrettyDerby_Jpn
+Steam appid: 3564400 (libraryfolders entry on F:\SteamLibrary)
+Runtime master.mdb (authoritative game DB):
+  C:\Users\1\AppData\LocalLow\Cygames\UmamusumePrettyDerby_Jpn\master\master.mdb
+  LastWriteTime: 2026-10-09 11:45:37
+Box/repo copy used by rebuild_from_master.py:
+  /workspace/614tools-effects/data/client/master.mdb
+Older/global LocalLow copy (do NOT use for JP):
+  C:\Users\1\AppData\LocalLow\Cygames\umamusume\master\master.mdb
+Inherent skills = unique + evolution + awakening (see docs/FORMULA.md).

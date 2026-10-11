@@ -265,11 +265,25 @@ function scoreCard(card, skillsById, course, opts = {}) {
   const styleFilter = opts.style || 0;
 
   const skillIds = [];
-  if (mode === 'inherent' || mode === 'unique') {
+  if (mode === 'inherent') {
+    // U-tools card page: 固有 + 進化 + 覚醒(含 Pt / 初期所持)
+    const inherent = card.inherent && card.inherent.length
+      ? card.inherent
+      : [].concat(
+          card.uniqueId ? [card.uniqueId] : [],
+          (card.evo || []).map((e) => e.id || e),
+          (card.awake || []).map((a) => a.id || a),
+          card.si || []
+        );
+    for (const id of inherent) skillIds.push(String(id));
+  } else if (mode === 'unique') {
     if (card.uniqueId) skillIds.push(card.uniqueId);
-  }
-  if (mode === 'inherent' || mode === 'si') {
+  } else if (mode === 'si') {
     for (const id of card.si || []) skillIds.push(String(id));
+  } else if (mode === 'evo') {
+    for (const e of card.evo || []) skillIds.push(String(e.id || e));
+  } else if (mode === 'awake') {
+    for (const a of card.awake || []) skillIds.push(String(a.id || a));
   }
 
   // Deduplicate
@@ -350,7 +364,7 @@ function rankCourse(db, courseId, opts = {}) {
     course,
     mode,
     style,
-    formula: 'approx-v1',
+    formula: 'approx-v1+inherent(unique+evo+awake)',
     totalCards: rows.length,
     ranking: rows.slice(0, limit).map((r, i) => ({ rank: i + 1, ...r })),
   };

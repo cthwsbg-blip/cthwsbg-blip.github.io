@@ -140,25 +140,71 @@
     return ({ 0: '全部', 1: '逃げ', 2: '先行', 3: '差し', 4: '追込' })[st] || '';
   }
 
+  /** Same chart markup/CSS as skillselect course-card (phases / corners / straights / slopes). */
   function drawCourseGeo(course) {
     const geo = course.geo || {};
     const dist = course.distance || 1;
-    const w = 640, h = 56, pad = 16;
-    const x = (m) => pad + (m / dist) * (w - pad * 2);
-    let shapes = '';
-    (geo.straights || []).forEach((s) => {
-      const [a, b] = s;
-      shapes += `<rect x="${x(a)}" y="22" width="${Math.max(2, x(b) - x(a))}" height="12" rx="3" fill="#3d9a5f"/>`;
-    });
-    (geo.corners || []).forEach((c, i) => {
-      const [start, len] = c;
-      shapes += `<rect x="${x(start)}" y="18" width="${Math.max(2, x(start + len) - x(start))}" height="20" rx="6" fill="#6c8cff" opacity="0.85"/>`;
-      shapes += `<text x="${x(start + len / 2)}" y="14" text-anchor="middle" fill="#cde" font-size="10">${i + 1}</text>`;
-    });
-    shapes += `<text x="${pad}" y="52" fill="#9ab" font-size="10">0m</text>`;
-    shapes += `<text x="${w - pad}" y="52" text-anchor="end" fill="#9ab" font-size="10">${dist}m</text>`;
+    const pct = (m) => ((m / dist) * 100).toFixed(2) + '%';
+    const phases = ['序盘', '中盘', '终盘', '最后阶段'];
+    const widths = ['16.667%', '50%', '16.666%', '16.667%'];
+    const corners = geo.corners || [];
+    const straights = geo.straights || [];
+    const slopes = geo.slopes || [];
+    // U-tools / skillselect corner numbering: final corner = 4, walking backward
+    const cornerNums = corners.map((_, v) => 4 - ((corners.length - 1 - v) % 4));
+
+    let geoRows = '';
+    if (corners.length || straights.length || slopes.length) {
+      const upLen = slopes.filter((u) => u[2] > 0).reduce((a, u) => a + u[1], 0);
+      const dnLen = slopes.filter((u) => u[2] < 0).reduce((a, u) => a + u[1], 0);
+      geoRows =
+        `<div class="geo-lab"><span>弯道</span><div class="geo-row">` +
+        corners
+          .map(
+            (u, v) =>
+              `<span class="cn" style="left:${pct(u[0])};width:${pct(u[1])}" title="第${cornerNums[v]}弯道 ${u[0]}–${u[0] + u[1]}m"></span>`
+          )
+          .join('') +
+        `</div></div>` +
+        `<div class="geo-lab"><span>直线</span><div class="geo-row">` +
+        straights
+          .map((u, v) => {
+            const start = u[0];
+            const end = u[1];
+            const last = v === straights.length - 1;
+            return `<span class="st${last ? ' last' : ''}" style="left:${pct(start)};width:${pct(end - start)}" title="${last ? '最终直线' : '直线'} ${start}–${end}m"></span>`;
+          })
+          .join('') +
+        `</div></div>` +
+        `<div class="geo-lab"><span>坡道</span><div class="geo-row">` +
+        slopes
+          .map((u) => {
+            const up = u[2] > 0;
+            return `<span class="${up ? 'up' : 'dn'}" style="left:${pct(u[0])};width:${pct(u[1])};${up ? '' : 'top:2px'}" title="${up ? '上坡' : '下坡'} ${u[0]}–${u[0] + u[1]}m"></span>`;
+          })
+          .join('') +
+        `</div></div>` +
+        `<div class="slope-legend">紫：弯道 · 绿：最终直线 · 橙：上坡 · 蓝：下坡 · 终盘起点 ${Math.round((dist * 2) / 3).toLocaleString()} m` +
+        (upLen ? ` · 上坡 ${upLen} m` : ' · 无上坡') +
+        (dnLen ? ` · 下坡 ${dnLen} m` : ' · 无下坡') +
+        `</div>`;
+    } else {
+      geoRows = `<p class="muted" style="margin:8px 0 0">暂无该赛道几何数据</p>`;
+    }
+
+    const heading =
+      `<div class="course-heading"><strong>${escapeHtml(course.trackZh || '')} ${course.distance}m</strong>` +
+      `<span>#${course.id}</span></div>`;
+
     els.trackDiagram.hidden = false;
-    els.trackDiagram.innerHTML = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="赛道剖面">${shapes}</svg>`;
+    els.trackDiagram.innerHTML =
+      `<div class="course-card">` +
+      heading +
+      `<div class="course-chart">` +
+      `<div class="phase-labels">${phases.map((h, b) => `<span style="width:${widths[b]}">${h}</span>`).join('')}</div>` +
+      `<div class="phase-track"><div style="width:16.667%"></div><div style="width:50%"></div><div style="width:16.666%"></div><div style="width:16.667%"></div></div>` +
+      geoRows +
+      `</div></div>`;
   }
 
   async function selectCourse(courseId) {

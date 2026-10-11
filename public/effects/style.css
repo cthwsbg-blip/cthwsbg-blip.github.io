@@ -75,8 +75,44 @@ body { margin: 0; background: var(--bg); color: var(--ink); }
 .tag.style { background: #efe6ff; color: #4b2d8a; }
 .footnotes { font-size: 13px; color: var(--muted); }
 .footnotes h2 { color: var(--ink); font-size: 16px; }
-.track-diagram { background: #1b1f24; color: #d7e0ea; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 12px; overflow-x: auto; }
-.track-diagram svg { display: block; width: 100%; height: 64px; }
+.track-diagram { margin-bottom: 12px; }
+.course-card {
+  background: linear-gradient(180deg, #f3fbf0, #fff);
+  border: 2px solid #d5eecf;
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+.course-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.course-heading strong { font-size: 18px; font-weight: 900; color: #23802d; }
+.course-heading span {
+  font: italic 800 12px "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #fff; background: #2f9e3a; border-radius: 999px; padding: 1px 10px;
+}
+.course-chart { margin-top: 12px; }
+.phase-labels { display: flex; font-size: 11px; font-weight: 700; color: #4f6a4c; }
+.phase-labels span { text-align: center; white-space: nowrap; }
+.phase-track {
+  display: flex; height: 12px; border-radius: 999px; overflow: hidden;
+  margin: 5px 0 6px; box-shadow: inset 0 1px 2px #0001;
+}
+.phase-track div:nth-child(1) { background: #d4ef7a; }
+.phase-track div:nth-child(2) { background: #8fd26a; }
+.phase-track div:nth-child(3) { background: #3cb032; }
+.phase-track div:nth-child(4) {
+  background: repeating-linear-gradient(115deg, #e8509f 0 8px, #ff79d0 8px 16px);
+}
+.geo-lab {
+  display: grid; grid-template-columns: 40px 1fr; align-items: center;
+  font-size: 11px; color: var(--muted);
+}
+.geo-row { position: relative; height: 12px; margin: 3px 0; }
+.geo-row span { position: absolute; top: 0; height: 10px; border-radius: 999px; }
+.geo-row .cn { background: #b9a6ff; }
+.geo-row .st { background: #d9d4e6; }
+.geo-row .st.last { background: #9ad88f; }
+.geo-row .up { background: #ffc833; }
+.geo-row .dn { background: #4caeff; }
+.slope-legend { font-size: 11px; color: var(--muted); margin-top: 5px; }
 @media (max-width: 600px) {
   .rank-grid, .course-grid { grid-template-columns: 1fr; }
   .brand-text b { font-size: 16px; }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>赛道有效马娘 · 马身排行</title>
+  <meta name="description" content="按赛道计算各马娘自身携带技能的马身收益，展示 Top 50。评分在服务端完成。" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="stripe"></div>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">🐎</span>
+        <span class="brand-text">
+          <small>EFFECTS · 服务端马身排行</small>
+          <b>赛道有效马娘</b>
+        </span>
+      </div>
+      <a class="uma-back" href="https://614tools.top/"><span aria-hidden="true">←</span> 返回目录</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel" id="coursePanel">
+      <div class="panel-h">
+        <h1>选择赛道</h1>
+        <p class="muted">先选赛道，再查看该赛道上「自身携带技能」马身收益 Top 50（后端计算，前端只展示）。</p>
+      </div>
+      <div class="filters">
+        <label>场地
+          <select id="groundFilter">
+            <option value="">全部</option>
+            <option value="1">芝</option>
+            <option value="2">ダート</option>
+          </select>
+        </label>
+        <label>距离
+          <select id="distFilter">
+            <option value="">全部</option>
+            <option value="1">短距離</option>
+            <option value="2">マイル</option>
+            <option value="3">中距離</option>
+            <option value="4">長距離</option>
+          </select>
+        </label>
+        <input id="courseSearch" type="search" placeholder="搜索赛场 / 距离…" />
+      </div>
+      <div id="courseList" class="course-grid" aria-live="polite">加载赛道列表中…</div>
+    </section>
+
+    <section class="panel hidden" id="rankPanel">
+      <div class="panel-h row">
+        <button type="button" class="pill" id="backToCourses">← 赛道列表</button>
+        <div>
+          <h1 id="rankTitle">有效马娘</h1>
+          <p class="muted" id="rankSub"></p>
+        </div>
+      </div>
+
+      <div class="style-tabs" id="styleTabs" role="tablist" aria-label="跑法筛选">
+        <button type="button" class="stab active" data-style="0">全部</button>
+        <button type="button" class="stab" data-style="1">逃げ</button>
+        <button type="button" class="stab" data-style="2">先行</button>
+        <button type="button" class="stab" data-style="3">差し</button>
+        <button type="button" class="stab" data-style="4">追込</button>
+      </div>
+
+      <div class="notice">
+        马身评分由后端 <b>uma-skill-tools RaceSolver</b> 计算（与站点 <code>/skill/</code> 同源物理栈：有/无技能位置差 ÷ 2.5）。自身携带 = 固有 + 进化 + 觉醒（含 Pt）。赛道图复用 skillselect 几何层。
+      </div>
+
+      <div id="trackDiagram" class="track-diagram" hidden></div>
+      <div id="rankStatus" class="muted">加载排行中…</div>
+      <div id="rankGrid" class="rank-grid"></div>
+    </section>
+
+    <section class="panel footnotes">
+      <h2>公式与数据说明</h2>
+      <ul>
+        <li><b>自身携带技能</b>：固有（skill_set）+ 进化（skill_upgrade_description）+ 觉醒（available_skill_set，含 Pt）。对齐 U-tools 卡页。</li>
+        <li><b>马身</b>：后端 RaceSolver 对同一面板跑「有技能 / 无技能」，<code>(pos_with − pos_without) / 2.5</code>，多样本取均值。</li>
+        <li><b>赛道图</b>：与 <code>/skillselect</code> 相同的序盘/中盘/终盘/最后阶段 + 弯道/直线/坡道层。</li>
+        <li><b>数据源</b>：Steam 日服 <code>UmamusumePrettyDerby_Jpn</code> 的 LocalLow <code>master.mdb</code>（见 <code>data/client/SOURCE_PATHS.txt</code>）。</li>
+        <li><b>后端</b>：浏览器只请求 <code>/api/effects/rank</code>，不在前端跑评分。</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>

@@ -68,7 +68,7 @@
       </div>
 
       <div class="notice">
-        马身评分由 <code>api</code> 后端计算（近似公式 approx-v1）。与 U-tools / uma-skill-tools 全量 RaceSolver 的差异见页面底部说明。
+        马身评分由后端 <b>uma-skill-tools RaceSolver</b> 计算（与站点 <code>/skill/</code> 同源物理栈：有/无技能位置差 ÷ 2.5）。自身携带 = 固有 + 进化 + 觉醒（含 Pt）。赛道图复用 skillselect 几何层。
       </div>
 
       <div id="trackDiagram" class="track-diagram" hidden></div>
@@ -77,12 +77,13 @@
     </section>
 
     <section class="panel footnotes">
-      <h2>公式说明（vs U-tools）</h2>
+      <h2>公式与数据说明</h2>
       <ul>
-        <li><b>自身携带技能</b>：固有技能（若数据有）+ 技能筛选器中的初期所持 <code>si</code>。</li>
-        <li><b>马身</b>：与 UST 相同，按 <code>位置差(m) / 2.5</code> 理解；本页用 Δv·时长·参考速度 的近似，而非逐步积分。</li>
-        <li><b>后端</b>：浏览器只请求 <code>/api/effects/rank</code>，不在前端跑评分公式。</li>
-        <li>部署与 Worker 接入方式见仓库 <code>docs/DEPLOY.md</code>。</li>
+        <li><b>自身携带技能</b>：固有（skill_set）+ 进化（skill_upgrade_description）+ 觉醒（available_skill_set，含 Pt）。对齐 U-tools 卡页。</li>
+        <li><b>马身</b>：后端 RaceSolver 对同一面板跑「有技能 / 无技能」，<code>(pos_with − pos_without) / 2.5</code>，多样本取均值。</li>
+        <li><b>赛道图</b>：与 <code>/skillselect</code> 相同的序盘/中盘/终盘/最后阶段 + 弯道/直线/坡道层。</li>
+        <li><b>数据源</b>：Steam 日服 <code>UmamusumePrettyDerby_Jpn</code> 的 LocalLow <code>master.mdb</code>（见 <code>data/client/SOURCE_PATHS.txt</code>）。</li>
+        <li><b>后端</b>：浏览器只请求 <code>/api/effects/rank</code>，不在前端跑评分。</li>
       </ul>
     </section>
   </main>

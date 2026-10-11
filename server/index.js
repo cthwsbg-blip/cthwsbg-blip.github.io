@@ -13,6 +13,7 @@ const fs = require('fs');
 const path = require('path');
 const { URL } = require('url');
 const { rankCourse, STYLE_KEYS, DIST_KEYS, GROUND_KEYS } = require('./bashin');
+const { rankWithUst } = require('./ust_bridge');
 
 const ROOT = path.resolve(__dirname, '..');
 const DB_PATH = process.env.EFFECTS_DB || path.join(ROOT, 'data', 'effects_db.json');
@@ -153,14 +154,28 @@ const server = http.createServer((req, res) => {
       send(res, 400, { ok: false, error: 'missing course' });
       return;
     }
-    const result = rankCourse(db, course, {
+    const opts = {
       style: u.searchParams.get('style') || 0,
       limit: u.searchParams.get('limit') || 50,
       mode: u.searchParams.get('mode') || 'inherent',
-    });
-    if (result.error) {
-      send(res, 404, { ok: false, error: result.error, courseId: result.courseId });
-      return;
+      nsamples: u.searchParams.get('nsamples') || 12,
+      force: u.searchParams.get('refresh') === '1',
+    };
+    // Default: uma-skill-tools RaceSolver (same family as /skill/). ?engine=approx for old approx-v1.
+    const engine = (u.searchParams.get('engine') || 'ust').toLowerCase();
+    let result;
+    if (engine === 'approx') {
+      result = rankCourse(db, course, opts);
+      if (result.error) {
+        send(res, 404, { ok: false, error: result.error, courseId: result.courseId });
+        return;
+      }
+    } else {
+      result = rankWithUst(DB_PATH, course, opts);
+      if (!result.ok) {
+        send(res, 500, result);
+        return;
+      }
     }
     send(res, 200, result);
     return;
