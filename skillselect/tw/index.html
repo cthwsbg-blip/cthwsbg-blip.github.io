@@ -998,7 +998,11 @@
             o = t.filter(d => !r || W(d.n + " " + d.d + " " + d.aliases).includes(r));
         new Set(t.map(d => d.id));
         const studGot = studCovered(),
-            c = (d, g) => a.sort === "pt" ? (d.pt ?? 999) - (g.pt ?? 999) || d.id - g.id : a.sort === "id" ? d.id - g.id : n(g).length - n(d).length || (d.pt ?? 999) - (g.pt ?? 999) || d.id - g.id,
+            c = (d, g) => {
+                const sa = studGot.has(d.id) ? 1 : 0, sb = studGot.has(g.id) ? 1 : 0;
+                if (sa !== sb) return sa - sb;
+                return a.sort === "pt" ? (d.pt ?? 999) - (g.pt ?? 999) || d.id - g.id : a.sort === "id" ? d.id - g.id : n(g).length - n(d).length || (d.pt ?? 999) - (g.pt ?? 999) || d.id - g.id
+            },
             i = d => {
                 const g = [];
                 for (const $ of d.g ? V.get(d.g) ?? [] : [])
