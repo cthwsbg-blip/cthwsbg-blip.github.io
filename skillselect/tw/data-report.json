@@ -1,87 +1,77 @@
 {
-  "buildDate": "2026-09-29",
+  "buildDate": "2026-10-30",
   "upstreamSkills": 771,
   "profiles": {
     "tw-progress": {
-      "basis": "依繁中 2026/09/22 唯獨愛你卡池，對照日服 2025/05/21 進度。實裝範圍及技能參數為進度推定，尚未經當期繁中 master.mdb 核對。",
-      "database": "master-jp-20250521.mdb",
-      "cutoff": "2025-05-21T23:59:59+09:00",
-      "skills": 595,
-      "whiteSkills": 344,
-      "cards": 209,
-      "supports": 336,
-      "excludedFromOriginal": 176,
-      "missingNames": [],
+      "basis": "繁中已於 2026/10/29 開放無人島；本版本依需求預先收錄日服 2025/06/27 開篇至 2025/10/27 的四個月卡池，並補齊舊版 2025/05/21 後遺漏。範圍含繁中尚未實裝內容，供後續規劃。數值主體採日服 2025/10/10 快照；10/18 緞通烈焰另以 2025/12/26 公開技能表補充並對照首發資料，並非當期繁中 master 核驗。",
+      "database": "master-jp-20251010.mdb",
+      "cutoff": "2025-10-27T23:59:59+09:00",
+      "skills": 657,
+      "whiteSkills": 380,
+      "cards": 227,
+      "supports": 360,
+      "excludedFromOriginal": 114,
+      "missingNames": [
+        {
+          "id": 203931,
+          "ja": "百戦錬磨"
+        },
+        {
+          "id": 203932,
+          "ja": "練達の一歩"
+        },
+        {
+          "id": 203941,
+          "ja": "まばたき厳禁！"
+        },
+        {
+          "id": 203942,
+          "ja": "シビれる走り"
+        },
+        {
+          "id": 203951,
+          "ja": "麒麟児"
+        },
+        {
+          "id": 203952,
+          "ja": "天才肌"
+        },
+        {
+          "id": 203961,
+          "ja": "不抜の気概"
+        },
+        {
+          "id": 203962,
+          "ja": "気丈な姿勢"
+        },
+        {
+          "id": 203991,
+          "ja": "開花"
+        },
+        {
+          "id": 203992,
+          "ja": "目覚めの時"
+        },
+        {
+          "id": 204051,
+          "ja": "燃ゆる魂"
+        },
+        {
+          "id": 204052,
+          "ja": "灯を胸に"
+        }
+      ],
       "danglingSkillReferences": 0,
       "excludedSkillIds": [
         202611,
         202891,
         203231,
         203321,
-        203361,
         203401,
-        203441,
         203561,
         203641,
-        203642,
-        203651,
-        203652,
-        203661,
-        203662,
-        203671,
-        203672,
-        203681,
-        203682,
         203701,
-        203702,
-        203711,
-        203712,
-        203731,
-        203732,
-        203741,
-        203742,
-        203751,
-        203752,
-        203761,
-        203762,
-        203772,
-        203781,
-        203791,
-        203792,
-        203801,
-        203802,
-        203812,
-        203822,
-        203831,
-        203832,
-        203841,
-        203842,
-        203851,
-        203852,
-        203861,
-        203862,
-        203871,
-        203872,
-        203881,
-        203882,
-        203892,
-        203902,
-        203911,
-        203912,
-        203922,
-        203931,
-        203932,
-        203941,
-        203942,
-        203951,
-        203952,
-        203961,
-        203962,
-        203972,
         203981,
-        203982,
-        203991,
-        203992,
         204001,
         204002,
         204012,
@@ -91,8 +81,6 @@
         204032,
         204041,
         204042,
-        204051,
-        204052,
         204061,
         204062,
         204071,
@@ -186,7 +174,6 @@
         204702,
         204711,
         204712,
-        210362,
         210372,
         210382,
         210392
@@ -194,9 +181,54 @@
       "eventSources": {
         "included": true,
         "basis": "原作事件技能表，按所選進度的卡片及技能 ID 篩選；取得條件尚未逐一核對當期繁中。",
-        "cardEdges": 921,
-        "supportEdges": 844
-      }
+        "cardEdges": 988,
+        "supportEdges": 913
+      },
+      "supplements": [
+        {
+          "id": "island-oct18-dantsu",
+          "sourceDate": "2025-12-26",
+          "sources": [
+            {
+              "url": "https://raw.githubusercontent.com/yy487/umamusume-skill_data/9019e40d3eeb0e288c4470ff02db027c75761988/skill_data.csv",
+              "role": "six complete raw skill_data rows",
+              "commit": "9019e40d3eeb0e288c4470ff02db027c75761988",
+              "sourceDate": "2025-12-26",
+              "sha256": "69d6232c1269ad4db0835618ebb8b2b434f84641d80bc2358b2cdac130a18894",
+              "bytes": 558142
+            },
+            {
+              "url": "https://xn--gck1f423k.xn--1bvt37a.tools/cards/109201",
+              "role": "Japanese text, skill points, unique and evolved skill mapping; independent full numeric cross-check",
+              "retrievedAt": "2026-10-30",
+              "sha256": "74592d48dd450d25de693b5720f7441091f5e88f0516ce1cdeeca6b5179dde5c"
+            },
+            {
+              "url": "https://xn--gck1f423k.xn--1bvt37a.tools/skills/900921",
+              "role": "inherited skill text and independent full numeric cross-check",
+              "retrievedAt": "2026-10-30",
+              "sha256": "63096cd27cc3ef87d9e05f271e1d9715536f784038ae0f9cb1e7dba84131995d"
+            },
+            {
+              "url": "https://umamusume.jp/news/detail?id=2846",
+              "role": "official release date 2025-10-18 21:00 JST"
+            },
+            {
+              "url": "https://gametora.com/ja/umamusume/characters/109201-dantsu-flame",
+              "role": "independent aptitude and initial rarity cross-check"
+            },
+            {
+              "url": "https://umamusumelabo.com/chara_support/dantsu-flame",
+              "role": "launch-day effect cross-check",
+              "sourceDate": "2025-10-18"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/Tsuyuchan-jp/umamusume-data/8f6f60d94ff9e803ad1ef70643c946257d7499ea/data/characters.json",
+              "role": "independent awakening skill mapping"
+            }
+          ]
+        }
+      ]
     },
     "tw-archive": {
       "basis": "公開繁中 master.mdb 歷史快照。僅代表 2024/06/27 的技能與卡片範圍，不是目前繁中版本。事件技能仍需另行核對。",
@@ -602,7 +634,8 @@
         "basis": "原作事件技能表，按所選進度的卡片及技能 ID 篩選；取得條件尚未逐一核對當期繁中。",
         "cardEdges": 467,
         "supportEdges": 452
-      }
+      },
+      "supplements": []
     }
   }
 }
