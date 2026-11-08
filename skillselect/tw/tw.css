@@ -95,3 +95,12 @@ body{font-family:"Microsoft JhengHei","PingFang TC",system-ui,sans-serif}
 .changelog-list{margin:0 0 16px;padding-left:1.2em;line-height:1.7}
 .changelog-list li{margin:0 0 8px}
 .changelog-actions{display:flex;justify-content:flex-end;gap:10px}
+
+.pl-feedback-dlg{width:min(520px,96vw);max-height:min(90vh,720px)}
+.pl-feedback-dlg .feedback-body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:12px}
+.fb-label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:800;color:var(--green-d,#2f7a3a)}
+.fb-label textarea,.fb-label input{font:inherit;font-weight:600;border:2px solid var(--border,#d5e0d8);border-radius:12px;padding:10px 12px;resize:vertical;background:#fff;color:#2b2740}
+.fb-label textarea:focus,.fb-label input:focus{outline:none;border-color:var(--green,#2f9e3a)}
+.fb-note{margin:0}
+.feedback-actions{display:flex;justify-content:flex-end;gap:8px}
+.changelog-lead{margin:0 0 12px;line-height:1.55;font-size:14px}
